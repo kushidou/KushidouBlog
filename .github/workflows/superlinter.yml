@@ -1,14 +1,12 @@
 name: Hugo-Blog-update
 
 # Run this workflow every time a new commit pushed to your repository
-on: 
-  push:
-      branches: [ main ]
+on: push:
 
 jobs:
   # Set the job key. The key is displayed as the job name
   # when a job name is not provided
-  super-lint:
+  build:
     # Name the Job
     name: Lint code base
     # Set the type of machine to run on
@@ -33,7 +31,7 @@ jobs:
 
       - name: Build
         run: |
-          hugo --minify
+          hugo
 
       - name: Deploy
       run: |
