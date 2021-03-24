@@ -33,7 +33,7 @@ jobs:
         run: |
           hugo
 
-      - name: update
-      run: |
-        rsync -av --delete public kushidou@42.194.190.42:22:/home/kushidou/webserver/webs
+      # - name: update
+      # run: |
+      #   rsync -av --delete public kushidou@42.194.190.42:22:/home/kushidou/webserver/webs
 
