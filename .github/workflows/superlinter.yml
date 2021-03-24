@@ -19,8 +19,8 @@ jobs:
 
       - uses: webfactory/ssh-agent@v0.4.1
         with:
-        ssh-private-key: |
-          ${{ secrets.BLOG_KEY }}
+          ssh-private-key: |
+            ${{ secrets.BLOG_KEY }}
 
       - name: Scan public keys
         run: |
