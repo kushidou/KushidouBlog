@@ -20,11 +20,11 @@ jobs:
       - uses: webfactory/ssh-agent@v0.4.1
         with:
           ssh-private-key: |
-            ${{ secrets.BLOG_KEY }}
+            ${{ secrets.TX_LIGHTHOUSE_GZ }}
 
       - name: Scan public keys
         run: |
-          ssh-keyscan 42.194.190.42 >> ~/.ssh/known_hosts
+          ssh-keyscan small09.top >> ~/.ssh/known_hosts
 
       - name: Setup Hugo
         uses: peaceiris/actions-hugo@v2
@@ -46,5 +46,5 @@ jobs:
         #   remote_key: ${{ secrets.BLOG_KEY }}
       # - name: update
         run: |
-          rsync -av --delete public/ kushidou@small09.top:22:~/webserver/webs/
+          rsync -av --delete public/ kushidou@small09.top:22:/home/kushidou/webserver/webs/
 
