@@ -34,18 +34,17 @@ jobs:
           hugo
 
       - name: rsync deployments
-        uses: burnett01/rsync-deployments@4.1
-        with:
-          # 这里是 rsync 的参数 switches: -avzh --delete --exclude="" --include="" --filter=""
-          switches: -avzh
-          path: public/
-          remote_path: /home/kushidou/webserver/webs
-          remote_host: 42.194.190.42
-          remote_port: 22
-          remote_user: kushidou
-          remote_key: ${{ secrets.BLOG_KEY }}
-
+        # uses: burnett01/rsync-deployments@4.1
+        # with:
+        #   # 这里是 rsync 的参数 switches: -avzh --delete --exclude="" --include="" --filter=""
+        #   switches: -avzh
+        #   path: public/
+        #   remote_path: /home/kushidou/webserver/webs
+        #   remote_host: 42.194.190.42
+        #   remote_port: 22
+        #   remote_user: kushidou
+        #   remote_key: ${{ secrets.BLOG_KEY }}
       # - name: update
-      # run: |
-      #   rsync -av --delete public kushidou@42.194.190.42:22:/home/kushidou/webserver/webs
+        run: |
+          rsync -av --delete public kushidou@42.194.190.42:22:/home/kushidou/webserver/webs
 
