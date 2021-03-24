@@ -17,10 +17,10 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v2
 
-      - uses: webfactory/ssh-agent@v0.4.1
-        with:
-          ssh-private-key: |
-            ${{ secrets.BLOG_KEY }}
+      # - uses: webfactory/ssh-agent@v0.4.1
+      #   with:
+      #     ssh-private-key: |
+      #       ${{ secrets.BLOG_KEY }}
 
       - name: Scan public keys
         run: |
@@ -32,6 +32,18 @@ jobs:
       - name: Build
         run: |
           hugo
+
+      - name: rsync deployments
+        uses: burnett01/rsync-deployments@4.1
+        with:
+          # 这里是 rsync 的参数 switches: -avzh --delete --exclude="" --include="" --filter=""
+          switches: -avzh
+          path: public/
+          remote_path: /home/kushidou/webserver/webs
+          remote_host: 42.194.190.42
+          remote_port: 22
+          remote_user: kushidou
+          remote_key: ${{ secrets.BLOG_KEY }}
 
       # - name: update
       # run: |
