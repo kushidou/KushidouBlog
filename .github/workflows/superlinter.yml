@@ -33,13 +33,7 @@ jobs:
         run: |
           hugo
 
-      - name: Deploy
+      - name: update
       run: |
         rsync -av --delete public kushidou@42.194.190.42:22:/home/kushidou/webserver/webs
 
-      # Runs the Super-Linter action
-      # - name: Run Super-Linter
-      #   uses: github/super-linter@v3
-      #   env:
-      #     DEFAULT_BRANCH: main
-      #     GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
