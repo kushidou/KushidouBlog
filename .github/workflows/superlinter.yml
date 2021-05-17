@@ -26,12 +26,12 @@ jobs:
         run: |
           ssh-keyscan small09.top >> ~/.ssh/known_hosts
 
-      - name: Setup Hugo
-        uses: peaceiris/actions-hugo@v2
+      # - name: Setup Hugo
+      #   uses: peaceiris/actions-hugo@v2
 
-      - name: Build
-        run: |
-          hugo
+      # - name: Build
+      #   run: |
+      #     hugo
 
       - name: rsync deployments
         # uses: burnett01/rsync-deployments@4.1
