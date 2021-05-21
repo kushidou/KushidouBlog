@@ -2,16 +2,20 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>small09.top/firstblog/</loc>
+    <loc>/firstblog/</loc>
     <lastmod>2021-03-24T09:25:22+08:00</lastmod>
   </url><url>
-    <loc>small09.top/about_hugo_website/</loc>
+    <loc>/about_hugo_website/</loc>
     <lastmod>2021-03-23T09:15:09+08:00</lastmod>
   </url><url>
-    <loc>small09.top/categories/</loc>
+    <loc>/authors/</loc>
   </url><url>
-    <loc>small09.top/</loc>
+    <loc>/categories/</loc>
   </url><url>
-    <loc>small09.top/tags/</loc>
+    <loc>/</loc>
+  </url><url>
+    <loc>/series/</loc>
+  </url><url>
+    <loc>/tags/</loc>
   </url>
 </urlset>

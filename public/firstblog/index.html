@@ -1,230 +1,297 @@
 <!DOCTYPE html>
-<html lang="en" dir="auto">
+<html lang='en' ><meta charset="utf-8">
+<meta name="viewport" content="width=device-width">
 
-<head><meta charset="utf-8">
-<meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<meta name="robots" content="index, follow">
-<title>Firstblog | Kushidou Hugo Blog Site</title>
 
-<meta name="keywords" content="" />
-<meta name="description" content="z这是hugo的二级目录测试页，也测试以下http的图床。
+<title>Firstblog | Eureka Demo</title>
+
+<meta name="generator" content="Hugo Eureka 0.8.0" />
+<link rel="stylesheet" href="/css/eureka.min.css">
+<script defer src="/js/eureka.min.js"></script>
+
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preload"
+  href="https://fonts.googleapis.com/css2?family=Lora:wght@400;600;700&family=Noto+Serif+SC:wght@400;600;700&display=swap"
+  as="style" onload="this.onload=null;this.rel='stylesheet'">
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@10.1.0/build/styles/solarized-light.min.css"
+   media="print"
+  onload="this.media='all';this.onload=null" crossorigin>
+<script defer src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@10.1.0/build/highlight.min.js"
+   crossorigin></script>
+
+  <script defer src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@10.1.0/build/languages/dart.min.js"
+     crossorigin></script>
+
+<script defer src="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.14.0/js/all.min.js"
+   integrity="sha256-uNYoXefWRqv&#43;PsIF/OflNmwtKM4lStn9yrz2gVl6ymo="  crossorigin></script>
+
+
+
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css"
+   integrity="sha384-AfEj0r4/OFrOo5t7NnNe46zW/tFgW6x/bCJG8FqQCEo3&#43;Aro6EYUG4&#43;cU&#43;KJWu/X"  media="print"
+  onload="this.media='all';this.onload=null" crossorigin>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.js" 
+  integrity="sha384-g7c&#43;Jr9ZivxKLnZTDUhnkOnsh30B4H0rpLUpJ4jAIKs4fnJI&#43;sEnkvrMWph2EDg4"  crossorigin></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/contrib/auto-render.min.js"
+   integrity="sha384-mll67QQFJfxn0IYznZYonOWZ644AWYC&#43;Pt2cHqMaRhXVrursRwvLnLaebdGIlYNa"  crossorigin></script>
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    renderMathInElement(document.body, {
+      delimiters: [
+        { left: "$$", right: "$$", display: true },
+        { left: "$", right: "$", display: false },
+        { left: "\\(", right: "\\)", display: false },
+        { left: "\\[", right: "\\]", display: true }
+      ],
+    });
+  });
+</script>
+
+
+<script defer src="https://cdn.jsdelivr.net/npm/mermaid@8.9.2/dist/mermaid.min.js" 
+  integrity="sha256-Zmpaaj&#43;GXFsPF5WdPArSrnW3b30dovldeKsW00xBVwE="  crossorigin></script>
+
+
+<link rel="icon" type="image/png" sizes="32x32" href="/images/icon_hu64421c6c7700f606f0ad45d807017b09_5843_32x32_fill_box_center_2.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/images/icon_hu64421c6c7700f606f0ad45d807017b09_5843_180x180_fill_box_center_2.png">
+
+<meta name="description"
+  content="z这是hugo的二级目录测试页，也测试以下http的图床。
 1.PicGo默认的SM.MS图床，https。 2.自己注册的七牛对象存储，http。 3.GitHub &#43; jsdelivr加速，https ">
-<meta name="author" content="">
-<link rel="canonical" href="small09.top/firstblog/" />
-<link href="/small09.top/assets/css/stylesheet.min.454e67c35915a5140193218cb9f96e0d9b6e858988673b618c27785dc239f2a6.css" integrity="sha256-RU5nw1kVpRQBkyGMufluDZtuhYmIZzthjCd4XcI58qY=" rel="preload stylesheet"
-    as="style">
-
-<link rel="icon" href="small09.top/favicon.ico">
-<link rel="icon" type="image/png" sizes="16x16" href="small09.top/favicon-16x16.png">
-<link rel="icon" type="image/png" sizes="32x32" href="small09.top/favicon-32x32.png">
-<link rel="apple-touch-icon" href="small09.top/apple-touch-icon.png">
-<link rel="mask-icon" href="small09.top/safari-pinned-tab.svg">
-<meta name="theme-color" content="#2e2e33">
-<meta name="msapplication-TileColor" content="#2e2e33">
-<meta name="generator" content="Hugo 0.82.0" />
-
-
-<meta property="og:title" content="Firstblog" />
-<meta property="og:description" content="z这是hugo的二级目录测试页，也测试以下http的图床。
-1.PicGo默认的SM.MS图床，https。 2.自己注册的七牛对象存储，http。 3.GitHub &#43; jsdelivr加速，https " />
-<meta property="og:type" content="article" />
-<meta property="og:url" content="small09.top/firstblog/" />
-<meta property="article:published_time" content="2021-03-24T09:25:22+08:00" />
-<meta property="article:modified_time" content="2021-03-24T09:25:22+08:00" />
-<meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="Firstblog"/>
-<meta name="twitter:description" content="z这是hugo的二级目录测试页，也测试以下http的图床。
-1.PicGo默认的SM.MS图床，https。 2.自己注册的七牛对象存储，http。 3.GitHub &#43; jsdelivr加速，https "/>
-
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
-  "@type": "BlogPosting",
-  "headline": "Firstblog",
-  "name": "Firstblog",
-  "description": "z这是hugo的二级目录测试页，也测试以下http的图床。\n1.PicGo默认的SM.MS图床，https。 2.自己注册的七牛对象存储，http。 3.GitHub + jsdelivr加速，https ",
-  "keywords": [
-    
-  ],
-  "articleBody": "z这是hugo的二级目录测试页，也测试以下http的图床。\n1.PicGo默认的SM.MS图床，https。 2.自己注册的七牛对象存储，http。 3.GitHub + jsdelivr加速，https ",
-  "wordCount" : "6",
-  "inLanguage": "en",
-  "datePublished": "2021-03-24T09:25:22+08:00",
-  "dateModified": "2021-03-24T09:25:22+08:00",
-  "mainEntityOfPage": {
-    "@type": "WebPage",
-    "@id": "small09.top/firstblog/"
-  },
-  "publisher": {
-    "@type": "Organization",
-    "name": "Kushidou Hugo Blog Site",
-    "logo": {
-      "@type": "ImageObject",
-      "url": "small09.top/favicon.ico"
-    }
-  }
+  "@type": "BreadcrumbList",
+  "itemListElement": [{
+      "@type": "ListItem",
+      "position": 1 ,
+      "name":"Eureka Demo",
+      "item":"/"},{
+      "@type": "ListItem",
+      "position": 2 ,
+      "name":"Firstblog",
+      "item":"/firstblog/"}]
 }
 </script>
 
 
 
-</head>
+<script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "/firstblog/"
+    },
+    "headline": "Firstblog | Eureka Demo","datePublished": "2021-03-24T09:25:22+08:00",
+    "dateModified": "2021-03-24T09:25:22+08:00",
+    "wordCount":  6 ,
+    "publisher": {
+        "@type": "Person",
+        "name": "C. Wang",
+        "logo": {
+            "@type": "ImageObject",
+            "url": "/images/icon.png"
+        }
+        },
+    "description": "z这是hugo的二级目录测试页，也测试以下http的图床。\n1.PicGo默认的SM.MS图床，https。 2.自己注册的七牛对象存储，http。 3.GitHub \u002b jsdelivr加速，https "
+}
+</script><meta property="og:title" content="Firstblog | Eureka Demo" />
+<meta property="og:type" content="article" />
 
-<body class="" id="top">
+
+<meta property="og:image" content="/images/icon.png">
+
+
+<meta property="og:url" content="/firstblog/" />
+
+
+
+
+<meta property="og:description" content="z这是hugo的二级目录测试页，也测试以下http的图床。
+1.PicGo默认的SM.MS图床，https。 2.自己注册的七牛对象存储，http。 3.GitHub &#43; jsdelivr加速，https " />
+
+
+
+
+<meta property="og:locale" content="en" />
+
+
+
+
+<meta property="og:site_name" content="Eureka Demo" />
+
+
+
+
+
+
+<meta property="article:published_time" content="2021-03-24T09:25:22&#43;08:00" />
+
+
+<meta property="article:modified_time" content="2021-03-24T09:25:22&#43;08:00" />
+
+
+
+<meta property="article:section" content="" />
+
+
+
+
+<body class="flex flex-col min-h-screen">
+  <header class="fixed flex items-center w-full min-h-16 pl-scrollbar z-50 bg-secondary-bg shadow-sm">
+    <div class="w-full max-w-screen-xl mx-auto"><script>
+    let storageColorScheme = localStorage.getItem("lightDarkMode")
+    if (((storageColorScheme == 'Auto' || storageColorScheme == null) && window.matchMedia("(prefers-color-scheme: dark)").matches) || storageColorScheme == "Dark") {
+        document.getElementsByTagName('html')[0].classList.add('dark')
+    }
+</script>
+<nav class="flex items-center justify-between flex-wrap px-4 py-4 md:py-0">
+    <a href="/" class="mr-6 text-primary-text text-xl font-bold">Eureka Demo</a>
+    <button id="navbar-btn" class="md:hidden flex items-center px-3 py-2" aria-label="Open Navbar">
+        <i class="fas fa-bars"></i>
+    </button>
+
+    <div id="target"
+        class="hidden block md:flex md:flex-grow md:justify-between md:items-center w-full md:w-auto text-primary-text z-20">
+        <div class="md:flex md:h-16 text-sm md:flex-grow pb-4 md:pb-0 border-b md:border-b-0">
+            <a href="/#about" class="block mt-4 md:inline-block md:mt-0 md:h-(16-4px) md:leading-(16-4px) box-border md:border-t-2 md:border-b-2  border-transparent  mr-4">About</a>
+            <a href="/posts/" class="block mt-4 md:inline-block md:mt-0 md:h-(16-4px) md:leading-(16-4px) box-border md:border-t-2 md:border-b-2  border-transparent  mr-4">Posts</a>
+            <a href="/docs/" class="block mt-4 md:inline-block md:mt-0 md:h-(16-4px) md:leading-(16-4px) box-border md:border-t-2 md:border-b-2  border-transparent  mr-4">Docs</a>
+        </div>
+
+        <div class="flex">
+            <div class="relative pt-4 md:pt-0">
+                <div class="cursor-pointer hover:text-eureka" id="lightDarkMode">
+                    <i class="fas fa-adjust"></i>
+                </div>
+                <div class="fixed hidden inset-0 opacity-0 h-full w-full cursor-default z-30" id="is-open">
+                </div>
+                <div class="absolute flex flex-col left-0 md:left-auto right-auto md:right-0 hidden bg-secondary-bg w-48 rounded py-2 border border-tertiary-bg cursor-pointer z-40"
+                    id='lightDarkOptions'>
+                    <span class="px-4 py-1 hover:text-eureka" name="Light">Light</span>
+                    <span class="px-4 py-1 hover:text-eureka" name="Dark">Dark</span>
+                    <span class="px-4 py-1 hover:text-eureka" name="Auto">Auto</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="fixed hidden inset-0 opacity-0 h-full w-full cursor-default z-0" id="is-open-mobile">
+    </div>
+
+</nav>
 <script>
-    if (localStorage.getItem("pref-theme") === "dark") {
-        document.body.classList.add('dark');
-    } else if (localStorage.getItem("pref-theme") === "light") {
-        document.body.classList.remove('dark')
-    } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
-        document.body.classList.add('dark');
+    
+    let element = document.getElementById('lightDarkMode')
+    if (storageColorScheme == null || storageColorScheme == 'Auto') {
+        document.addEventListener('DOMContentLoaded', () => {
+            window.matchMedia("(prefers-color-scheme: dark)").addEventListener('change', switchDarkMode)
+        })
+    } else if (storageColorScheme == "Light") {
+        element.firstElementChild.classList.remove('fa-adjust')
+        element.firstElementChild.setAttribute("data-icon", 'sun')
+        element.firstElementChild.classList.add('fa-sun')
+    } else if (storageColorScheme == "Dark") {
+        element.firstElementChild.classList.remove('fa-adjust')
+        element.firstElementChild.setAttribute("data-icon", 'moon')
+        element.firstElementChild.classList.add('fa-moon')
     }
 
+    document.addEventListener('DOMContentLoaded', () => {
+        getcolorscheme();
+        switchBurger();
+    });
 </script>
-<noscript>
-    <style type="text/css">
-        .theme-toggle,
-        .top-link {
-            display: none;
-        }
+</div>
+  </header>
+  <main class="flex-grow pt-16">
+    <div class="pl-scrollbar">
+      <div class="w-full max-w-screen-xl lg:px-4 xl:px-8 mx-auto">
 
-    </style>
-</noscript>
-<header class="header">
-    <nav class="nav">
-        <div class="logo">
-            <a href="small09.top" accesskey="h" title="Kushidou Hugo Blog Site (Alt + H)">Kushidou Hugo Blog Site</a>
-            <span class="logo-switches">
-                <span class="theme-toggle" title="(Alt + T)">
-                    <a id="theme-toggle" accesskey="t">
-                        <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
-                            fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                            stroke-linejoin="round">
-                            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
-                        </svg>
-                        <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
-                            fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                            stroke-linejoin="round">
-                            <circle cx="12" cy="12" r="5"></circle>
-                            <line x1="12" y1="1" x2="12" y2="3"></line>
-                            <line x1="12" y1="21" x2="12" y2="23"></line>
-                            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
-                            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
-                            <line x1="1" y1="12" x2="3" y2="12"></line>
-                            <line x1="21" y1="12" x2="23" y2="12"></line>
-                            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
-                            <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
-                        </svg>
-                    </a>
-                </span>
-                
-            </span>
-        </div>
-        <ul class="menu" id="menu" onscroll="menu_on_scroll()"></ul>
-    </nav>
-</header>
 
-    <main class="main">
-
-<article class="post-single">
-  <header class="post-header">
-    <h1 class="post-title">
-      Firstblog
-    </h1>
-    <div class="post-description">
-      
+<div class="grid grid-cols-2 lg:grid-cols-8 gap-4 lg:pt-12">
+    <div
+        class="col-span-2 lg:col-start-2 lg:col-span-6 bg-secondary-bg rounded px-6 py-8">
+        <h1 class="font-bold text-3xl text-primary-text">Firstblog</h1>
+        <div class="flex flex-wrap flex-row items-center mt-2 text-tertiary-text">
+    <div class="mr-6 my-2">
+        <i class="fas fa-calendar mr-1"></i>
+        <span>2021-03-24</span>
     </div>
-    <div class="post-meta">March 24, 2021
-
+    <div class="mr-6 my-2">
+        <i class="fas fa-clock mr-1"></i>
+        <span>1 min read</span>
     </div>
-  </header> 
+    
+    
 
-  <div class="post-content">
-<p>z这是hugo的二级目录测试页，也测试以下http的图床。</p>
-<h2 id="1picgo默认的smms图床https">1.PicGo默认的SM.MS图床，https。<a hidden class="anchor" aria-hidden="true" href="#1picgo默认的smms图床https">#</a></h2>
+    
+</div>
+        
+        
+        
+
+        <div class="content">
+            <p>z这是hugo的二级目录测试页，也测试以下http的图床。</p>
+<h2 id="1picgo默认的smms图床https">1.PicGo默认的SM.MS图床，https。</h2>
 <p><img src="https://i.loli.net/2021/03/24/SHG416dTJQuKrMP.png" alt="image-20210324092636543"></p>
-<h2 id="2自己注册的七牛对象存储http">2.自己注册的七牛对象存储，http。<a hidden class="anchor" aria-hidden="true" href="#2自己注册的七牛对象存储http">#</a></h2>
+<h2 id="2自己注册的七牛对象存储http">2.自己注册的七牛对象存储，http。</h2>
 <p><img src="http://pic.small09.top/image-20210324093422216.png" alt="image-20210324093422216"></p>
-<h2 id="3github--jsdelivr加速https">3.GitHub + jsdelivr加速，https<a hidden class="anchor" aria-hidden="true" href="#3github--jsdelivr加速https">#</a></h2>
+<h2 id="3github--jsdelivr加速https">3.GitHub + jsdelivr加速，https</h2>
 <p><img src="https://cdn.jsdelivr.net/gh/tang1219/PicLibrary/img/image-20210324160044988.png" alt=""></p>
 
+        </div>
+        
+        
+        
+
+
+        
+        
+        
+        
+<div class="flex flex-col md:flex-row md:justify-between -mx-2 mt-4 px-2 pt-4 border-t">
+    <div>
+        
+    </div>
+    <div class="md:text-right mt-4 md:mt-0">
+        
+        <span class="block font-bold">Next</span>
+        <a href="/about_hugo_website/" class="block">关于使用HUGO建立博客站点</a>
+        
+    </div>
 </div>
-  <footer class="post-footer">
-  </footer>
-</article>
-    </main><footer class="footer">
-    <span>&copy; 2021 <a href="small09.top">Kushidou Hugo Blog Site</a></span>
-    <span>&middot;</span>
-    <span>Powered by <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a></span>
-    <span>&middot;</span>
-    <span>Theme <a href="https://git.io/hugopapermod" rel="noopener" target="_blank">PaperMod</a></span>
-</footer>
-<a href="#top" aria-label="go to top" title="Go to Top (Alt + G)">
-    <button class="top-link" id="top-link" type="button" accesskey="g">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentColor">
-            <path d="M12 6H0l6-6z" />
-        </svg>
-    </button>
-</a>
+
+        
 
 
 
-<script defer src="/small09.top/assets/js/highlight.min.7680afc38aa6b15ddf158a4f3780b7b1f7dde7e91d26f073e6229bb7a0793c92.js" integrity="sha256-doCvw4qmsV3fFYpPN4C3sffd5&#43;kdJvBz5iKbt6B5PJI="
-    onload="hljs.initHighlightingOnLoad();"></script>
+    </div>
+    
+
+    
+    
+</div>
 <script>
-    window.onload = function () {
-        if (localStorage.getItem("menu-scroll-position")) {
-            document.getElementById('menu').scrollLeft = localStorage.getItem("menu-scroll-position");
-        }
-    }
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-        anchor.addEventListener("click", function (e) {
-            e.preventDefault();
-            var id = this.getAttribute("href").substr(1);
-            if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
-                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
-                    behavior: "smooth"
-                });
-            } else {
-                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView();
-            }
-            if (id === "top") {
-                history.replaceState(null, null, " ");
-            } else {
-                history.replaceState(null, null, `#${id}`);
-            }
-        });
-    });
-    var mybutton = document.getElementById("top-link");
-    window.onscroll = function () {
-        if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
-            mybutton.style.visibility = "visible";
-            mybutton.style.opacity = "1";
-        } else {
-            mybutton.style.visibility = "hidden";
-            mybutton.style.opacity = "0";
-        }
-    };
-
-    function menu_on_scroll() {
-        localStorage.setItem("menu-scroll-position", document.getElementById('menu').scrollLeft);
-    }
-
-</script>
-<script>
-    document.getElementById("theme-toggle").addEventListener("click", () => {
-        if (document.body.className.includes("dark")) {
-            document.body.classList.remove('dark');
-            localStorage.setItem("pref-theme", 'light');
-        } else {
-            document.body.classList.add('dark');
-            localStorage.setItem("pref-theme", 'dark');
-        }
+    document.addEventListener('DOMContentLoaded', ()=>{
+        hljs.initHighlightingOnLoad();
     })
-
 </script>
 
+      </div>
+    </div>
+    
+  </main>
+  <footer class="pl-scrollbar">
+    <div class="w-full max-w-screen-xl mx-auto"><div class="text-center p-6 pin-b">
+    <p class="text-sm text-tertiary-text">&copy; 2021 <a href="https://www.wangchucheng.com/">C. Wang</a> and <a href="https://www.ruiqima.com/">R. Ma</a>
+ &middot;  Powered by the <a href="https://github.com/wangchucheng/hugo-eureka" class="hover:text-eureka">Eureka</a> theme for <a href="https://gohugo.io" class="hover:text-eureka">Hugo</a></p>
+</div></div>
+  </footer>
 </body>
 
 </html>
