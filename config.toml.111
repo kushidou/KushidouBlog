@@ -1,4 +1,0 @@
-baseURL = "small09.top"
-languageCode = "zh-cn"
-title = "Kushidou Hugo Blog Site"
-theme= "eureka"
