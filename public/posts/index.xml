@@ -1,18 +1,14 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Posts on Eureka Demo</title>
+    <title>Posts on 香风家的火柴盒</title>
     <link>/posts/</link>
-    <description>Recent content in Posts on Eureka Demo</description>
+    <description>Recent content in Posts on 香风家的火柴盒</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <copyright>&amp;copy; 2021 &lt;a href=&#34;https://www.wangchucheng.com/&#34;&gt;C. Wang&lt;/a&gt; and &lt;a href=&#34;https://www.ruiqima.com/&#34;&gt;R. Ma&lt;/a&gt;
+    <copyright>2021-2021  &amp;copy;  Kushidou. Powered by &lt;a href=&#34;https://www.wangchucheng.com/&#34;&gt;Eureka&lt;/a&gt; and &lt;a href=&#34;https://gohugo.io/&#34;&gt;Hugo&lt;/a&gt;
 </copyright>
-    <lastBuildDate>Wed, 31 Mar 2021 13:11:22 +0800</lastBuildDate>
-    
-	<atom:link href="/posts/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <lastBuildDate>Wed, 31 Mar 2021 13:11:22 +0800</lastBuildDate><atom:link href="/posts/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Diagram Support</title>
       <link>/posts/diagram-support/</link>
@@ -20,6 +16,32 @@
       
       <guid>/posts/diagram-support/</guid>
       <description>&lt;p&gt;Eureka supports the rendering of diagrams by using Mermaid.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Firstblog</title>
+      <link>/posts/firstblog/</link>
+      <pubDate>Wed, 24 Mar 2021 09:25:22 +0800</pubDate>
+      
+      <guid>/posts/firstblog/</guid>
+      <description>z这是hugo的二级目录测试页，也测试以下http的图床。
+1.PicGo默认的SM.MS图床，https。 2.自己注册的七牛对象存储，http。 3.GitHub + jsdelivr加速，https </description>
+    </item>
+    
+    <item>
+      <title>关于使用HUGO建立博客站点</title>
+      <link>/posts/about_hugo_website/</link>
+      <pubDate>Tue, 23 Mar 2021 09:15:09 +0800</pubDate>
+      
+      <guid>/posts/about_hugo_website/</guid>
+      <description>关于使用HUGO建立博客 在经历了worldpress的性能消耗和慢速加载后，我现在决定换用hugo+caddy的建站模式。昨天已经完成了caddy2的基础设置，现在开始测试使用hugo。
+hugo的安装与首次创建 安装使用chocolatey，一个windows下的仿apt、yum的软件包管理器。安装好chocolatey后，根据hugo官网的内容，choco install hugo -confirm安装基础的hugo（好处是不用再配置环境变量了）。
+为hugo创建目录，进入后hugo site new website，hugo会自动建立它所需要的层级结构。
+添加第一个页面，`hugo new xxx/xxx.md&#39;，创建的内容会出现在content下，创建多级目录也适合将来归类。
+编写文章 hugo的文章是基于markdown文档的，创建的文章会自动加入以下抬头
+--- title: &amp;quot;$文章标题&amp;quot; date: $时间 draft: true ---  这个可以修改为json或ymal格式，理应可以添加更多项目，这个之后再研究。
+主题/皮肤 主题放在themes下，我在知乎上找到了一个高赞且顺眼的，有哪些好看的Hugo主题？ - 飞雪无情的回答 - 知乎，文章中附了github连接，那么我们直接git过来就完事了。
+生成网站 文章+主题都有了，现在可以生成第一个网站了（虽然写这些字的时候，网站还没生成）。hugo就能直接产生网页，保存至public文件夹。hugo server可以启动一个服务器预览静态网页。</description>
     </item>
     
     <item>

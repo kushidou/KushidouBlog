@@ -1,6 +1,14 @@
 ---
-title: "{{ replace .Name "-" " " | title }}"
+title: {{ replace .Name "-" " " | title }}
+description:
+toc: true
+authors: []
+tags: []
+categories: []
+series: []
 date: {{ .Date }}
-draft: true
+lastmod: {{ .Date }}
+featuredVideo:
+featuredImage:
+draft: false
 ---
-

@@ -1,5 +1,5 @@
 baseURL: /
-title: Eureka Demo
+title: 香风家的火柴盒
 
 # Comment when installing using Hugo Modules
 theme: eureka
@@ -8,13 +8,15 @@ theme: eureka
 
 paginate: 3
 copyright: >
-  &copy; 2021 <a href="https://www.wangchucheng.com/">C. Wang</a> and <a
-  href="https://www.ruiqima.com/">R. Ma</a>
+  2021-2021  &copy;  Kushidou · Powered by <a
+  href="https://www.wangchucheng.com/">Eureka</a> and <a
+  href="https://gohugo.io/">Hugo</a>
 enableEmoji: true
 enableGitInfo: false
 summaryLength: 75
 
-defaultContentLanguage: en
+# defaultContentLanguage: zh_cn
+languageCode : "zh-cn"
 hasCJKLanguage: false # Set `true` for Chinese/Japanese/Korean.
 defaultContentLanguageInSubdir: false
 

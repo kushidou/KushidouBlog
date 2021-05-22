@@ -1,29 +1,39 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Eureka Demo</title>
+    <title>香风家的火柴盒</title>
     <link>/</link>
-    <description>Recent content on Eureka Demo</description>
+    <description>Recent content on 香风家的火柴盒</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <copyright>&amp;copy; 2021 &lt;a href=&#34;https://www.wangchucheng.com/&#34;&gt;C. Wang&lt;/a&gt; and &lt;a href=&#34;https://www.ruiqima.com/&#34;&gt;R. Ma&lt;/a&gt;
-</copyright><atom:link href="/index.xml" rel="self" type="application/rss+xml" />
+    <copyright>2021-2021  &amp;copy;  Kushidou. Powered by &lt;a href=&#34;https://www.wangchucheng.com/&#34;&gt;Eureka&lt;/a&gt; and &lt;a href=&#34;https://gohugo.io/&#34;&gt;Hugo&lt;/a&gt;
+</copyright>
+    <lastBuildDate>Wed, 31 Mar 2021 13:11:22 +0800</lastBuildDate><atom:link href="/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Diagram Support</title>
+      <link>/posts/diagram-support/</link>
+      <pubDate>Wed, 31 Mar 2021 13:11:22 +0800</pubDate>
+      
+      <guid>/posts/diagram-support/</guid>
+      <description>&lt;p&gt;Eureka supports the rendering of diagrams by using Mermaid.&lt;/p&gt;</description>
+    </item>
+    
     <item>
       <title>Firstblog</title>
-      <link>/firstblog/</link>
+      <link>/posts/firstblog/</link>
       <pubDate>Wed, 24 Mar 2021 09:25:22 +0800</pubDate>
       
-      <guid>/firstblog/</guid>
+      <guid>/posts/firstblog/</guid>
       <description>z这是hugo的二级目录测试页，也测试以下http的图床。
 1.PicGo默认的SM.MS图床，https。 2.自己注册的七牛对象存储，http。 3.GitHub + jsdelivr加速，https </description>
     </item>
     
     <item>
       <title>关于使用HUGO建立博客站点</title>
-      <link>/about_hugo_website/</link>
+      <link>/posts/about_hugo_website/</link>
       <pubDate>Tue, 23 Mar 2021 09:15:09 +0800</pubDate>
       
-      <guid>/about_hugo_website/</guid>
+      <guid>/posts/about_hugo_website/</guid>
       <description>关于使用HUGO建立博客 在经历了worldpress的性能消耗和慢速加载后，我现在决定换用hugo+caddy的建站模式。昨天已经完成了caddy2的基础设置，现在开始测试使用hugo。
 hugo的安装与首次创建 安装使用chocolatey，一个windows下的仿apt、yum的软件包管理器。安装好chocolatey后，根据hugo官网的内容，choco install hugo -confirm安装基础的hugo（好处是不用再配置环境变量了）。
 为hugo创建目录，进入后hugo site new website，hugo会自动建立它所需要的层级结构。
@@ -32,6 +42,87 @@ hugo的安装与首次创建 安装使用chocolatey，一个windows下的仿apt�
 --- title: &amp;quot;$文章标题&amp;quot; date: $时间 draft: true ---  这个可以修改为json或ymal格式，理应可以添加更多项目，这个之后再研究。
 主题/皮肤 主题放在themes下，我在知乎上找到了一个高赞且顺眼的，有哪些好看的Hugo主题？ - 飞雪无情的回答 - 知乎，文章中附了github连接，那么我们直接git过来就完事了。
 生成网站 文章+主题都有了，现在可以生成第一个网站了（虽然写这些字的时候，网站还没生成）。hugo就能直接产生网页，保存至public文件夹。hugo server可以启动一个服务器预览静态网页。</description>
+    </item>
+    
+    <item>
+      <title>Math Support</title>
+      <link>/posts/math-support/</link>
+      <pubDate>Fri, 20 Nov 2020 22:52:56 +0800</pubDate>
+      
+      <guid>/posts/math-support/</guid>
+      <description>&lt;p&gt;Eureka supports the rendering of mathematical formulas by using KaTeX.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Chapter 1</title>
+      <link>/docs/example-doc/chapter-1/</link>
+      <pubDate>Fri, 16 Oct 2020 00:00:00 +0000</pubDate>
+      
+      <guid>/docs/example-doc/chapter-1/</guid>
+      <description>&lt;p&gt;This is chapter 1 of example doc.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Chapter 1</title>
+      <link>/docs/example-doc/nested-chapter/chapter-1/</link>
+      <pubDate>Fri, 16 Oct 2020 00:00:00 +0000</pubDate>
+      
+      <guid>/docs/example-doc/nested-chapter/chapter-1/</guid>
+      <description>&lt;p&gt;This is chapter 1 of nested chapter.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Chapter 2</title>
+      <link>/docs/example-doc/chapter-2/</link>
+      <pubDate>Fri, 16 Oct 2020 00:00:00 +0000</pubDate>
+      
+      <guid>/docs/example-doc/chapter-2/</guid>
+      <description>&lt;p&gt;This is chapter 2 of example doc.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Chapter 2</title>
+      <link>/docs/example-doc/nested-chapter/chapter-2/</link>
+      <pubDate>Fri, 16 Oct 2020 00:00:00 +0000</pubDate>
+      
+      <guid>/docs/example-doc/nested-chapter/chapter-2/</guid>
+      <description>&lt;p&gt;This is chapter 2 of nested chapter.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Featured Image</title>
+      <link>/posts/featured-image/</link>
+      <pubDate>Tue, 26 May 2020 00:00:00 +0000</pubDate>
+      
+      <guid>/posts/featured-image/</guid>
+      <description>&lt;p&gt;Maecenas maximus, elit in ornare porttitor, nisi eros hendrerit nisl, sed fermentum nulla urna blandit tellus.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Markdown Syntax Guide</title>
+      <link>/posts/markdown-syntax/</link>
+      <pubDate>Mon, 11 Mar 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/posts/markdown-syntax/</guid>
+      <description>&lt;p&gt;This article offers a sample of basic Markdown syntax that can be used in Hugo content files, also it shows whether basic HTML elements are decorated with CSS in a Hugo theme.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Placeholder Text</title>
+      <link>/posts/placeholder-text/</link>
+      <pubDate>Sat, 09 Mar 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/posts/placeholder-text/</guid>
+      <description>&lt;p&gt;Lorem est tota propiore conpellat pectoribus de pectora summo.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Emoji Support</title>
+      <link>/posts/emoji-support/</link>
+      <pubDate>Tue, 05 Mar 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/posts/emoji-support/</guid>
+      <description>&lt;p&gt;Emoji can be enabled in a Hugo project in a number of ways.&lt;/p&gt;</description>
     </item>
     
   </channel>

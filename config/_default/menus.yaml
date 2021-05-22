@@ -1,10 +1,11 @@
 main:
-  - name: About
-    url: '#about'
+  - name: Minecraft
+    # url: '#about'
+    url: /minecraft/
     weight: 1
-  - name: Posts
+  - name: 博客
     url: /posts/
     weight: 2
-  - name: Docs
-    url: /docs/
+  - name: 工具
+    url: /tools/
     weight: 3
