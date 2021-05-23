@@ -1,17 +1,13 @@
 ---
 title: Kushidou
-role: Example Role
-avatar: images/icon.png
-bio: Aenean vel bibendum quam. Aliquam at mollis quam. Proin efficitur.
+avatar: images/kushidou.png
+bio: 什么都学，却什么都不精通的一个小白:)
 social:
   - icon: envelope
     iconPack: fas
     url: small09@qq.com
   - icon: twitter
     iconPack: fab
-    url: https://example.com/
-  - icon: github
-    iconPack: fab
-    url: https://example.com/
+    url: https://twitter.com/tangzhen1219
 ---
 
