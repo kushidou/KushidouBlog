@@ -4,6 +4,6 @@
 {{ if $video }}
 {{ $featured = $video }}
 {{ else if $image }}
-{{ $featured = print "<img src=\"" $image "\" class=\"w-full\" alt=\"Featured Image\">" | safeHTML }}
+{{ $featured = print "<img src=\"" $image "\" width=\"200px\" alt=\"Featured Image\">" | safeHTML }}
 {{ end }}
 {{ return $featured }}

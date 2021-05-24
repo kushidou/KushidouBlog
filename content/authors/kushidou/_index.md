@@ -1,9 +1,8 @@
 ---
 # Name
-title: _Default
-role:
-bio:
-avatar:
+title: Kushidou
+bio: 什么都学，却什么都不精通的一个小白:)
+avatar: images/kushidou.png
 
 organization:
   name:

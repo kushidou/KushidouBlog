@@ -11,6 +11,8 @@ social:
     iconPack: fab
     url: https://twitter.com/tangzhen1219
 
+style: card
+
 weight: 10
 widget:
   handler: about
