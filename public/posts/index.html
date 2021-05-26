@@ -14,13 +14,19 @@
   href="https://fonts.googleapis.com/css2?family=Lora:wght@400;600;700&family=Noto+Serif+SC:wght@400;600;700&display=swap"
   as="style" onload="this.onload=null;this.rel='stylesheet'">
 
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@10.1.0/build/styles/solarized-light.min.css"
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@10.1.0/build/styles/googlecode.min.css"
    media="print"
   onload="this.media='all';this.onload=null" crossorigin>
 <script defer src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@10.1.0/build/highlight.min.js"
    crossorigin></script>
 
   <script defer src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@10.1.0/build/languages/dart.min.js"
+     crossorigin></script>
+
+  <script defer src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@10.1.0/build/languages/cpp.min.js"
+     crossorigin></script>
+
+  <script defer src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@10.1.0/build/languages/shell.min.js"
      crossorigin></script>
 
 <script defer src="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.14.0/js/all.min.js"
@@ -70,15 +76,58 @@
     "itemListElement":[{
             "@type":"ListItem",
             "position":  1 ,
+            "name": "EurekaTest",
+            "description": "香风家的火柴盒，第三期~",
+            "url": "/posts/eurekatest/"
+        },{
+            "@type":"ListItem",
+            "position":  2 ,
+            "name": "deepin和UOS，快捷方式，开机自启动",
+            "description": "\u003cp\u003e修正触屏的脚本总是运行失败，于是找到在Deepin下能够在桌面启动后自动运行的方法。这样的触屏映射就稳定了。\u003c/p\u003e",
+            "url": "/posts/210429-deepinautorun/"
+        },{
+            "@type":"ListItem",
+            "position":  3 ,
+            "name": "Linux启用四个以上的串口",
+            "description": "\u003cp\u003e工控板安装Linux常常最多只能看到四个串口，通过修改引导文件可以显示所有的串口。\u003c/p\u003e",
+            "url": "/posts/210420-linuxmorethan4serialport/"
+        },{
+            "@type":"ListItem",
+            "position":  4 ,
+            "name": "Linux修改mac地址",
+            "description": "\u003cp\u003e当Linux的图形界面没有或失效的时候，该如何更改mac地址？\u003c/p\u003e",
+            "url": "/posts/210328-linuxchangemacip/"
+        },{
+            "@type":"ListItem",
+            "position":  5 ,
             "name": "Firstblog",
             "description": "\u003cp\u003e测试hugo的图片和图床。\u003c/p\u003e",
             "url": "/posts/firstblog/"
         },{
             "@type":"ListItem",
-            "position":  2 ,
+            "position":  6 ,
             "name": "关于使用HUGO建立博客站点",
             "description": "\u003cp\u003e使用hugo建立本站的规划和记录。\u003c/p\u003e",
             "url": "/posts/about_hugo_website/"
+        },{
+            "@type":"ListItem",
+            "position":  7 ,
+            "name": "Linux串口和udev理解",
+            "description": "\u003cp\u003e配置串口权限，顺便看一下linux的udev规则。\u003c/p\u003e",
+            "url": "/posts/210311-serialmodeandudevinlinux/"
+        },{
+            "@type":"ListItem",
+            "position":  8 ,
+            "name": "Linux多显示器触屏调试与暂行解决方案",
+            "description": "Linux with multi touch screen",
+            "url": "/posts/210311-multitouchscreeninlinux/"
+        },{
+            "@type":"ListItem",
+            "position":  9 ,
+            "name": "使用Docker安装TeamSpeak",
+            "description": "install teamspeak with docker",
+            "image": "https://cdn.jsdelivr.net/gh/kushidou/PicLibrary/img/image-20210526173013413.png",
+            "url": "/posts/210218-teamspeakwithdocker/"
         }
     ]
 }
@@ -113,7 +162,7 @@
 
 
 
-<meta property="og:updated_time" content="2021-03-24T09:25:22&#43;08:00" />
+<meta property="og:updated_time" content="2021-05-25T10:15:27&#43;08:00" />
 
 
 
@@ -204,6 +253,158 @@
   
   <div class="w-full ">
     <div class="mb-4">
+  <a href="/posts/eurekatest/" class="font-bold text-xl hover:text-eureka">EurekaTest</a>
+</div>
+<div class="content">
+  
+</div>
+
+<div class="flex flex-wrap flex-row items-center mt-2 text-tertiary-text">
+    <div class="mr-6 my-2">
+        <i class="fas fa-calendar-check"></i>
+        <span>2021-05-25</span>
+    </div>
+    <div class="mr-6 my-2">
+        <i class="fas fa-history"></i>
+        <span> update 2021-05-25</span>
+    </div>
+    
+    
+
+    
+</div>
+
+  </div>
+
+  
+</div>
+  </div>
+  
+  <div class="py-6">
+    <div class="flex flex-col-reverse lg:flex-row justify-between">
+  
+  <div class="w-full ">
+    <div class="mb-4">
+  <a href="/posts/210429-deepinautorun/" class="font-bold text-xl hover:text-eureka">deepin和UOS，快捷方式，开机自启动</a>
+</div>
+<div class="content">
+  修正触屏的脚本总是运行失败，于是找到在Deepin下能够在桌面启动后自动运行的方法。这样的触屏映射就稳定了。
+
+</div>
+
+<div class="flex flex-wrap flex-row items-center mt-2 text-tertiary-text">
+    <div class="mr-6 my-2">
+        <i class="fas fa-calendar-check"></i>
+        <span>2021-04-29</span>
+    </div>
+    <div class="mr-6 my-2">
+        <i class="fas fa-history"></i>
+        <span> update 2021-04-29</span>
+    </div>
+    
+    
+
+    
+    <div class="mr-6 my-2">
+        <i class="fas fa-th-list mr-1"></i>
+        
+        <a href="/series/linux%E5%AD%A6%E4%B9%A0%E4%B8%8E%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/" class="hover:text-eureka">Linux学习与解决方案</a>
+        
+    </div>
+    
+</div>
+
+  </div>
+
+  
+</div>
+  </div>
+  
+  <div class="py-6">
+    <div class="flex flex-col-reverse lg:flex-row justify-between">
+  
+  <div class="w-full ">
+    <div class="mb-4">
+  <a href="/posts/210420-linuxmorethan4serialport/" class="font-bold text-xl hover:text-eureka">Linux启用四个以上的串口</a>
+</div>
+<div class="content">
+  工控板安装Linux常常最多只能看到四个串口，通过修改引导文件可以显示所有的串口。
+
+</div>
+
+<div class="flex flex-wrap flex-row items-center mt-2 text-tertiary-text">
+    <div class="mr-6 my-2">
+        <i class="fas fa-calendar-check"></i>
+        <span>2021-04-20</span>
+    </div>
+    <div class="mr-6 my-2">
+        <i class="fas fa-history"></i>
+        <span> update 2021-04-20</span>
+    </div>
+    
+    
+
+    
+    <div class="mr-6 my-2">
+        <i class="fas fa-th-list mr-1"></i>
+        
+        <a href="/series/linux%E5%AD%A6%E4%B9%A0%E4%B8%8E%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/" class="hover:text-eureka">Linux学习与解决方案</a>
+        
+    </div>
+    
+</div>
+
+  </div>
+
+  
+</div>
+  </div>
+  
+  <div class="py-6">
+    <div class="flex flex-col-reverse lg:flex-row justify-between">
+  
+  <div class="w-full ">
+    <div class="mb-4">
+  <a href="/posts/210328-linuxchangemacip/" class="font-bold text-xl hover:text-eureka">Linux修改mac地址</a>
+</div>
+<div class="content">
+  当Linux的图形界面没有或失效的时候，该如何更改mac地址？
+
+</div>
+
+<div class="flex flex-wrap flex-row items-center mt-2 text-tertiary-text">
+    <div class="mr-6 my-2">
+        <i class="fas fa-calendar-check"></i>
+        <span>2021-03-28</span>
+    </div>
+    <div class="mr-6 my-2">
+        <i class="fas fa-history"></i>
+        <span> update 2021-03-28</span>
+    </div>
+    
+    
+
+    
+    <div class="mr-6 my-2">
+        <i class="fas fa-th-list mr-1"></i>
+        
+        <a href="/series/linux%E5%AD%A6%E4%B9%A0%E4%B8%8E%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/" class="hover:text-eureka">Linux学习与解决方案</a>
+        
+    </div>
+    
+</div>
+
+  </div>
+
+  
+</div>
+  </div>
+  
+  <div class="py-6">
+    <div class="flex flex-col-reverse lg:flex-row justify-between">
+  
+  <div class="w-full ">
+    <div class="mb-4">
   <a href="/posts/firstblog/" class="font-bold text-xl hover:text-eureka">Firstblog</a>
 </div>
 <div class="content">
@@ -213,12 +414,12 @@
 
 <div class="flex flex-wrap flex-row items-center mt-2 text-tertiary-text">
     <div class="mr-6 my-2">
-        <i class="fas fa-calendar mr-1"></i>
+        <i class="fas fa-calendar-check"></i>
         <span>2021-03-24</span>
     </div>
     <div class="mr-6 my-2">
-        <i class="fas fa-clock mr-1"></i>
-        <span>1 min read</span>
+        <i class="fas fa-history"></i>
+        <span> update 2021-03-24</span>
     </div>
     
     
@@ -246,12 +447,12 @@
 
 <div class="flex flex-wrap flex-row items-center mt-2 text-tertiary-text">
     <div class="mr-6 my-2">
-        <i class="fas fa-calendar mr-1"></i>
+        <i class="fas fa-calendar-check"></i>
         <span>2021-03-23</span>
     </div>
     <div class="mr-6 my-2">
-        <i class="fas fa-clock mr-1"></i>
-        <span>1 min read</span>
+        <i class="fas fa-history"></i>
+        <span> update 2021-05-24</span>
     </div>
     
     
@@ -261,6 +462,123 @@
 
   </div>
 
+  
+</div>
+  </div>
+  
+  <div class="py-6">
+    <div class="flex flex-col-reverse lg:flex-row justify-between">
+  
+  <div class="w-full ">
+    <div class="mb-4">
+  <a href="/posts/210311-serialmodeandudevinlinux/" class="font-bold text-xl hover:text-eureka">Linux串口和udev理解</a>
+</div>
+<div class="content">
+  配置串口权限，顺便看一下linux的udev规则。
+
+</div>
+
+<div class="flex flex-wrap flex-row items-center mt-2 text-tertiary-text">
+    <div class="mr-6 my-2">
+        <i class="fas fa-calendar-check"></i>
+        <span>2021-03-11</span>
+    </div>
+    <div class="mr-6 my-2">
+        <i class="fas fa-history"></i>
+        <span> update 2021-03-11</span>
+    </div>
+    
+    
+
+    
+    <div class="mr-6 my-2">
+        <i class="fas fa-th-list mr-1"></i>
+        
+        <a href="/series/linux%E5%AD%A6%E4%B9%A0%E4%B8%8E%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/" class="hover:text-eureka">Linux学习与解决方案</a>
+        
+    </div>
+    
+</div>
+
+  </div>
+
+  
+</div>
+  </div>
+  
+  <div class="py-6">
+    <div class="flex flex-col-reverse lg:flex-row justify-between">
+  
+  <div class="w-full ">
+    <div class="mb-4">
+  <a href="/posts/210311-multitouchscreeninlinux/" class="font-bold text-xl hover:text-eureka">Linux多显示器触屏调试与暂行解决方案</a>
+</div>
+<div class="content">
+  由于需要使用新创平台配合多个显示器，触摸屏经常出现不准的情况。经过多次的查阅资料、测试和整合，总结了一个解决触摸的方法。一些测试过程中的弯路也保留了，作为记录。
+
+</div>
+
+<div class="flex flex-wrap flex-row items-center mt-2 text-tertiary-text">
+    <div class="mr-6 my-2">
+        <i class="fas fa-calendar-check"></i>
+        <span>2021-03-11</span>
+    </div>
+    <div class="mr-6 my-2">
+        <i class="fas fa-history"></i>
+        <span> update 2021-04-28</span>
+    </div>
+    
+    
+
+    
+    <div class="mr-6 my-2">
+        <i class="fas fa-th-list mr-1"></i>
+        
+        <a href="/series/linux%E5%AD%A6%E4%B9%A0%E4%B8%8E%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/" class="hover:text-eureka">Linux学习与解决方案</a>
+        
+    </div>
+    
+</div>
+
+  </div>
+
+  
+</div>
+  </div>
+  
+  <div class="py-6">
+    <div class="flex flex-col-reverse lg:flex-row justify-between">
+  
+  <div class="w-full lg:w-2/3">
+    <div class="mb-4">
+  <a href="/posts/210218-teamspeakwithdocker/" class="font-bold text-xl hover:text-eureka">使用Docker安装TeamSpeak</a>
+</div>
+<div class="content">
+  TeamSpeak的官网总是有些问题，无法下载其客户端，所以考虑使用Docker来部署一个ts服务器环境。
+
+</div>
+
+<div class="flex flex-wrap flex-row items-center mt-2 text-tertiary-text">
+    <div class="mr-6 my-2">
+        <i class="fas fa-calendar-check"></i>
+        <span>2021-02-18</span>
+    </div>
+    <div class="mr-6 my-2">
+        <i class="fas fa-history"></i>
+        <span> update 2021-02-18</span>
+    </div>
+    
+    
+
+    
+</div>
+
+  </div>
+
+  
+  <div class="w-full lg:w-1/3 mb-4 lg:mb-0 lg:ml-8">
+    <img src="https://cdn.jsdelivr.net/gh/kushidou/PicLibrary/img/image-20210526173013413.png" width="200px" alt="Featured Image">
+  </div>
   
 </div>
   </div>

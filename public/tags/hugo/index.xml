@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>hugo on 香风家的火柴盒</title>
+    <link>/tags/hugo/</link>
+    <description>Recent content in hugo on 香风家的火柴盒</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <copyright>2021-2021  &amp;copy;  Kushidou · Powered by &lt;a href=&#34;https://www.wangchucheng.com/&#34;&gt;Eureka&lt;/a&gt; and &lt;a href=&#34;https://gohugo.io/&#34;&gt;Hugo&lt;/a&gt;
+</copyright>
+    <lastBuildDate>Tue, 25 May 2021 10:15:27 +0800</lastBuildDate><atom:link href="/tags/hugo/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>EurekaTest</title>
+      <link>/posts/eurekatest/</link>
+      <pubDate>Tue, 25 May 2021 10:15:27 +0800</pubDate>
+      
+      <guid>/posts/eurekatest/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

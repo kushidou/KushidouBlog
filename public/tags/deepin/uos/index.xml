@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Deepin/UOS on 香风家的火柴盒</title>
+    <link>/tags/deepin/uos/</link>
+    <description>Recent content in Deepin/UOS on 香风家的火柴盒</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <copyright>2021-2021  &amp;copy;  Kushidou · Powered by &lt;a href=&#34;https://www.wangchucheng.com/&#34;&gt;Eureka&lt;/a&gt; and &lt;a href=&#34;https://gohugo.io/&#34;&gt;Hugo&lt;/a&gt;
+</copyright><atom:link href="/tags/deepin/uos/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>deepin和UOS，快捷方式，开机自启动</title>
+      <link>/posts/210429-deepinautorun/</link>
+      <pubDate>Thu, 29 Apr 2021 00:00:00 +0000</pubDate>
+      
+      <guid>/posts/210429-deepinautorun/</guid>
+      <description>&lt;p&gt;修正触屏的脚本总是运行失败，于是找到在Deepin下能够在桌面启动后自动运行的方法。这样的触屏映射就稳定了。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Linux多显示器触屏调试与暂行解决方案</title>
+      <link>/posts/210311-multitouchscreeninlinux/</link>
+      <pubDate>Thu, 11 Mar 2021 00:00:00 +0000</pubDate>
+      
+      <guid>/posts/210311-multitouchscreeninlinux/</guid>
+      <description>&lt;p&gt;由于需要使用新创平台配合多个显示器，触摸屏经常出现不准的情况。经过多次的查阅资料、测试和整合，总结了一个解决触摸的方法。一些测试过程中的弯路也保留了，作为记录。&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

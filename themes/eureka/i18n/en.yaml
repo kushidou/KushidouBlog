@@ -3,9 +3,9 @@ readMore:
 readingTime:
   other: '{{ .ReadingTime }} min read'
 toc:
-  other: Table of Contents
+  other: 目录
 seriesOfPosts:
-  other: Series of Posts
+  other: 系列
 previous:
   other: Previous
 next:
@@ -13,9 +13,9 @@ next:
 seeAlso:
   other: See Also
 recent:
-  other: Recent
+  other: 最近文章
 onThisPage:
-  other: On This Page
+  other: 章节
 editThisPage:
   other: Edit this page
 light:

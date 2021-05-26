@@ -6,7 +6,7 @@ theme: eureka
 # Uncomment when installing using Hugo Modules
 # theme: github.com/wangchucheng/hugo-eureka
 
-paginate: 3
+paginate: 10
 copyright: >
   2021-2021  &copy;  Kushidou · Powered by <a
   href="https://www.wangchucheng.com/">Eureka</a> and <a
@@ -17,7 +17,7 @@ summaryLength: 75
 
 # defaultContentLanguage: zh_cn
 languageCode : "zh-cn"
-hasCJKLanguage: false # Set `true` for Chinese/Japanese/Korean.
+hasCJKLanguage: true # Set `true` for Chinese/Japanese/Korean.
 defaultContentLanguageInSubdir: false
 
 # Uncomment for google analytics

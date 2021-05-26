@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Linux on 香风家的火柴盒</title>
+    <link>/tags/linux/</link>
+    <description>Recent content in Linux on 香风家的火柴盒</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <copyright>2021-2021  &amp;copy;  Kushidou · Powered by &lt;a href=&#34;https://www.wangchucheng.com/&#34;&gt;Eureka&lt;/a&gt; and &lt;a href=&#34;https://gohugo.io/&#34;&gt;Hugo&lt;/a&gt;
+</copyright>
+    <lastBuildDate>Thu, 29 Apr 2021 00:00:00 +0000</lastBuildDate><atom:link href="/tags/linux/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>deepin和UOS，快捷方式，开机自启动</title>
+      <link>/posts/210429-deepinautorun/</link>
+      <pubDate>Thu, 29 Apr 2021 00:00:00 +0000</pubDate>
+      
+      <guid>/posts/210429-deepinautorun/</guid>
+      <description>&lt;p&gt;修正触屏的脚本总是运行失败，于是找到在Deepin下能够在桌面启动后自动运行的方法。这样的触屏映射就稳定了。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Linux启用四个以上的串口</title>
+      <link>/posts/210420-linuxmorethan4serialport/</link>
+      <pubDate>Tue, 20 Apr 2021 00:00:00 +0000</pubDate>
+      
+      <guid>/posts/210420-linuxmorethan4serialport/</guid>
+      <description>&lt;p&gt;工控板安装Linux常常最多只能看到四个串口，通过修改引导文件可以显示所有的串口。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Linux修改mac地址</title>
+      <link>/posts/210328-linuxchangemacip/</link>
+      <pubDate>Sun, 28 Mar 2021 00:00:00 +0000</pubDate>
+      
+      <guid>/posts/210328-linuxchangemacip/</guid>
+      <description>&lt;p&gt;当Linux的图形界面没有或失效的时候，该如何更改mac地址？&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Linux串口和udev理解</title>
+      <link>/posts/210311-serialmodeandudevinlinux/</link>
+      <pubDate>Thu, 11 Mar 2021 00:00:00 +0000</pubDate>
+      
+      <guid>/posts/210311-serialmodeandudevinlinux/</guid>
+      <description>&lt;p&gt;配置串口权限，顺便看一下linux的udev规则。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Linux多显示器触屏调试与暂行解决方案</title>
+      <link>/posts/210311-multitouchscreeninlinux/</link>
+      <pubDate>Thu, 11 Mar 2021 00:00:00 +0000</pubDate>
+      
+      <guid>/posts/210311-multitouchscreeninlinux/</guid>
+      <description>&lt;p&gt;由于需要使用新创平台配合多个显示器，触摸屏经常出现不准的情况。经过多次的查阅资料、测试和整合，总结了一个解决触摸的方法。一些测试过程中的弯路也保留了，作为记录。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>使用Docker安装TeamSpeak</title>
+      <link>/posts/210218-teamspeakwithdocker/</link>
+      <pubDate>Thu, 18 Feb 2021 00:00:00 +0000</pubDate>
+      
+      <guid>/posts/210218-teamspeakwithdocker/</guid>
+      <description>&lt;p&gt;TeamSpeak的官网总是有些问题，无法下载其客户端，所以考虑使用Docker来部署一个ts服务器环境。&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>
