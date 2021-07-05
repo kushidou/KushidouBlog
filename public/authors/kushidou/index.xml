@@ -8,7 +8,16 @@
     <language>en</language>
     <copyright>2021-2021  &amp;copy;  Kushidou · Powered by &lt;a href=&#34;https://www.wangchucheng.com/&#34;&gt;Eureka&lt;/a&gt; and &lt;a href=&#34;https://gohugo.io/&#34;&gt;Hugo&lt;/a&gt;
 </copyright>
-    <lastBuildDate>Tue, 25 May 2021 10:15:27 +0800</lastBuildDate><atom:link href="/authors/kushidou/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 30 Jun 2021 15:14:40 +0800</lastBuildDate><atom:link href="/authors/kushidou/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>免密码使用sudo</title>
+      <link>/posts/210630-sudowithoutpasswd/</link>
+      <pubDate>Wed, 30 Jun 2021 15:14:40 +0800</pubDate>
+      
+      <guid>/posts/210630-sudowithoutpasswd/</guid>
+      <description>&lt;p&gt;记录一种可以免密码使用sudo的方法。&lt;/p&gt;</description>
+    </item>
+    
     <item>
       <title>EurekaTest</title>
       <link>/posts/eurekatest/</link>
