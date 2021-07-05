@@ -8,7 +8,19 @@
     <loc>/authors/kushidou/</loc>
     <lastmod>2021-06-30T15:14:40+08:00</lastmod>
   </url><url>
+    <loc>/tags/linux/</loc>
+    <lastmod>2021-06-30T15:14:40+08:00</lastmod>
+  </url><url>
+    <loc>/series/linux%E5%AD%A6%E4%B9%A0%E4%B8%8E%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/</loc>
+    <lastmod>2021-06-30T15:14:40+08:00</lastmod>
+  </url><url>
     <loc>/posts/</loc>
+    <lastmod>2021-06-30T15:14:40+08:00</lastmod>
+  </url><url>
+    <loc>/series/</loc>
+    <lastmod>2021-06-30T15:14:40+08:00</lastmod>
+  </url><url>
+    <loc>/tags/</loc>
     <lastmod>2021-06-30T15:14:40+08:00</lastmod>
   </url><url>
     <loc>/posts/210630-sudowithoutpasswd/</loc>
@@ -23,22 +35,10 @@
     <loc>/tags/hugo/</loc>
     <lastmod>2021-05-25T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>/tags/</loc>
-    <lastmod>2021-05-25T00:00:00+00:00</lastmod>
-  </url><url>
     <loc>/tags/%E4%B8%BB%E9%A2%98/</loc>
     <lastmod>2021-05-25T00:00:00+00:00</lastmod>
   </url><url>
     <loc>/posts/210429-deepinautorun/</loc>
-    <lastmod>2021-04-29T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>/tags/linux/</loc>
-    <lastmod>2021-04-29T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>/series/linux%E5%AD%A6%E4%B9%A0%E4%B8%8E%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/</loc>
-    <lastmod>2021-04-29T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>/series/</loc>
     <lastmod>2021-04-29T00:00:00+00:00</lastmod>
   </url><url>
     <loc>/posts/210420-linuxmorethan4serialport/</loc>

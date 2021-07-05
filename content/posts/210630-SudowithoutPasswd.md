@@ -4,9 +4,9 @@ description:
 toc: false
 authors: kushidou
 tags: 
-  - 
+  - Linux
 categories: []
-series: []
+series: Linux学习与解决方案
 date: 2021-06-30T15:14:40+08:00
 lastmod: 2021-06-30T15:14:40+08:00
 featuredVideo:
@@ -28,7 +28,7 @@ draft: false
 chmod 666 /etc/sudoers
 ```
 
-![文件是只读权限](.mdpic/20210705092601.png)
+![文件是只读权限](https://cdn.jsdelivr.net/gh/kushidou/PicLibrary/img/20210705092601.png)
 
 3. 使用vim修改文件，`vi /etc/sudoers`，把当前用户和用户组加入，如图
 
@@ -46,7 +46,7 @@ yourname	ALL=(ALL:ALL) NOPASSWS:ALL
 chmod 440 /etc/sudoers
 ```
 
-![文件修改的内容](.mdpic/20210705092637.png)
+![文件修改的内容](https://cdn.jsdelivr.net/gh/kushidou/PicLibrary/img/20210705092637.png)
 
 5. 完成\~\~\~ 把终端关掉再次打开就应该能看到效果了。
 

@@ -155,7 +155,35 @@
 <meta property="article:section" content="posts" />
 
 
-<meta property="article:tag" content="" />
+<meta property="article:tag" content="Linux" />
+
+
+
+
+
+
+
+
+
+
+
+<meta property="og:see_also" content="/posts/210429-deepinautorun/" />
+
+
+
+<meta property="og:see_also" content="/posts/210420-linuxmorethan4serialport/" />
+
+
+
+<meta property="og:see_also" content="/posts/210328-linuxchangemacip/" />
+
+
+
+<meta property="og:see_also" content="/posts/210311-serialmodeandudevinlinux/" />
+
+
+
+<meta property="og:see_also" content="/posts/210311-multitouchscreeninlinux/" />
 
 
 
@@ -235,7 +263,7 @@
 
 <div class="grid grid-cols-2 lg:grid-cols-8 gap-4 lg:pt-12">
     <div
-        class="col-span-2 lg:col-start-2 lg:col-span-6 bg-secondary-bg rounded px-6 py-8">
+        class="col-span-2  lg:col-span-6 bg-secondary-bg rounded px-6 py-8">
         <h1 class="font-bold text-3xl text-primary-text">免密码使用sudo</h1>
         <div class="flex flex-wrap flex-row items-center mt-2 text-tertiary-text">
     <div class="mr-6 my-2">
@@ -249,6 +277,13 @@
     
     
 
+    
+    <div class="mr-6 my-2">
+        <i class="fas fa-th-list mr-1"></i>
+        
+        <a href="/series/linux%E5%AD%A6%E4%B9%A0%E4%B8%8E%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/" class="hover:text-eureka">Linux学习与解决方案</a>
+        
+    </div>
     
 </div>
         
@@ -268,7 +303,7 @@
 </ol>
 <pre><code class="language-bash">chmod 666 /etc/sudoers
 </code></pre>
-<p><img src=".mdpic/20210705092601.png" alt="文件是只读权限"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/kushidou/PicLibrary/img/20210705092601.png" alt="文件是只读权限"></p>
 <ol start="3">
 <li>使用vim修改文件，<code>vi /etc/sudoers</code>，把当前用户和用户组加入，如图</li>
 </ol>
@@ -283,12 +318,18 @@ yourname	ALL=(ALL:ALL) NOPASSWS:ALL
 </ol>
 <pre><code class="language-bash">chmod 440 /etc/sudoers
 </code></pre>
-<p><img src=".mdpic/20210705092637.png" alt="文件修改的内容"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/kushidou/PicLibrary/img/20210705092637.png" alt="文件修改的内容"></p>
 <ol start="5">
 <li>完成~~~ 把终端关掉再次打开就应该能看到效果了。</li>
 </ol>
 <p>参考：https://blog.csdn.net/wxqee/article/details/72718869</p>
         </div>
+        
+        <div class="my-4">
+    
+    <a href="/tags/linux/" class="inline-block bg-tertiary-bg text-sm rounded px-3 py-1 my-1 mr-2 hover:text-eureka">#Linux</a>
+    
+</div>
         
         
         
@@ -342,8 +383,67 @@ yourname	ALL=(ALL:ALL) NOPASSWS:ALL
 
     </div>
     
+    <div class="col-span-2">
+        
+        
+<div class="bg-secondary-bg rounded p-6">
+    <h3 class="text-lg font-semibold mb-4">系列</h3>
+    <div class="content">
+        
+        
+        <a href="/posts/210630-sudowithoutpasswd/">免密码使用sudo</a>
+        <br />
+        
+        <a href="/posts/210429-deepinautorun/">deepin和UOS，快捷方式，开机自启动</a>
+        <br />
+        
+        <a href="/posts/210420-linuxmorethan4serialport/">Linux启用四个以上的串口</a>
+        <br />
+        
+        <a href="/posts/210328-linuxchangemacip/">Linux修改mac地址</a>
+        <br />
+        
+        <a href="/posts/210311-serialmodeandudevinlinux/">Linux串口和udev理解</a>
+        <br />
+        
+        <a href="/posts/210311-multitouchscreeninlinux/">Linux多显示器触屏调试与暂行解决方案</a>
+        <br />
+        
+        
+    </div>
+</div>
+        
+        
+    </div>
+    
 
     
+    
+    <div
+        class="col-span-2  lg:col-span-6 bg-secondary-bg rounded p-6">
+        <h2 class="text-lg font-semibold mb-4">See Also</h2>
+        <div class="content">
+            
+            <a href="/posts/210429-deepinautorun/">deepin和UOS，快捷方式，开机自启动</a>
+            <br />
+            
+            <a href="/posts/210420-linuxmorethan4serialport/">Linux启用四个以上的串口</a>
+            <br />
+            
+            <a href="/posts/210328-linuxchangemacip/">Linux修改mac地址</a>
+            <br />
+            
+            <a href="/posts/210311-serialmodeandudevinlinux/">Linux串口和udev理解</a>
+            <br />
+            
+            <a href="/posts/210311-multitouchscreeninlinux/">Linux多显示器触屏调试与暂行解决方案</a>
+            <br />
+            
+            <a href="/posts/210218-teamspeakwithdocker/">使用Docker安装TeamSpeak</a>
+            <br />
+            
+        </div>
+    </div>
     
 </div>
 <script>

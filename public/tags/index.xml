@@ -8,7 +8,16 @@
     <language>en</language>
     <copyright>2021-2021  &amp;copy;  Kushidou · Powered by &lt;a href=&#34;https://www.wangchucheng.com/&#34;&gt;Eureka&lt;/a&gt; and &lt;a href=&#34;https://gohugo.io/&#34;&gt;Hugo&lt;/a&gt;
 </copyright>
-    <lastBuildDate>Tue, 25 May 2021 10:15:27 +0800</lastBuildDate><atom:link href="/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 30 Jun 2021 15:14:40 +0800</lastBuildDate><atom:link href="/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Linux</title>
+      <link>/tags/linux/</link>
+      <pubDate>Wed, 30 Jun 2021 15:14:40 +0800</pubDate>
+      
+      <guid>/tags/linux/</guid>
+      <description></description>
+    </item>
+    
     <item>
       <title>hugo</title>
       <link>/tags/hugo/</link>
@@ -24,15 +33,6 @@
       <pubDate>Tue, 25 May 2021 10:15:27 +0800</pubDate>
       
       <guid>/tags/%E4%B8%BB%E9%A2%98/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Linux</title>
-      <link>/tags/linux/</link>
-      <pubDate>Thu, 29 Apr 2021 00:00:00 +0000</pubDate>
-      
-      <guid>/tags/linux/</guid>
       <description></description>
     </item>
     
