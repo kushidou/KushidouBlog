@@ -308,9 +308,9 @@
 <li>使用vim修改文件，<code>vi /etc/sudoers</code>，把当前用户和用户组加入，如图</li>
 </ol>
 <pre><code class="language-bash"># 表示为该用户免密码
-yourname	ALL=(ALL:ALL) NOPASSWS:ALL
+yourname	ALL=(ALL:ALL) NOPASSWD:ALL
 # 表示为该用户组免密码
-%yourname	ALL=(ALL:ALL) NOPASSWS:ALL
+%yourname	ALL=(ALL:ALL) NOPASSWD:ALL
 # 不用严格按照次形式，与你的这个文件中root的格式对应即可。
 </code></pre>
 <ol start="4">

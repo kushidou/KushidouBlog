@@ -34,9 +34,9 @@ chmod 666 /etc/sudoers
 
 ```bash
 # 表示为该用户免密码
-yourname	ALL=(ALL:ALL) NOPASSWS:ALL
+yourname	ALL=(ALL:ALL) NOPASSWD:ALL
 # 表示为该用户组免密码
-%yourname	ALL=(ALL:ALL) NOPASSWS:ALL
+%yourname	ALL=(ALL:ALL) NOPASSWD:ALL
 # 不用严格按照次形式，与你的这个文件中root的格式对应即可。
 ```
 
