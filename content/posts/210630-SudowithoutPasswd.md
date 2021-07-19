@@ -8,7 +8,7 @@ tags:
 categories: []
 series: Linux学习与解决方案
 date: 2021-06-30T15:14:40+08:00
-lastmod: 2021-06-30T15:14:40+08:00
+lastmod: 2021-07-13T08:43:40+08:00
 featuredVideo:
 featuredImage:
 draft: false
@@ -49,5 +49,11 @@ chmod 440 /etc/sudoers
 ![文件修改的内容](https://cdn.jsdelivr.net/gh/kushidou/PicLibrary/img/20210705092637.png)
 
 5. 完成\~\~\~ 把终端关掉再次打开就应该能看到效果了。
+
+>  **PS. 不可使用sudo chmod**
+>
+> 一定要直接sudo -i进入root用户，如果使用sudo chmod以普通用户的身份修改sudoers文件的话，改完会发现无法使用sudo指令把权限改回去了，提示“任何人可读写，无法找到有效的sudoers”。其实还有一种更加安全的操作，但是那个编辑器用起来没有vim顺手，
+>
+> 
 
 参考：https://blog.csdn.net/wxqee/article/details/72718869

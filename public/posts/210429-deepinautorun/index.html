@@ -72,7 +72,7 @@
 <link rel="apple-touch-icon" sizes="180x180" href="/images/icon_hu2edf57696400f275bcb1d2f9022ef01c_28092_180x180_fill_box_center_2.png">
 
 <meta name="description"
-  content="修正触屏的脚本总是运行失败，于是找到在Deepin下能够在桌面启动后自动运行的方法。这样的触屏映射就稳定了。">
+  content="修正触屏的脚本总是运行失败，于是找到在Deepin下能够在桌面启动后自动运行的方法。这样的触屏映射就稳定了。经测试在Ubuntu 1604中也适用。">
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -100,8 +100,8 @@
         "@id": "/posts/210429-deepinautorun/"
     },
     "headline": "deepin和UOS，快捷方式，开机自启动 | 香风家的火柴盒","datePublished": "2021-04-29T00:00:00+00:00",
-    "dateModified": "2021-04-29T00:00:00+00:00",
-    "wordCount":  625 ,
+    "dateModified": "2021-07-19T00:00:00+00:00",
+    "wordCount":  772 ,
     "author": {
         "@type": "Person",
         "name": "kushidou"
@@ -114,7 +114,7 @@
             "url": "/images/icon.png"
         }
         },
-    "description": "\u003cp\u003e修正触屏的脚本总是运行失败，于是找到在Deepin下能够在桌面启动后自动运行的方法。这样的触屏映射就稳定了。\u003c\/p\u003e"
+    "description": "\u003cp\u003e修正触屏的脚本总是运行失败，于是找到在Deepin下能够在桌面启动后自动运行的方法。这样的触屏映射就稳定了。经测试在Ubuntu 1604中也适用。\u003c\/p\u003e"
 }
 </script><meta property="og:title" content="deepin和UOS，快捷方式，开机自启动 | 香风家的火柴盒" />
 <meta property="og:type" content="article" />
@@ -128,7 +128,7 @@
 
 
 
-<meta property="og:description" content="修正触屏的脚本总是运行失败，于是找到在Deepin下能够在桌面启动后自动运行的方法。这样的触屏映射就稳定了。" />
+<meta property="og:description" content="修正触屏的脚本总是运行失败，于是找到在Deepin下能够在桌面启动后自动运行的方法。这样的触屏映射就稳定了。经测试在Ubuntu 1604中也适用。" />
 
 
 
@@ -148,7 +148,7 @@
 <meta property="article:published_time" content="2021-04-29T00:00:00&#43;00:00" />
 
 
-<meta property="article:modified_time" content="2021-04-29T00:00:00&#43;00:00" />
+<meta property="article:modified_time" content="2021-07-19T00:00:00&#43;00:00" />
 
 
 
@@ -164,6 +164,10 @@
 
 
 
+
+
+
+<meta property="og:see_also" content="/posts/210719-gpuinfoinlinux/" />
 
 
 
@@ -274,7 +278,7 @@
     </div>
     <div class="mr-6 my-2">
         <i class="fas fa-history"></i>
-        <span> update 2021-04-29</span>
+        <span> update 2021-07-19</span>
     </div>
     
     
@@ -293,7 +297,7 @@
         
 
         <div class="content">
-            <p>修正触屏的脚本总是运行失败，于是找到在Deepin下能够在桌面启动后自动运行的方法。这样的触屏映射就稳定了。</p>
+            <p>修正触屏的脚本总是运行失败，于是找到在Deepin下能够在桌面启动后自动运行的方法。这样的触屏映射就稳定了。经测试在Ubuntu 1604中也适用。</p>
 <h2 id="桌面快捷方式">桌面快捷方式</h2>
 <p>deepin的桌面快捷方式是以<code>*.desktop</code>文件的形式实现的，所以我们需要添加自定义快捷方式的话，只要在桌面添加要给desktop格式的文本文件，编辑内容</p>
 <pre><code>[Desktop Entry]
@@ -308,6 +312,8 @@ Type=Application
 <h2 id="开机自动执行">开机自动执行</h2>
 <p><code>cp ~/Desktop/刚刚的.desktop ~/.config/autostart</code></p>
 <p>需要这个的原因主要是我执行触摸屏映射的指令经常会在桌面启动前（<code>lightdm.service</code>）执行，导致error从而无法进入桌面，将脚本放进<code>/etc/profile.d</code>之后第二天就失效了，所以需要一个在登录桌面后就实现自动执行的功能，多种方法对比下来还是放进桌面环境的开机自启文件夹比较靠谱。这样一般会在进入桌面后5-10秒自动执行，稳定性大幅提高。</p>
+<h2 id="ubuntu1604中测试">Ubuntu1604中测试</h2>
+<p>经过实际查阅资料和测试，Ubuntu1604也完全适用上面的步骤，只不过可能需要在<code>~/.config/</code>下手动创建一个<code>autostart</code>目录。由于1604已经停止支持，许多人转入了更新的ubuntu系统，猜测近几年的也可以尝试一下。</p>
         </div>
         
         <div class="my-4">
@@ -380,6 +386,9 @@ Type=Application
     <h3 class="text-lg font-semibold mb-4">系列</h3>
     <div class="content">
         
+        
+        <a href="/posts/210719-gpuinfoinlinux/">Linux中获得AMD显卡的状态信息</a>
+        <br />
         
         <a href="/posts/210630-sudowithoutpasswd/">免密码使用sudo</a>
         <br />

@@ -8,7 +8,16 @@
     <language>en</language>
     <copyright>2021-2021  &amp;copy;  Kushidou · Powered by &lt;a href=&#34;https://www.wangchucheng.com/&#34;&gt;Eureka&lt;/a&gt; and &lt;a href=&#34;https://gohugo.io/&#34;&gt;Hugo&lt;/a&gt;
 </copyright>
-    <lastBuildDate>Wed, 30 Jun 2021 15:14:40 +0800</lastBuildDate><atom:link href="/posts/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 19 Jul 2021 11:00:07 +0800</lastBuildDate><atom:link href="/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Linux中获得AMD显卡的状态信息</title>
+      <link>/posts/210719-gpuinfoinlinux/</link>
+      <pubDate>Mon, 19 Jul 2021 11:00:07 +0800</pubDate>
+      
+      <guid>/posts/210719-gpuinfoinlinux/</guid>
+      <description>&lt;p&gt;在Linux下获得AMD GPU的状态和温度信息。&lt;/p&gt;</description>
+    </item>
+    
     <item>
       <title>免密码使用sudo</title>
       <link>/posts/210630-sudowithoutpasswd/</link>
@@ -33,7 +42,7 @@
       <pubDate>Thu, 29 Apr 2021 00:00:00 +0000</pubDate>
       
       <guid>/posts/210429-deepinautorun/</guid>
-      <description>&lt;p&gt;修正触屏的脚本总是运行失败，于是找到在Deepin下能够在桌面启动后自动运行的方法。这样的触屏映射就稳定了。&lt;/p&gt;</description>
+      <description>&lt;p&gt;修正触屏的脚本总是运行失败，于是找到在Deepin下能够在桌面启动后自动运行的方法。这样的触屏映射就稳定了。经测试在Ubuntu 1604中也适用。&lt;/p&gt;</description>
     </item>
     
     <item>
