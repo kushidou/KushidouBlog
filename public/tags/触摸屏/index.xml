@@ -8,7 +8,16 @@
     <language>en</language>
     <copyright>2021-2021  &amp;copy;  Kushidou · Powered by &lt;a href=&#34;https://www.wangchucheng.com/&#34;&gt;Eureka&lt;/a&gt; and &lt;a href=&#34;https://gohugo.io/&#34;&gt;Hugo&lt;/a&gt;
 </copyright>
-    <lastBuildDate>Thu, 11 Mar 2021 00:00:00 +0000</lastBuildDate><atom:link href="/tags/%E8%A7%A6%E6%91%B8%E5%B1%8F/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 24 Aug 2021 00:00:00 +0000</lastBuildDate><atom:link href="/tags/%E8%A7%A6%E6%91%B8%E5%B1%8F/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Linux处理多触屏的终极解决方案</title>
+      <link>/posts/210824-linuxtouchscreenfin/</link>
+      <pubDate>Tue, 24 Aug 2021 00:00:00 +0000</pubDate>
+      
+      <guid>/posts/210824-linuxtouchscreenfin/</guid>
+      <description>&lt;p&gt;一般Linux操作系统接入多个触摸屏的最终解，仅一种情况无法应对！&lt;/p&gt;</description>
+    </item>
+    
     <item>
       <title>Linux多显示器触屏调试与暂行解决方案</title>
       <link>/posts/210311-multitouchscreeninlinux/</link>

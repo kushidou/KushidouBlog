@@ -3,7 +3,7 @@
 <meta name="viewport" content="width=device-width">
 
 
-<title>Linux启用四个以上的串口 | 香风家的火柴盒</title>
+<title>Linux处理多触屏的终极解决方案 | 香风家的火柴盒</title>
 
 <meta name="generator" content="Hugo and Eureka 0.8.0" />
 <link rel="stylesheet" href="/css/eureka.min.css">
@@ -72,7 +72,7 @@
 <link rel="apple-touch-icon" sizes="180x180" href="/images/icon_hu2edf57696400f275bcb1d2f9022ef01c_28092_180x180_fill_box_center_2.png">
 
 <meta name="description"
-  content="工控板安装Linux常常最多只能看到四个串口，通过修改引导文件可以显示所有的串口。">
+  content="Linux with mutli touch screen">
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -84,8 +84,8 @@
       "item":"/posts/"},{
       "@type": "ListItem",
       "position": 2 ,
-      "name":"Linux启用四个以上的串口",
-      "item":"/posts/210420-linuxmorethan4serialport/"}]
+      "name":"Linux处理多触屏的终极解决方案",
+      "item":"/posts/210824-linuxtouchscreenfin/"}]
 }
 </script>
 
@@ -97,11 +97,11 @@
     "@type": "Article",
     "mainEntityOfPage": {
         "@type": "WebPage",
-        "@id": "/posts/210420-linuxmorethan4serialport/"
+        "@id": "/posts/210824-linuxtouchscreenfin/"
     },
-    "headline": "Linux启用四个以上的串口 | 香风家的火柴盒","datePublished": "2021-04-20T00:00:00+00:00",
-    "dateModified": "2021-04-20T00:00:00+00:00",
-    "wordCount":  858 ,
+    "headline": "Linux处理多触屏的终极解决方案 | 香风家的火柴盒","datePublished": "2021-08-24T00:00:00+00:00",
+    "dateModified": "2021-08-24T00:00:00+00:00",
+    "wordCount":  1930 ,
     "author": {
         "@type": "Person",
         "name": "kushidou"
@@ -114,22 +114,20 @@
             "url": "/images/icon.png"
         }
         },
-    "description": "\u003cp\u003e工控板安装Linux常常最多只能看到四个串口，通过修改引导文件可以显示所有的串口。\u003c\/p\u003e"
+    "description": "Linux with mutli touch screen"
 }
-</script><meta property="og:title" content="Linux启用四个以上的串口 | 香风家的火柴盒" />
+</script><meta property="og:title" content="Linux处理多触屏的终极解决方案 | 香风家的火柴盒" />
 <meta property="og:type" content="article" />
 
 
 <meta property="og:image" content="/images/icon.png">
 
 
-<meta property="og:url" content="/posts/210420-linuxmorethan4serialport/" />
+<meta property="og:url" content="/posts/210824-linuxtouchscreenfin/" />
 
 
 
-
-<meta property="og:description" content="工控板安装Linux常常最多只能看到四个串口，通过修改引导文件可以显示所有的串口。" />
-
+<meta property="og:description" content="Linux with mutli touch screen" />
 
 
 
@@ -145,10 +143,10 @@
 
 
 
-<meta property="article:published_time" content="2021-04-20T00:00:00&#43;00:00" />
+<meta property="article:published_time" content="2021-08-24T00:00:00&#43;00:00" />
 
 
-<meta property="article:modified_time" content="2021-04-20T00:00:00&#43;00:00" />
+<meta property="article:modified_time" content="2021-08-24T00:00:00&#43;00:00" />
 
 
 
@@ -157,7 +155,9 @@
 
 <meta property="article:tag" content="Linux" />
 
-<meta property="article:tag" content="串口" />
+<meta property="article:tag" content="Deepin/UOS" />
+
+<meta property="article:tag" content="触摸屏" />
 
 
 
@@ -166,8 +166,6 @@
 
 
 
-
-<meta property="og:see_also" content="/posts/210824-linuxtouchscreenfin/" />
 
 
 
@@ -182,6 +180,8 @@
 <meta property="og:see_also" content="/posts/210429-deepinautorun/" />
 
 
+
+<meta property="og:see_also" content="/posts/210420-linuxmorethan4serialport/" />
 
 
 
@@ -274,15 +274,15 @@
 <div class="grid grid-cols-2 lg:grid-cols-8 gap-4 lg:pt-12">
     <div
         class="col-span-2  lg:col-span-6 bg-secondary-bg rounded px-6 py-8">
-        <h1 class="font-bold text-3xl text-primary-text">Linux启用四个以上的串口</h1>
+        <h1 class="font-bold text-3xl text-primary-text">Linux处理多触屏的终极解决方案</h1>
         <div class="flex flex-wrap flex-row items-center mt-2 text-tertiary-text">
     <div class="mr-6 my-2">
         <i class="fas fa-calendar-check"></i>
-        <span>2021-04-20</span>
+        <span>2021-08-24</span>
     </div>
     <div class="mr-6 my-2">
         <i class="fas fa-history"></i>
-        <span> update 2021-04-20</span>
+        <span> update 2021-08-24</span>
     </div>
     
     
@@ -301,40 +301,84 @@
         
 
         <div class="content">
-            <p>工控板安装Linux常常最多只能看到四个串口，通过修改引导文件可以显示所有的串口。</p>
-<h2 id="先说结论">先说结论</h2>
-<pre><code class="language-shell"># 1.修改开机grub文件
-sudo vi /etc/default/grub
-# 2.在&quot;GRUB_CMDLINE_LINUX_DEFAULT=&quot;一行的结尾空格，添加内容
- 8250.nr_uarts=8
-# 3.更新开机引导并重启
-sudo update-grub
+            <p>一般Linux操作系统接入多个触摸屏的最终解，仅一种情况无法应对！</p>
+<p>从<a href="https://www.small09.top/posts/210311-multitouchscreeninlinux/">21年3月中旬开始</a>，我就在不断探索Linux操作系统下接入多个触摸屏且为拓展显示的解决方案，随着我们遇到的问题不断变得复杂，这篇博客也越来越乱越来越难读。直到今天我把里面最复杂的方案尝试成功后，我感觉我已经获得了Linux触摸屏的终极奥义。</p>
+<p><em>重要：</em> 本文全文基于软件<code>xinput</code></p>
+<p><em>更重要：</em> 如简介所说，仍有一种方法无法对应，具体为<code>【两个触摸屏的 VID:PID 与 设备描述 完全一致时，即两个完全相同的显示器】</code>，本文内容对这种情况仍然是无解的，个人认为只能通过硬件端口(/sys/class)来进行识别与调整，本文不涉及该方法(还没吃透)。</p>
+<h2 id="0核心xinput">0、核心：xinput</h2>
+<p>xinput是Linux下的一款配置测试X输入设备的神器，具有以下功能（我们将会用到的）</p>
+<blockquote>
+<p>xinput (list)  :  直接键入xinput或者跟上list参数，就会列出本机所有输入设备，包括名称、ID、层级</p>
+<p>xinput list &ndash;id-only  :  仅仅列出设备ID（序号，每次开机都可能改变）</p>
+<p>xinput map-to-output  :  将输入设备映射到输出，比如将触屏映射到某个屏幕</p>
+<p>xinput list-props  :  列出某个设备的详细信息，后接参数为设备ID。</p>
+</blockquote>
+<h2 id="1简约两个完全不同的触摸显示器">1、简约：两个完全不同的触摸显示器</h2>
+<p><code>xinput map-to-output &quot;$DEVICE NAME A&quot; PORT-A</code></p>
+<p>这里对应了两种情况，一是VID:PDI和设备描述符都不同，即毫无关系的两款；二是具有相同的VID:PID，但是设备描述符，这一般是同款芯片配了不同的固件。</p>
+<p>首先通过xinput查看所有的输入设备：</p>
+<pre><code class="language-shell">~$ xinput
+┌ Virtual core pointer		id=2 [master pointer  (3)]
+|	ILITEK TLITEK-TP		id=9 [slave  pointer  (2)]
+|	ILITEK Multi-Touch		id=7 [slave  pointer  (2)]
+(下略)
 </code></pre>
-<h2 id="再说细节">再说细节</h2>
-<p>给带有多串口的工控机安装国产Linux操作系统UOS，发现<code>/dev/ttyS</code>只有四个，而且一个都不通，其实这是Linux 的通病，如果发行商没有提前配置，我们只能看到四个不能用的串口。但是工控机都有8-16个串口，不得不想办法让他们能够正常使用，而许多串口芯片只需要基本的驱动就能运行，也不提供专有驱动的源代码编译<font size=2 color=#ff0000>（一般安装专用驱动后，串口名称会改变，比如xr17v358芯片的驱动安装后名称变成ttyXR0）</font>，我们只有从linux本身下手了。</p>
-<p>经过多番查找资料，虽然不知道为什么，但是我们应该修改<code>/etc/default/grub</code>文件，其中有一行是这样的：</p>
-<pre><code class="language-shell">GRUB_CMDLINE_LINUX_DEFAULT=&quot;这里面 的内容 先不管 它&quot;
+<p>可以看到<code>ILITEK ILITEK-TP</code>和<code>ILITEK Multi-Touch</code>显示为两个不同名称的设备，那么不论其VID:PID具体如何，我们都可以按如下方式进行映射：</p>
+<p><code>xinput map-to-output &quot;ILITEK ILITEK-TP&quot; HDMI-0</code></p>
+<p><code>xinput map-to-output &quot;ILITEK Multi-Touch&quot; HDMI-1</code></p>
+<p>这种方式的要点是1.必须带英文<code>&quot;&quot;</code>，2.引号内名称须完整。<code>map-to-output</code>所携带的第一个参数为输入设备，不一定要设备id，使用设备名也是能够实现。</p>
+<h2 id="2复杂但通用vidpid不同的显示器">2、复杂但通用：VID:PID不同的显示器</h2>
+<p>不论usb设备还是PCI设备，他们都有一个唯一识别符VID:PID，这相当于设备的身份证，同功能的设备，不同的厂商、不同的型号，就会有不同的ID。我们可以通过指定设备的VID:PID，筛选出输入设备的编号id，进行映射。</p>
+<p>通过<code>xinput list-props [id]</code>可以得到某个设备的详细信息，其中就有十进制的VID,PID，如果这两个参数可以和指定的对应上，那么我们可以提取id映射到屏幕。<code>list-props</code>的结果示例如下：</p>
+<pre><code class="language-shell">(后续再补)
 </code></pre>
-<p>我看了UOS（含Deepin）、Ubuntu和服务器的Centos7都有，在这一行的最后添加<code>8250.nr_uart=32</code>，其中数字&lt;=32都行，效果如下：</p>
-<pre><code class="language-shell">GRUB_CMDLINE_LINUX_DEFAULT=&quot;这里面 的内容 先不管 它 8250.nr_uarts=32&quot;
+<p>其中<code>Device Product ID</code>一项有两个值，但不像是16进制的VID:PID，经过换算，他们其实是十进制的。利用grep+awk指令筛选出这两个值，和预先设定的比较，确定设备的id。写出来就是这样子：</p>
+<pre><code class="language-bash">#!/bin/bash
+# 先通过lsusb/xinput/xrandr 等命令确定如下硬件信息:
+# 1、屏幕VID:PID(16进制)和显示接口，多屏重复本段
+VIDA=222a
+PIDA=0001
+PORTA=VGA-0
+
+# 2、先修算出10进制。如果xinput list-props [n] 的“Device Product ID”为16进制的，注释这2行
+# 或者这里直接填写Device Product ID里面的结果，先VID后PID。
+# 字母O，不是数字0，多屏重复本段
+VIDA_O=$((16#$VIDA))
+PIDA_O=$((16#$PIDA))
+
+# =========自动处理步骤，请勿随意修改==========
+for I in $(xinput list --id-only)
+do
+# 根据设备ID取其序号
+    CUR_FIRST=$(xinput list-props $I|grep &quot;Device Product ID&quot;|awk -F : '{print $2}'|awk -F , '{print $1}'|awk '{print $1}')
+    CUR_SECOND=$(xinput list-props $I|grep &quot;Device Product ID&quot;|awk -F : '{print $2}'|awk -F , '{print $2}'|awk '{print $1}')
+# 3、屏映射，多屏重复本段
+    if [ &quot;$VIDA_O&quot; == &quot;$CUR_FIRST&quot; ] &amp;&amp; [ &quot;$PIDA_O&quot; == &quot;$CUR_SECOND&quot; ];
+    then
+		  xinput map-to-output $I $PORTA
+    fi
+done
+exit 0
 </code></pre>
-<p>然后更新一下系统的引导</p>
-<pre><code class="language-shell">sudo update-gurb
-reboot
+<p>这个脚本使用<code>xinput list --id-only</code>仅列出了设备的id序号，然后轮询所有的设备找出符合要求的编号，最后仍然使用<code>map-to-output</code>进行映射。这个脚本易于扩展，如果多个触摸屏只需要将3个有序号的注释后面的一块内容重复、修改名字就可以了。</p>
+<h2 id="32的进阶版">3、[2]的进阶版</h2>
+<p>结果查资料过程中又有了新发现，这篇文章大概又会又乱又长吧。。。</p>
+<p><strong>该方法未经验证，实测有效后会第一时间更新</strong></p>
+<p>前面都是通过shell/bash脚本的方式实现的重映射，如果要自动映射还需要添加自启动。如果设备进行了插拔，这个设备的映射就失效了，需要重新跑一跑脚本。在<a href="https://wiki.archlinux.org/title/Calibrating_Touchscreen#Do_it_automatically_via_a_udev_rule">ArchLinuxWiki</a>上我看到了添加udev文件的方法，这样在设备加载、重加载的第一时间就可以进行重映射。总体上看，这个方法和[2]中的是一致的。</p>
+<p>首先还是通过xinput查看设备id，然后<code>xinput list-props [id]</code>查看设备的Device Product ID参数。最后把参数填入下面这一行：</p>
+<pre><code class="language-udev">ENV{ID_VENDOR_ID}==&quot;2149&quot;,ENV{ID_MODEL_ID}==&quot;2703&quot;,ENV{WL_OUTPUT}=&quot;DVI1&quot;,ENV{LIBINPUT_CALIBRATION_MATRIX}=&quot;1 0 0 0 1 0&quot;
 </code></pre>
-<p>重启完了你就能看到更多的串口啦！配合<a href="https://www.small09.top/?p=24">修改udev规则</a>，你就可以用普通用户的权限使用串口通信了。但是请注意其他隐患，比如这个芯片配合基本驱动只能完成基础的收发功能，流控的RTS、CTS等还是需要专用驱动实现的！</p>
-<h2 id="最后吐槽">最后吐槽</h2>
-<p>为了串口问题我找了一下午的资料，最后才在外网找到了一个能用的。国内的教程都是说要修改<code>/boot/gurb/gurb2</code>，宝友，这可不兴改啊，这个改坏了系统可就没了啊！这些文件普通用户连浏览权限都没就可见其重要性。</p>
-<h2 id="参考">参考：</h2>
-<p><a href="https://blog.wjacobsen.dk/2019/05/03/enable-more-than-4-serial-ports-linux-unix/">https://blog.wjacobsen.dk/2019/05/03/enable-more-than-4-serial-ports-linux-unix/</a></p>
-<p>核心步骤就参考了这个，在Linux方面大家还是多用google，多用英文去搜索吧！</p>
+<p>*看起来这里的ID依然是十进制的，且最后的映射矩阵需要计算，这些要点我将在后续实践中更新。</p>
+<p>有几个屏就生写几行，最后写入udev-rules文件存入指定的文件夹中。理论上讲，就可以在触摸屏插入的第一时间完成映射，不再有手动恢复的烦恼了。</p>
         </div>
         
         <div class="my-4">
     
     <a href="/tags/linux/" class="inline-block bg-tertiary-bg text-sm rounded px-3 py-1 my-1 mr-2 hover:text-eureka">#Linux</a>
     
-    <a href="/tags/%E4%B8%B2%E5%8F%A3/" class="inline-block bg-tertiary-bg text-sm rounded px-3 py-1 my-1 mr-2 hover:text-eureka">#串口</a>
+    <a href="/tags/deepin/uos/" class="inline-block bg-tertiary-bg text-sm rounded px-3 py-1 my-1 mr-2 hover:text-eureka">#Deepin/UOS</a>
+    
+    <a href="/tags/%E8%A7%A6%E6%91%B8%E5%B1%8F/" class="inline-block bg-tertiary-bg text-sm rounded px-3 py-1 my-1 mr-2 hover:text-eureka">#触摸屏</a>
     
 </div>
         
@@ -375,14 +419,11 @@ reboot
 <div class="flex flex-col md:flex-row md:justify-between -mx-2 mt-4 px-2 pt-4 border-t">
     <div>
         
-        <span class="block font-bold">Previous</span>
-        <a href="/posts/210429-deepinautorun/" class="block">deepin和UOS，快捷方式，开机自启动</a>
-        
     </div>
     <div class="md:text-right mt-4 md:mt-0">
         
         <span class="block font-bold">Next</span>
-        <a href="/posts/210328-linuxchangemacip/" class="block">Linux修改mac地址</a>
+        <a href="/posts/210719-gpuinfoinlinux/" class="block">Linux中获得AMD显卡的状态信息</a>
         
     </div>
 </div>
@@ -430,6 +471,25 @@ reboot
 </div>
         
         
+        <div class="sticky top-16 z-10 hidden lg:block px-6 py-4  bg-primary-bg ">
+    <span class="text-lg font-semibold">章节</span>
+</div>
+<div class="sticky-toc hidden lg:block px-6 pb-6 ">
+    <nav id="TableOfContents">
+  <ul>
+    <li><a href="#0核心xinput">0、核心：xinput</a></li>
+    <li><a href="#1简约两个完全不同的触摸显示器">1、简约：两个完全不同的触摸显示器</a></li>
+    <li><a href="#2复杂但通用vidpid不同的显示器">2、复杂但通用：VID:PID不同的显示器</a></li>
+    <li><a href="#32的进阶版">3、[2]的进阶版</a></li>
+  </ul>
+</nav>
+</div>
+<script>
+    window.addEventListener('DOMContentLoaded', () => {
+        enableStickyToc();
+    });
+</script>
+        
     </div>
     
 
@@ -440,16 +500,22 @@ reboot
         <h2 class="text-lg font-semibold mb-4">See Also</h2>
         <div class="content">
             
-            <a href="/posts/210311-serialmodeandudevinlinux/">Linux串口和udev理解</a>
-            <br />
-            
-            <a href="/posts/210328-linuxchangemacip/">Linux修改mac地址</a>
-            <br />
-            
             <a href="/posts/210311-multitouchscreeninlinux/">Linux多显示器触屏调试与暂行解决方案</a>
             <br />
             
-            <a href="/posts/210218-teamspeakwithdocker/">使用Docker安装TeamSpeak</a>
+            <a href="/posts/210429-deepinautorun/">deepin和UOS，快捷方式，开机自启动</a>
+            <br />
+            
+            <a href="/posts/210719-gpuinfoinlinux/">Linux中获得AMD显卡的状态信息</a>
+            <br />
+            
+            <a href="/posts/210630-sudowithoutpasswd/">免密码使用sudo</a>
+            <br />
+            
+            <a href="/posts/210420-linuxmorethan4serialport/">Linux启用四个以上的串口</a>
+            <br />
+            
+            <a href="/posts/210328-linuxchangemacip/">Linux修改mac地址</a>
             <br />
             
         </div>

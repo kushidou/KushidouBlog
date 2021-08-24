@@ -6,6 +6,9 @@ main:
   - name: 博客
     url: /posts/
     weight: 2
+  # - name: 暴论
+  #   url: /daily/
+  #   weight: 3
   - name: 工具
     url: /tools/
-    weight: 3
+    weight: 4

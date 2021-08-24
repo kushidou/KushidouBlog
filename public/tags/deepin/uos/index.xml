@@ -9,6 +9,15 @@
     <copyright>2021-2021  &amp;copy;  Kushidou · Powered by &lt;a href=&#34;https://www.wangchucheng.com/&#34;&gt;Eureka&lt;/a&gt; and &lt;a href=&#34;https://gohugo.io/&#34;&gt;Hugo&lt;/a&gt;
 </copyright><atom:link href="/tags/deepin/uos/index.xml" rel="self" type="application/rss+xml" />
     <item>
+      <title>Linux处理多触屏的终极解决方案</title>
+      <link>/posts/210824-linuxtouchscreenfin/</link>
+      <pubDate>Tue, 24 Aug 2021 00:00:00 +0000</pubDate>
+      
+      <guid>/posts/210824-linuxtouchscreenfin/</guid>
+      <description>&lt;p&gt;一般Linux操作系统接入多个触摸屏的最终解，仅一种情况无法应对！&lt;/p&gt;</description>
+    </item>
+    
+    <item>
       <title>deepin和UOS，快捷方式，开机自启动</title>
       <link>/posts/210429-deepinautorun/</link>
       <pubDate>Thu, 29 Apr 2021 00:00:00 +0000</pubDate>
