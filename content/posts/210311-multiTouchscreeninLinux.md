@@ -10,7 +10,7 @@ tags:
 categories: []
 series: Linux学习与解决方案
 date: 2021-03-11
-lastmod: 2021-04-28
+lastmod: 2021-09-14
 featuredVideo:
 featuredImage:
 draft: false
@@ -22,6 +22,8 @@ draft: false
 
 *2021-03-22更新部分内容*
 *2021-04-28再次更新内容*
+
+**2021-09-14 文章已有新版本，请访问《[Linux处理多触屏的终极解决方案](https://www.small09.top/posts/210824-linuxtouchscreenfin/)》**
 
 ## 问题来源
 

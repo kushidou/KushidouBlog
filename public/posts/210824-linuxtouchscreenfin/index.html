@@ -100,8 +100,8 @@
         "@id": "/posts/210824-linuxtouchscreenfin/"
     },
     "headline": "Linux处理多触屏的终极解决方案 | 香风家的火柴盒","datePublished": "2021-08-24T00:00:00+00:00",
-    "dateModified": "2021-08-24T00:00:00+00:00",
-    "wordCount":  1930 ,
+    "dateModified": "2021-09-14T00:00:00+00:00",
+    "wordCount":  1996 ,
     "author": {
         "@type": "Person",
         "name": "kushidou"
@@ -146,7 +146,7 @@
 <meta property="article:published_time" content="2021-08-24T00:00:00&#43;00:00" />
 
 
-<meta property="article:modified_time" content="2021-08-24T00:00:00&#43;00:00" />
+<meta property="article:modified_time" content="2021-09-14T00:00:00&#43;00:00" />
 
 
 
@@ -164,6 +164,14 @@
 
 
 
+
+
+
+<meta property="og:see_also" content="/posts/210914-mdadm/" />
+
+
+
+<meta property="og:see_also" content="/posts/210914-linuxbackupdd/" />
 
 
 
@@ -282,7 +290,7 @@
     </div>
     <div class="mr-6 my-2">
         <i class="fas fa-history"></i>
-        <span> update 2021-08-24</span>
+        <span> update 2021-09-14</span>
     </div>
     
     
@@ -301,8 +309,8 @@
         
 
         <div class="content">
-            <p>一般Linux操作系统接入多个触摸屏的最终解，仅一种情况无法应对！</p>
-<p>从<a href="https://www.small09.top/posts/210311-multitouchscreeninlinux/">21年3月中旬开始</a>，我就在不断探索Linux操作系统下接入多个触摸屏且为拓展显示的解决方案，随着我们遇到的问题不断变得复杂，这篇博客也越来越乱越来越难读。直到今天我把里面最复杂的方案尝试成功后，我感觉我已经获得了Linux触摸屏的终极奥义。</p>
+            <p>一般Linux操作系统接入多个触摸屏的最终解！</p>
+<p>从<a href="https://www.small09.top/posts/210311-multitouchscreeninlinux/">21年3月中旬开始</a>，我就在不断探索Linux操作系统下接入多个触摸屏且为拓展显示的解决方案，随着我们遇到的问题不断变得复杂，那篇博客也越来越乱越来越难读。直到今天我把里面最复杂的方案尝试成功后，我感觉我已经获得了Linux触摸屏的终极奥义。</p>
 <p><em>重要：</em> 本文全文基于软件<code>xinput</code></p>
 <p><em>更重要：</em> 如简介所说，仍有一种方法无法对应，具体为<code>【两个触摸屏的 VID:PID 与 设备描述 完全一致时，即两个完全相同的显示器】</code>，本文内容对这种情况仍然是无解的，个人认为只能通过硬件端口(/sys/class)来进行识别与调整，本文不涉及该方法(还没吃透)。</p>
 <h2 id="0核心xinput">0、核心：xinput</h2>
@@ -362,14 +370,26 @@ exit 0
 </code></pre>
 <p>这个脚本使用<code>xinput list --id-only</code>仅列出了设备的id序号，然后轮询所有的设备找出符合要求的编号，最后仍然使用<code>map-to-output</code>进行映射。这个脚本易于扩展，如果多个触摸屏只需要将3个有序号的注释后面的一块内容重复、修改名字就可以了。</p>
 <h2 id="32的进阶版">3、[2]的进阶版</h2>
-<p>结果查资料过程中又有了新发现，这篇文章大概又会又乱又长吧。。。</p>
-<p><strong>该方法未经验证，实测有效后会第一时间更新</strong></p>
-<p>前面都是通过shell/bash脚本的方式实现的重映射，如果要自动映射还需要添加自启动。如果设备进行了插拔，这个设备的映射就失效了，需要重新跑一跑脚本。在<a href="https://wiki.archlinux.org/title/Calibrating_Touchscreen#Do_it_automatically_via_a_udev_rule">ArchLinuxWiki</a>上我看到了添加udev文件的方法，这样在设备加载、重加载的第一时间就可以进行重映射。总体上看，这个方法和[2]中的是一致的。</p>
-<p>首先还是通过xinput查看设备id，然后<code>xinput list-props [id]</code>查看设备的Device Product ID参数。最后把参数填入下面这一行：</p>
-<pre><code class="language-udev">ENV{ID_VENDOR_ID}==&quot;2149&quot;,ENV{ID_MODEL_ID}==&quot;2703&quot;,ENV{WL_OUTPUT}=&quot;DVI1&quot;,ENV{LIBINPUT_CALIBRATION_MATRIX}=&quot;1 0 0 0 1 0&quot;
+<p>前面都是通过shell/bash脚本的方式实现的重映射，如果要自动映射还需要添加自启动。如果设备进行了插拔，这个设备的映射就失效了，需要手动重新跑一跑脚本。我尝试了编写udev-rules文件，当触摸的设备发生变化时就延时启动映射脚本，但无一例外都是失败的，我觉得是udev生效的必xinput更早，无论延时多久都是这样。</p>
+<p>在银河麒麟操作系统中我发现了它提供的触摸映射方法，使用的是<code>pyudev</code>库，采用第三方的方法实现udev-rules的效果，而且在这里延时不会影响系统的加载顺序，只需要系统额外安装<code>python3+pyudev</code>，并且使用desktop文件在开机时启动，即可。</p>
+<pre><code class="language-python">#!/usr/bin/python3
+# -- coding: UTF-8 --
+# -- Author: Blues --
+
+import pyudev
+import os
+
+context = pyudev.Context()
+monitor = pyudev.Monitor.from_netlink(context)
+monitor.filter_by(subsystem='hid')
+for device in iter(monitor.poll, None):
+    if device.driver != &quot;hid-multitouch&quot;:
+        continue
+    if device.action == &quot;add&quot; or device.action == &quot;change&quot;:
+        os.system(&quot;/var/my-touchscreen/remap-screen&quot;)
+
 </code></pre>
-<p>*看起来这里的ID依然是十进制的，且最后的映射矩阵需要计算，这些要点我将在后续实践中更新。</p>
-<p>有几个屏就生写几行，最后写入udev-rules文件存入指定的文件夹中。理论上讲，就可以在触摸屏插入的第一时间完成映射，不再有手动恢复的烦恼了。</p>
+<p>上面直接贴了麒麟自带的代码，就修改了一下脚本的路径，经过多次验证，在uos下可以正常使用。借此机会我也参照麒麟的代码修改了一下，用户不用看命令行那些多余的东西，只需要点击几个GUI窗口，程序就可以按照<em>设备名、VID、UID、物理接口</em>四大特征，自动映射到对应的显示屏上了。</p>
         </div>
         
         <div class="my-4">
@@ -419,6 +439,9 @@ exit 0
 <div class="flex flex-col md:flex-row md:justify-between -mx-2 mt-4 px-2 pt-4 border-t">
     <div>
         
+        <span class="block font-bold">Previous</span>
+        <a href="/posts/210914-linuxbackupdd/" class="block">使用dd指令备份和恢复Linux系统（硬盘级）</a>
+        
     </div>
     <div class="md:text-right mt-4 md:mt-0">
         
@@ -441,6 +464,12 @@ exit 0
     <h3 class="text-lg font-semibold mb-4">系列</h3>
     <div class="content">
         
+        
+        <a href="/posts/210914-mdadm/">Linux恢复操作系统后mdadm导致开机变慢的方法</a>
+        <br />
+        
+        <a href="/posts/210914-linuxbackupdd/">使用dd指令备份和恢复Linux系统（硬盘级）</a>
+        <br />
         
         <a href="/posts/210824-linuxtouchscreenfin/">Linux处理多触屏的终极解决方案</a>
         <br />

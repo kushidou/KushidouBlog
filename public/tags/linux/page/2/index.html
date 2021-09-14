@@ -14,13 +14,19 @@
   href="https://fonts.googleapis.com/css2?family=Lora:wght@400;600;700&family=Noto+Serif+SC:wght@400;600;700&display=swap"
   as="style" onload="this.onload=null;this.rel='stylesheet'">
 
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@10.1.0/build/styles/solarized-light.min.css"
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@10.1.0/build/styles/googlecode.min.css"
    media="print"
   onload="this.media='all';this.onload=null" crossorigin>
 <script defer src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@10.1.0/build/highlight.min.js"
    crossorigin></script>
 
   <script defer src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@10.1.0/build/languages/dart.min.js"
+     crossorigin></script>
+
+  <script defer src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@10.1.0/build/languages/cpp.min.js"
+     crossorigin></script>
+
+  <script defer src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@10.1.0/build/languages/shell.min.js"
      crossorigin></script>
 
 <script defer src="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.14.0/js/all.min.js"
@@ -52,6 +58,14 @@
 
 <script defer src="https://cdn.jsdelivr.net/npm/mermaid@8.9.2/dist/mermaid.min.js" 
   integrity="sha256-Zmpaaj&#43;GXFsPF5WdPArSrnW3b30dovldeKsW00xBVwE="  crossorigin></script>
+<link rel="preconnect" href="https://www.google-analytics.com" crossorigin>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-1PLS0TFMVN"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag() { dataLayer.push(arguments); }
+  gtag('js', new Date());
+  gtag('config', 'G-1PLS0TFMVN');
+</script>
 
 
 <link rel="icon" type="image/png" sizes="32x32" href="/images/icon_hu2edf57696400f275bcb1d2f9022ef01c_28092_32x32_fill_box_center_2.png">
@@ -85,20 +99,9 @@
     "itemListElement":[{
             "@type":"ListItem",
             "position":  1 ,
-            "name": "Linux串口和udev理解",
-            "description": "\u003cp\u003e配置串口权限，顺便看一下linux的udev规则。\u003c/p\u003e",
-            "url": "/posts/210311-serialmodeandudevinlinux/"
-        },{
-            "@type":"ListItem",
-            "position":  2 ,
-            "name": "Linux多显示器触屏调试与暂行解决方案",
-            "description": "Linux with multi touch screen",
-            "url": "/posts/210311-multitouchscreeninlinux/"
-        },{
-            "@type":"ListItem",
-            "position":  3 ,
             "name": "使用Docker安装TeamSpeak",
             "description": "install teamspeak with docker",
+            "image": "https://cdn.jsdelivr.net/gh/kushidou/PicLibrary/img/image-20210526173013413.png",
             "url": "/posts/210218-teamspeakwithdocker/"
         }
     ]
@@ -134,7 +137,7 @@
 
 
 
-<meta property="og:updated_time" content="2021-04-29T00:00:00&#43;00:00" />
+<meta property="og:updated_time" content="2021-09-14T15:16:13&#43;08:00" />
 
 
 
@@ -223,87 +226,7 @@
   <div class="py-6">
     <div class="flex flex-col-reverse lg:flex-row justify-between">
   
-  <div class="w-full ">
-    <div class="mb-4">
-  <a href="/posts/210311-serialmodeandudevinlinux/" class="font-bold text-xl hover:text-eureka">Linux串口和udev理解</a>
-</div>
-<div class="content">
-  配置串口权限，顺便看一下linux的udev规则。
-
-</div>
-
-<div class="flex flex-wrap flex-row items-center mt-2 text-tertiary-text">
-    <div class="mr-6 my-2">
-        <i class="fas fa-calendar-check"></i>
-        <span>2021-03-11</span>
-    </div>
-    <div class="mr-6 my-2">
-        <i class="fas fa-history"></i>
-        <span> update 2021-03-11</span>
-    </div>
-    
-    
-
-    
-    <div class="mr-6 my-2">
-        <i class="fas fa-th-list mr-1"></i>
-        
-        <a href="/series/linux%E5%AD%A6%E4%B9%A0%E4%B8%8E%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/" class="hover:text-eureka">Linux学习与解决方案</a>
-        
-    </div>
-    
-</div>
-
-  </div>
-
-  
-</div>
-  </div>
-  
-  <div class="py-6">
-    <div class="flex flex-col-reverse lg:flex-row justify-between">
-  
-  <div class="w-full ">
-    <div class="mb-4">
-  <a href="/posts/210311-multitouchscreeninlinux/" class="font-bold text-xl hover:text-eureka">Linux多显示器触屏调试与暂行解决方案</a>
-</div>
-<div class="content">
-  由于需要使用新创平台配合多个显示器，触摸屏经常出现不准的情况。经过多次的查阅资料、测试和整合，总结了一个解决触摸的方法。一些测试过程中的弯路也保留了，作为记录。
-
-</div>
-
-<div class="flex flex-wrap flex-row items-center mt-2 text-tertiary-text">
-    <div class="mr-6 my-2">
-        <i class="fas fa-calendar-check"></i>
-        <span>2021-03-11</span>
-    </div>
-    <div class="mr-6 my-2">
-        <i class="fas fa-history"></i>
-        <span> update 2021-04-28</span>
-    </div>
-    
-    
-
-    
-    <div class="mr-6 my-2">
-        <i class="fas fa-th-list mr-1"></i>
-        
-        <a href="/series/linux%E5%AD%A6%E4%B9%A0%E4%B8%8E%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/" class="hover:text-eureka">Linux学习与解决方案</a>
-        
-    </div>
-    
-</div>
-
-  </div>
-
-  
-</div>
-  </div>
-  
-  <div class="py-6">
-    <div class="flex flex-col-reverse lg:flex-row justify-between">
-  
-  <div class="w-full ">
+  <div class="w-full lg:w-2/3">
     <div class="mb-4">
   <a href="/posts/210218-teamspeakwithdocker/" class="font-bold text-xl hover:text-eureka">使用Docker安装TeamSpeak</a>
 </div>
@@ -329,6 +252,10 @@
 
   </div>
 
+  
+  <div class="w-full lg:w-1/3 mb-4 lg:mb-0 lg:ml-8">
+    <img src="https://cdn.jsdelivr.net/gh/kushidou/PicLibrary/img/image-20210526173013413.png" width="200px" alt="Featured Image">
+  </div>
   
 </div>
   </div>

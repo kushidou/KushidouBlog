@@ -9,7 +9,7 @@ tags:
 categories: []
 series: Linux学习与解决方案
 date: 2021-04-29
-lastmod: 2021-07-19
+lastmod: 2021-09-14
 featuredVideo:
 featuredImage:
 draft: false
@@ -40,10 +40,16 @@ Type=Application
 
 ## 开机自动执行
 
+### UOS/Deepin和Ubuntu
+
 `cp ~/Desktop/刚刚的.desktop ~/.config/autostart`
 
 需要这个的原因主要是我执行触摸屏映射的指令经常会在桌面启动前（`lightdm.service`）执行，导致error从而无法进入桌面，将脚本放进`/etc/profile.d`之后第二天就失效了，所以需要一个在登录桌面后就实现自动执行的功能，多种方法对比下来还是放进桌面环境的开机自启文件夹比较靠谱。这样一般会在进入桌面后5-10秒自动执行，稳定性大幅提高。
 
-## Ubuntu1604中测试
-
 经过实际查阅资料和测试，Ubuntu1604也完全适用上面的步骤，只不过可能需要在`~/.config/`下手动创建一个`autostart`目录。由于1604已经停止支持，许多人转入了更新的ubuntu系统，猜测近几年的也可以尝试一下。
+
+### 麒麟和其他使用X11桌面的Linux
+
+本条目包含UOS和Ubuntu、deepin系统
+
+自启动目录为`/etc/xdg/autostart`，同样的desktop文件放进去即可。但是麒麟中我使用上面的基础desktop报错，可能需要添加其他内容。

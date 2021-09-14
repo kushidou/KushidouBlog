@@ -10,17 +10,17 @@ tags:
 categories: []
 series: Linux学习与解决方案
 date: 2021-08-24
-lastmod: 2021-08-24
+lastmod: 2021-09-14
 featuredVideo:
 featuredImage:
 draft: false
 ---
 
-一般Linux操作系统接入多个触摸屏的最终解，仅一种情况无法应对！
+一般Linux操作系统接入多个触摸屏的最终解！
 
 <!--more-->
 
-从[21年3月中旬开始](https://www.small09.top/posts/210311-multitouchscreeninlinux/)，我就在不断探索Linux操作系统下接入多个触摸屏且为拓展显示的解决方案，随着我们遇到的问题不断变得复杂，这篇博客也越来越乱越来越难读。直到今天我把里面最复杂的方案尝试成功后，我感觉我已经获得了Linux触摸屏的终极奥义。
+从[21年3月中旬开始](https://www.small09.top/posts/210311-multitouchscreeninlinux/)，我就在不断探索Linux操作系统下接入多个触摸屏且为拓展显示的解决方案，随着我们遇到的问题不断变得复杂，那篇博客也越来越乱越来越难读。直到今天我把里面最复杂的方案尝试成功后，我感觉我已经获得了Linux触摸屏的终极奥义。
 
 *重要：* 本文全文基于软件`xinput`
 
@@ -107,18 +107,27 @@ exit 0
 
 ## 3、[2]的进阶版
 
-结果查资料过程中又有了新发现，这篇文章大概又会又乱又长吧。。。
+前面都是通过shell/bash脚本的方式实现的重映射，如果要自动映射还需要添加自启动。如果设备进行了插拔，这个设备的映射就失效了，需要手动重新跑一跑脚本。我尝试了编写udev-rules文件，当触摸的设备发生变化时就延时启动映射脚本，但无一例外都是失败的，我觉得是udev生效的必xinput更早，无论延时多久都是这样。
 
-**该方法未经验证，实测有效后会第一时间更新**
+在银河麒麟操作系统中我发现了它提供的触摸映射方法，使用的是`pyudev`库，采用第三方的方法实现udev-rules的效果，而且在这里延时不会影响系统的加载顺序，只需要系统额外安装`python3+pyudev`，并且使用desktop文件在开机时启动，即可。
 
-前面都是通过shell/bash脚本的方式实现的重映射，如果要自动映射还需要添加自启动。如果设备进行了插拔，这个设备的映射就失效了，需要重新跑一跑脚本。在[ArchLinuxWiki](https://wiki.archlinux.org/title/Calibrating_Touchscreen#Do_it_automatically_via_a_udev_rule)上我看到了添加udev文件的方法，这样在设备加载、重加载的第一时间就可以进行重映射。总体上看，这个方法和[2]中的是一致的。
+```python
+#!/usr/bin/python3
+# -- coding: UTF-8 --
+# -- Author: Blues --
 
-首先还是通过xinput查看设备id，然后`xinput list-props [id]`查看设备的Device Product ID参数。最后把参数填入下面这一行：
+import pyudev
+import os
 
-```udev
-ENV{ID_VENDOR_ID}=="2149",ENV{ID_MODEL_ID}=="2703",ENV{WL_OUTPUT}="DVI1",ENV{LIBINPUT_CALIBRATION_MATRIX}="1 0 0 0 1 0"
+context = pyudev.Context()
+monitor = pyudev.Monitor.from_netlink(context)
+monitor.filter_by(subsystem='hid')
+for device in iter(monitor.poll, None):
+    if device.driver != "hid-multitouch":
+        continue
+    if device.action == "add" or device.action == "change":
+        os.system("/var/my-touchscreen/remap-screen")
+
 ```
 
-\*看起来这里的ID依然是十进制的，且最后的映射矩阵需要计算，这些要点我将在后续实践中更新。
-
-有几个屏就生写几行，最后写入udev-rules文件存入指定的文件夹中。理论上讲，就可以在触摸屏插入的第一时间完成映射，不再有手动恢复的烦恼了。
+上面直接贴了麒麟自带的代码，就修改了一下脚本的路径，经过多次验证，在uos下可以正常使用。借此机会我也参照麒麟的代码修改了一下，用户不用看命令行那些多余的东西，只需要点击几个GUI窗口，程序就可以按照*设备名、VID、UID、物理接口*四大特征，自动映射到对应的显示屏上了。
