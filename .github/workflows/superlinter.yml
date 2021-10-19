@@ -45,6 +45,6 @@ jobs:
         #   remote_user: kushidou
         #   remote_key: ${{ secrets.BLOG_KEY }}
       # - name: update
+      #           rsync -av --delete public/ kushidou@small09.top:/home/kushidou/webserver/webs/
         run: |
-          rsync -av --delete public/ kushidou@small09.top:/home/kushidou/webserver/webs/
-
+            scp -r public/ kushidou@small09.top:/home/kushidou/webserver/webs/
