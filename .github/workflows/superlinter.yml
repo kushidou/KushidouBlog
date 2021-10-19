@@ -47,4 +47,4 @@ jobs:
       # - name: update
       #           rsync -av --delete public/ kushidou@small09.top:/home/kushidou/webserver/webs/
         run: |
-            scp -r public/ kushidou@small09.top:/home/kushidou/webserver/webs/
+              rsync -avz public/ kushidou@small09.top:/home/kushidou/webserver/webs/
