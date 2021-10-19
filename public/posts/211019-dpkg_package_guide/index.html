@@ -3,7 +3,7 @@
 <meta name="viewport" content="width=device-width">
 
 
-<title>使用dd指令备份和恢复Linux系统（硬盘级） | 香风家的火柴盒</title>
+<title>DEB打包方法简介 | 香风家的火柴盒</title>
 
 <meta name="generator" content="Hugo and Eureka 0.8.0" />
 <link rel="stylesheet" href="/css/eureka.min.css">
@@ -72,7 +72,7 @@
 <link rel="apple-touch-icon" sizes="180x180" href="/images/icon_hu2edf57696400f275bcb1d2f9022ef01c_28092_180x180_fill_box_center_2.png">
 
 <meta name="description"
-  content="Backup Linux with dd command.">
+  content="Debian系Linux，如ubuntu, deepin等系统的deb打包教程">
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -84,8 +84,8 @@
       "item":"/posts/"},{
       "@type": "ListItem",
       "position": 2 ,
-      "name":"使用dd指令备份和恢复Linux系统（硬盘级）",
-      "item":"/posts/210914-linuxbackupdd/"}]
+      "name":"DEB打包方法简介",
+      "item":"/posts/211019-dpkg_package_guide/"}]
 }
 </script>
 
@@ -97,11 +97,11 @@
     "@type": "Article",
     "mainEntityOfPage": {
         "@type": "WebPage",
-        "@id": "/posts/210914-linuxbackupdd/"
+        "@id": "/posts/211019-dpkg_package_guide/"
     },
-    "headline": "使用dd指令备份和恢复Linux系统（硬盘级） | 香风家的火柴盒","datePublished": "2021-09-14T13:51:16+08:00",
-    "dateModified": "2021-09-14T13:51:16+08:00",
-    "wordCount":  718 ,
+    "headline": "DEB打包方法简介 | 香风家的火柴盒","datePublished": "2021-10-19T10:12:23+08:00",
+    "dateModified": "2021-10-19T10:12:23+08:00",
+    "wordCount":  994 ,
     "author": {
         "@type": "Person",
         "name": "kushidou"
@@ -114,20 +114,20 @@
             "url": "/images/icon.png"
         }
         },
-    "description": "Backup Linux with dd command."
+    "description": "Debian系Linux，如ubuntu, deepin等系统的deb打包教程"
 }
-</script><meta property="og:title" content="使用dd指令备份和恢复Linux系统（硬盘级） | 香风家的火柴盒" />
+</script><meta property="og:title" content="DEB打包方法简介 | 香风家的火柴盒" />
 <meta property="og:type" content="article" />
 
 
 <meta property="og:image" content="/images/icon.png">
 
 
-<meta property="og:url" content="/posts/210914-linuxbackupdd/" />
+<meta property="og:url" content="/posts/211019-dpkg_package_guide/" />
 
 
 
-<meta property="og:description" content="Backup Linux with dd command." />
+<meta property="og:description" content="Debian系Linux，如ubuntu, deepin等系统的deb打包教程" />
 
 
 
@@ -143,10 +143,10 @@
 
 
 
-<meta property="article:published_time" content="2021-09-14T13:51:16&#43;08:00" />
+<meta property="article:published_time" content="2021-10-19T10:12:23&#43;08:00" />
 
 
-<meta property="article:modified_time" content="2021-09-14T13:51:16&#43;08:00" />
+<meta property="article:modified_time" content="2021-10-19T10:12:23&#43;08:00" />
 
 
 
@@ -165,13 +165,13 @@
 
 
 
-<meta property="og:see_also" content="/posts/211019-dpkg_package_guide/" />
-
 
 
 <meta property="og:see_also" content="/posts/210914-mdadm/" />
 
 
+
+<meta property="og:see_also" content="/posts/210914-linuxbackupdd/" />
 
 
 
@@ -284,15 +284,15 @@
 <div class="grid grid-cols-2 lg:grid-cols-8 gap-4 lg:pt-12">
     <div
         class="col-span-2  lg:col-span-6 bg-secondary-bg rounded px-6 py-8">
-        <h1 class="font-bold text-3xl text-primary-text">使用dd指令备份和恢复Linux系统（硬盘级）</h1>
+        <h1 class="font-bold text-3xl text-primary-text">DEB打包方法简介</h1>
         <div class="flex flex-wrap flex-row items-center mt-2 text-tertiary-text">
     <div class="mr-6 my-2">
         <i class="fas fa-calendar-check"></i>
-        <span>2021-09-14</span>
+        <span>2021-10-19</span>
     </div>
     <div class="mr-6 my-2">
         <i class="fas fa-history"></i>
-        <span> update 2021-09-14</span>
+        <span> update 2021-10-19</span>
     </div>
     
     
@@ -311,30 +311,84 @@
         
 
         <div class="content">
-            <p>害，谁不是个DD (誰でも 大好き)了呢!</p>
-<p>但是这玩意儿太慢了。。。</p>
-<h2 id="起因">起因</h2>
-<p>使用UOS的时候经常需要备份镜像并分享给其他部门或者办事处的人。传统的方法是进入系统自带的Recovery分区，打开备份软件制作镜像，但是这存在两个问题：A. 镜像特别巨大，系统多大镜像就占多大。B. 必须先拥有系统，才能恢复镜像。最新版的系统中已经去掉了Recovery分区，而LiveCD镜像还不是很好用，于是有了这篇博客，试图寻找一个简单的方法来进行恢复和备份。</p>
-<h2 id="dd说明">DD说明</h2>
-<p>dd指令是一个简单的复制指令，它不管源和目标的编码、格式、数据结构，简单粗暴的把二进制数据从A复制到B。所以恢复的目标硬盘甚至不需要提前分区，因为dd会把分区信息也写入。</p>
-<p>dd指令依然是有多少数据占多少空间，所以我们可以使用gzip进行压缩。具体代码后面贴出来。</p>
-<p>实际使用中，发现dd指令除了方便，就没有其他优点了。它因为要读取硬盘所有数据（包括垃圾数据），即便用SSD，读盘速度还是会很慢，三刻钟才读了200GiB数据，平均75MB/s，而使用uos自带的deepin-clone，三个系统都备份完了。</p>
-<h2 id="dd备份">DD备份</h2>
-<pre><code class="language-bash">dd if=/dev/sda of=/dev/sdb				=&gt;    备份整个磁盘到另外一个磁盘
-dd if=/dev/sdb of=sda.img				=&gt;    备份整个磁盘为某个文件
-dd if=/dev/sda | gzip &gt; sda.img    		=&gt;    备份并且压缩
-dd if=/dev/sda bs=1M | gzip &gt; sda.img	=&gt;    指定块大小，备份并压缩（据说能提速）
+            <p>简单介绍deb打包的方法，包括目录树格式和打包注意事项。</p>
+<h2 id="文件结构">文件结构</h2>
+<p>首先创建一个目录作为工作空间，目录名可以使用软件名，deb包所有文件都将会存在这个目录下，这个目录就是安装时的根目录<code>/</code>。一个工作空间的目录树如下：</p>
+<pre><code>  PackageDIR
+	├─DEBIAN
+    ├─opt
+    │  └─kushidou-touchscreen
+    │      └─desktops
+    ├─usr
+    │  ├─bin
+    │  └─share
+    └─var
 </code></pre>
-<h2 id="dd复原">DD复原</h2>
-<pre><code class="language-bash">dd if=/dev/sdb of=/dev/sda					=&gt;从另一个磁盘恢复回来
-gzip -dc sda.img | dd of=/dev/sda			=&gt;从压缩的文件恢复出来
-gzip -dc sda.img | dd of=/dev/sda bs=1M		=&gt;前面指定了块大小，这里也需要
+<p>其中，<code>DEBIAN</code>目录放置了安装包的信息、配置、控制文件等，其他文件都放在目录的相对位置里，安装时就会根据这些相对位置，把程序与文件直接拷贝到对应的地方。</p>
+<h2 id="debian">DEBIAN</h2>
+<p><code>DEBIAN</code>目录下有一个control文件和至多四个脚本文件。</p>
+<h3 id="control">control</h3>
+<p><code>control</code>文件用于写入安装包的识别信息，包括包名、版本、作者、简介等。没有严格的顺序要求。表格中列出常用的关键字和作用，图片展示了一个软件包的control信息。control文件最后需要添加一个空行。</p>
+<table>
+<thead>
+<tr>
+<th>NAME</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Package</td>
+<td>软件名，<code>dpkg -l</code> 列出的名字</td>
+</tr>
+<tr>
+<td>Version</td>
+<td>版本号-修订号</td>
+</tr>
+<tr>
+<td>Section</td>
+<td>软件类型，比如mail, test, x11等</td>
+</tr>
+<tr>
+<td>Priority</td>
+<td>优先级/重要性，比如optional  可选的</td>
+</tr>
+<tr>
+<td>Architecture</td>
+<td>软件架构，比如x86, arm64</td>
+</tr>
+<tr>
+<td>Depends</td>
+<td>依赖环境，用 <code>,</code> 隔开，用<code>(&gt;=&lt; )</code>指定版本号</td>
+</tr>
+<tr>
+<td>Suggests</td>
+<td>推荐安装，指非必要依赖，可以提供更多功能</td>
+</tr>
+<tr>
+<td>Maintainer</td>
+<td>作者  &lt;邮箱或者其他联系方式&gt;</td>
+</tr>
+<tr>
+<td>Descritprion</td>
+<td>简介，可以换行书写</td>
+</tr>
+</tbody>
+</table>
+<p><img src="https://cdn.jsdelivr.net/gh/kushidou/PicLibrary/img/20211019101901.png" alt="image-20211019094048011"></p>
+<h3 id="额外脚本">额外脚本</h3>
+<p><code>DEBIAN</code>目录下之多放置四个可执行脚本，包括<strong>安装前<code>preinst</code></strong>、<strong>安装后<code>postinst</code></strong>、<strong>卸载前<code>prerm</code></strong>、<strong>卸载前<code>postrm</code></strong>，四个脚本都需要以<code>#!/bin/bash</code>开头，内容与普通脚本无异，文件名不需要后缀。</p>
+<p>这些脚本主要实现复制快捷方式、建立软连接、添加环境变量、添加额外的文件和配置等操作。这些脚本是以<code>root</code>身份运行，注意他们创建文件的访问权限。inst创建的文件无法被dpkg删除，需要使用rm脚本自行处理。</p>
+<p>此外<code>postinst</code>可以用来启动已安装的程序，<code>prerm</code>常用来停止正在运行的程序。</p>
+<h3 id="md5sums">md5sums</h3>
+<p>为了防止安装包被篡改，可以计算每个二进制文件的md5值存放在这个文件里。非必要。</p>
+<h2 id="打包">打包</h2>
+<p>所有文件配置完成后，进入工作空间上级目录，执行指令</p>
+<pre><code class="language-bash">dpkg -b ./PackageDIR packagename.deb
 </code></pre>
-<h2 id="参考">参考：</h2>
-<p>本文参考（抄）了以下内容：</p>
-<p><a href="http://vpsxyz.com/archives/87">Linux 下使用 dd 和 gzip 命令来代替 Ghost 做磁盘镜像</a></p>
-<p><a href="https://blog.csdn.net/weixin_33971130/article/details/85662628">linux dd实现磁盘完整全盘镜像备份backup,恢复recover(restore)</a></p>
-<p>还有一些查找过程中作用不大的页面，就不贴出来了（诶嘿(╹ڡ╹ )</p>
+<p>deb包命名的一般规则为 <strong>软件名_版本-修订号_架构.deb</strong></p>
+<h2 id="其他信息">其他信息</h2>
+<p>一般公开发行的安装包应该包含其他信息，如版权信息、changelog、doc、man手册等。这些文件都有各自的编撰格式，主要是为了方便系统识别和二次开发，与用户直接体验无关。</p>
         </div>
         
         <div class="my-4">
@@ -382,14 +436,11 @@ gzip -dc sda.img | dd of=/dev/sda bs=1M		=&gt;前面指定了块大小，这里�
 <div class="flex flex-col md:flex-row md:justify-between -mx-2 mt-4 px-2 pt-4 border-t">
     <div>
         
-        <span class="block font-bold">Previous</span>
-        <a href="/posts/210914-mdadm/" class="block">Linux恢复操作系统后mdadm导致开机变慢的方法</a>
-        
     </div>
     <div class="md:text-right mt-4 md:mt-0">
         
         <span class="block font-bold">Next</span>
-        <a href="/posts/210824-linuxtouchscreenfin/" class="block">Linux处理多触屏的终极解决方案</a>
+        <a href="/posts/210914-mdadm/" class="block">Linux恢复操作系统后mdadm导致开机变慢的方法</a>
         
     </div>
 </div>
@@ -452,11 +503,16 @@ gzip -dc sda.img | dd of=/dev/sda bs=1M		=&gt;前面指定了块大小，这里�
 <div class="sticky-toc hidden lg:block px-6 pb-6 ">
     <nav id="TableOfContents">
   <ul>
-    <li><a href="#起因">起因</a></li>
-    <li><a href="#dd说明">DD说明</a></li>
-    <li><a href="#dd备份">DD备份</a></li>
-    <li><a href="#dd复原">DD复原</a></li>
-    <li><a href="#参考">参考：</a></li>
+    <li><a href="#文件结构">文件结构</a></li>
+    <li><a href="#debian">DEBIAN</a>
+      <ul>
+        <li><a href="#control">control</a></li>
+        <li><a href="#额外脚本">额外脚本</a></li>
+        <li><a href="#md5sums">md5sums</a></li>
+      </ul>
+    </li>
+    <li><a href="#打包">打包</a></li>
+    <li><a href="#其他信息">其他信息</a></li>
   </ul>
 </nav>
 </div>
@@ -476,6 +532,9 @@ gzip -dc sda.img | dd of=/dev/sda bs=1M		=&gt;前面指定了块大小，这里�
         <h2 class="text-lg font-semibold mb-4">See Also</h2>
         <div class="content">
             
+            <a href="/posts/210914-linuxbackupdd/">使用dd指令备份和恢复Linux系统（硬盘级）</a>
+            <br />
+            
             <a href="/posts/210824-linuxtouchscreenfin/">Linux处理多触屏的终极解决方案</a>
             <br />
             
@@ -485,13 +544,10 @@ gzip -dc sda.img | dd of=/dev/sda bs=1M		=&gt;前面指定了块大小，这里�
             <a href="/posts/210311-multitouchscreeninlinux/">Linux多显示器触屏调试与暂行解决方案</a>
             <br />
             
+            <a href="/posts/210914-mdadm/">Linux恢复操作系统后mdadm导致开机变慢的方法</a>
+            <br />
+            
             <a href="/posts/210719-gpuinfoinlinux/">Linux中获得AMD显卡的状态信息</a>
-            <br />
-            
-            <a href="/posts/210630-sudowithoutpasswd/">免密码使用sudo</a>
-            <br />
-            
-            <a href="/posts/210420-linuxmorethan4serialport/">Linux启用四个以上的串口</a>
             <br />
             
         </div>

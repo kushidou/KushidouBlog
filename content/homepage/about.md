@@ -2,7 +2,7 @@
 title: kushidou
 draft: false
 avatar: images/kushidou.png
-bio: 啥都学，啥都不精通的一个小白。B站@唐唐xiaozhen
+bio: 啥都学，啥都不精通的一个小白。B站@唐唐xiaozhen。欢迎加群交♂流：655742099
 social:
   - icon: envelope
     iconPack: fas
