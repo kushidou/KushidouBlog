@@ -8,7 +8,16 @@
     <language>en</language>
     <copyright>2021-2021  &amp;copy;  Kushidou · Powered by &lt;a href=&#34;https://www.wangchucheng.com/&#34;&gt;Eureka&lt;/a&gt; and &lt;a href=&#34;https://gohugo.io/&#34;&gt;Hugo&lt;/a&gt;
 </copyright>
-    <lastBuildDate>Tue, 19 Oct 2021 10:12:23 +0800</lastBuildDate><atom:link href="/posts/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 15 Nov 2021 10:02:30 +0800</lastBuildDate><atom:link href="/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>记一次拯救NAS硬盘</title>
+      <link>/posts/211115-fixnasdriver/</link>
+      <pubDate>Mon, 15 Nov 2021 10:02:30 +0800</pubDate>
+      
+      <guid>/posts/211115-fixnasdriver/</guid>
+      <description>&lt;p&gt;更新家里的NAS，手滑把原来NAS硬盘的分区信息删掉了。如何拯救盘里的数据？&lt;/p&gt;</description>
+    </item>
+    
     <item>
       <title>DEB打包方法简介</title>
       <link>/posts/211019-dpkg_package_guide/</link>

@@ -3,7 +3,7 @@
 <meta name="viewport" content="width=device-width">
 
 
-<title>DEB打包方法简介 | 香风家的火柴盒</title>
+<title>记一次拯救NAS硬盘 | 香风家的火柴盒</title>
 
 <meta name="generator" content="Hugo and Eureka 0.8.0" />
 <link rel="stylesheet" href="/css/eureka.min.css">
@@ -72,7 +72,7 @@
 <link rel="apple-touch-icon" sizes="180x180" href="/images/icon_hu2edf57696400f275bcb1d2f9022ef01c_28092_180x180_fill_box_center_2.png">
 
 <meta name="description"
-  content="Debian系Linux，如ubuntu, deepin等系统的deb打包教程">
+  content="黑群晖拿下来的硬盘不小心删除分区后进行数据拯救。">
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -84,8 +84,8 @@
       "item":"/posts/"},{
       "@type": "ListItem",
       "position": 2 ,
-      "name":"DEB打包方法简介",
-      "item":"/posts/211019-dpkg_package_guide/"}]
+      "name":"记一次拯救NAS硬盘",
+      "item":"/posts/211115-fixnasdriver/"}]
 }
 </script>
 
@@ -97,11 +97,13 @@
     "@type": "Article",
     "mainEntityOfPage": {
         "@type": "WebPage",
-        "@id": "/posts/211019-dpkg_package_guide/"
+        "@id": "/posts/211115-fixnasdriver/"
     },
-    "headline": "DEB打包方法简介 | 香风家的火柴盒","datePublished": "2021-10-19T10:12:23+08:00",
-    "dateModified": "2021-10-19T10:12:23+08:00",
-    "wordCount":  994 ,
+    "headline": "记一次拯救NAS硬盘 | 香风家的火柴盒",
+    "image": "https://cdn.jsdelivr.net/gh/kushidou/PicLibrary//img/202111151000352.png",
+    "datePublished": "2021-11-15T10:02:30+08:00",
+    "dateModified": "2021-11-15T10:02:30+08:00",
+    "wordCount":  2163 ,
     "author": {
         "@type": "Person",
         "name": "kushidou"
@@ -114,20 +116,20 @@
             "url": "/images/icon.png"
         }
         },
-    "description": "Debian系Linux，如ubuntu, deepin等系统的deb打包教程"
+    "description": "黑群晖拿下来的硬盘不小心删除分区后进行数据拯救。"
 }
-</script><meta property="og:title" content="DEB打包方法简介 | 香风家的火柴盒" />
+</script><meta property="og:title" content="记一次拯救NAS硬盘 | 香风家的火柴盒" />
 <meta property="og:type" content="article" />
 
 
 <meta property="og:image" content="/images/icon.png">
 
 
-<meta property="og:url" content="/posts/211019-dpkg_package_guide/" />
+<meta property="og:url" content="/posts/211115-fixnasdriver/" />
 
 
 
-<meta property="og:description" content="Debian系Linux，如ubuntu, deepin等系统的deb打包教程" />
+<meta property="og:description" content="黑群晖拿下来的硬盘不小心删除分区后进行数据拯救。" />
 
 
 
@@ -143,23 +145,21 @@
 
 
 
-<meta property="article:published_time" content="2021-10-19T10:12:23&#43;08:00" />
+<meta property="article:published_time" content="2021-11-15T10:02:30&#43;08:00" />
 
 
-<meta property="article:modified_time" content="2021-10-19T10:12:23&#43;08:00" />
+<meta property="article:modified_time" content="2021-11-15T10:02:30&#43;08:00" />
 
 
 
 <meta property="article:section" content="posts" />
 
 
-<meta property="article:tag" content="Linux" />
+<meta property="article:tag" content="NAS" />
 
-<meta property="article:tag" content="Deepin/UOS" />
+<meta property="article:tag" content="群晖" />
 
-
-
-
+<meta property="article:tag" content="数据恢复" />
 
 
 
@@ -167,43 +167,7 @@
 
 
 
-<meta property="og:see_also" content="/posts/210914-mdadm/" />
 
-
-
-<meta property="og:see_also" content="/posts/210914-linuxbackupdd/" />
-
-
-
-<meta property="og:see_also" content="/posts/210824-linuxtouchscreenfin/" />
-
-
-
-<meta property="og:see_also" content="/posts/210719-gpuinfoinlinux/" />
-
-
-
-<meta property="og:see_also" content="/posts/210630-sudowithoutpasswd/" />
-
-
-
-<meta property="og:see_also" content="/posts/210429-deepinautorun/" />
-
-
-
-<meta property="og:see_also" content="/posts/210420-linuxmorethan4serialport/" />
-
-
-
-<meta property="og:see_also" content="/posts/210328-linuxchangemacip/" />
-
-
-
-<meta property="og:see_also" content="/posts/210311-serialmodeandudevinlinux/" />
-
-
-
-<meta property="og:see_also" content="/posts/210311-multitouchscreeninlinux/" />
 
 
 
@@ -284,15 +248,15 @@
 <div class="grid grid-cols-2 lg:grid-cols-8 gap-4 lg:pt-12">
     <div
         class="col-span-2  lg:col-span-6 bg-secondary-bg rounded px-6 py-8">
-        <h1 class="font-bold text-3xl text-primary-text">DEB打包方法简介</h1>
+        <h1 class="font-bold text-3xl text-primary-text">记一次拯救NAS硬盘</h1>
         <div class="flex flex-wrap flex-row items-center mt-2 text-tertiary-text">
     <div class="mr-6 my-2">
         <i class="fas fa-calendar-check"></i>
-        <span>2021-10-19</span>
+        <span>2021-11-15</span>
     </div>
     <div class="mr-6 my-2">
         <i class="fas fa-history"></i>
-        <span> update 2021-10-19</span>
+        <span> update 2021-11-15</span>
     </div>
     
     
@@ -301,7 +265,7 @@
     <div class="mr-6 my-2">
         <i class="fas fa-th-list mr-1"></i>
         
-        <a href="/series/linux%E5%AD%A6%E4%B9%A0%E4%B8%8E%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/" class="hover:text-eureka">Linux学习与解决方案</a>
+        <a href="/series/nas%E6%8A%98%E8%85%BE/" class="hover:text-eureka">NAS折腾</a>
         
     </div>
     
@@ -309,93 +273,61 @@
         
         
         
+        <div class="my-4">
+            <img src="https://cdn.jsdelivr.net/gh/kushidou/PicLibrary//img/202111151000352.png" width="200px" alt="Featured Image">
+        </div>
+        
 
         <div class="content">
-            <p>简单介绍deb打包的方法，包括目录树格式和打包注意事项。</p>
-<h2 id="文件结构">文件结构</h2>
-<p>首先创建一个目录作为工作空间，目录名可以使用软件名，deb包所有文件都将会存在这个目录下，这个目录就是安装时的根目录<code>/</code>。一个工作空间的目录树如下：</p>
-<pre><code>  PackageDIR
-	├─DEBIAN
-    ├─opt
-    │  └─kushidou-touchscreen
-    │      └─desktops
-    ├─usr
-    │  ├─bin
-    │  └─share
-    └─var
+            <p>更新家里的NAS，手滑把原来NAS硬盘的分区信息删掉了。如何拯救盘里的数据？</p>
+<p><em>图片稍后补充。</em></p>
+<h2 id="v-0-起因">v 0 起因</h2>
+<p>双十一买了两块新的4T紫盘，打算升级一下家里的黑群晖。原来黑群晖是用一台N手工控机+1TB希捷笔记本硬盘（看缓存和速度肯定是SMR盘了），数据安全几乎为0.</p>
+<p>考虑到小工控机的电源带不动那么多硬盘，机箱也没有空间，就把家里闲置的i3台式机整了过来，拆掉原来的硬盘装上紫盘组新nas了。顺手拆了一个捡来的监控机上的1TB西数紫盘。</p>
+<p>为了节约迁移系统和数据的时间，我打算拿两个sata易驱线，用DiskGenuies进行克隆。后来网上冲浪发现群晖系统是认硬盘SN的，也就是说我克隆的数据没有一丁点用，加上手头上没有2.5转3.5的转接件，就考虑把笔记本盘放回老nas，然后直接拷贝或者备份到新nas。</p>
+<h2 id="v-1-杯具">v-1 杯具</h2>
+<p>当我按下取消的时候，惨剧发生了。其实整盘克隆的时候，DG会删除所有分区，克隆完了再重建分区。我取消克隆，然后退出DG。它提示我是否保存分区更改，我以为是1T紫盘的分区，顺手点了个否。当我重启DG的时候，发现希捷笔记本盘只剩一条灰色，未分区的区域。</p>
+<h2 id="v-2-尝试">v-2 尝试</h2>
+<p>DG有个功能是搜索重建分区表，我第一时间进行搜索。此时还没有网盘内<strong>写入任何内容</strong>，也<strong>没有格式化</strong>。数据应该是都在的，只要按照原来的样子重新分区应该就能重新读写数据了。</p>
+<p>为什么不手动分区？因为群晖会在硬盘上先建立一个系统分区，然后建立swap分区，空一段空间后再建立数据分区。每个分区开始和结束的位置都是未知的，网络上也没有可以参考的内容。</p>
+<p>经过一个多小时的搜索，除了第一个2.4GB的系统分区被找到以外，一无所获。我怀疑是不是我期间制作黑裙启动盘影响了，又搜索了一遍，好家伙还是没有。</p>
+<p>搜索期间网上冲浪找前人的肩膀，结果他们要么是分区没被删直接装Windows下btrfs驱动（gitee开源）读取（群晖坏了），要么是DG轻松搜出全部分区（和群晖无关）。我还尝试查找丢失文件，依然一无所获。</p>
+<p>难道就这么放弃了么？</p>
+<h2 id="v-1-曙光">v 1 曙光</h2>
+<p>群晖使用的BTRFS格式不是什么群晖专用格式，而是SUN（Oracle收购）开发的新一代文件系统，针对ext3/4进行优化升级。所以比较新的Linux系统都支持使用这个格式；装个驱动也能轻易读取。</p>
+<p>我本来笔记本是有Deepin系统的，上次win10损毁了我就格掉装了win11。后来想起来我还有块树莓派正跑着linux系统。但是没有分区的硬盘上了Linux也啥都读不到。恰好这时候新nas的系统已经起来了，1T紫盘上的独立分区也建立好了。两款空间一样的盘，同样版本的群晖系统，建立一样的存储空间后，那不就是连分区也一模一样了么？！</p>
+<p>开搞，ssh连上群晖，用sudo blkid看到硬盘实际的分区信息，它正好是显示的扇区起止、大小。打开DG，手动分区，按照群晖的磨样给小硬盘手动分区。DG不支持btrfs分区，那我随便挂一个ext4吧。分区过程和保存的时候，千万不要格式化了。</p>
+<p>把小硬盘用易驱线连上树莓派，<code>lsblk</code>看到这个硬盘有三个分区，其中<code>/dev/sda3</code>下面还有一个<code>md127</code>，不知道是啥，查看发现是raid。群晖的数据区，哪怕是单盘basic也是以raid方式存在的，方便以后升级raid模式吧大概。也就是说，虽然我分区表是瞎分的，Linux还是能够正确读取到原来的分区和文件系统。</p>
+<h2 id="v-2-得到数据">v 2 得到数据</h2>
+<p>安装<code>mdadm</code>软件包，我的树莓派不带这个，然后就能挂载raid盘了。</p>
+<pre><code class="language-bash">sudo mount /dev/md127 ~/disk
 </code></pre>
-<p>其中，<code>DEBIAN</code>目录放置了安装包的信息、配置、控制文件等，其他文件都放在目录的相对位置里，安装时就会根据这些相对位置，把程序与文件直接拷贝到对应的地方。</p>
-<h2 id="debian">DEBIAN</h2>
-<p><code>DEBIAN</code>目录下有一个control文件和至多四个脚本文件。</p>
-<h3 id="control">control</h3>
-<p><code>control</code>文件用于写入安装包的识别信息，包括包名、版本、作者、简介等。没有严格的顺序要求。表格中列出常用的关键字和作用，图片展示了一个软件包的control信息。control文件最后需要添加一个空行。</p>
-<table>
-<thead>
-<tr>
-<th>NAME</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Package</td>
-<td>软件名，<code>dpkg -l</code> 列出的名字</td>
-</tr>
-<tr>
-<td>Version</td>
-<td>版本号-修订号</td>
-</tr>
-<tr>
-<td>Section</td>
-<td>软件类型，比如mail, test, x11等</td>
-</tr>
-<tr>
-<td>Priority</td>
-<td>优先级/重要性，比如optional  可选的</td>
-</tr>
-<tr>
-<td>Architecture</td>
-<td>软件架构，比如x86, arm64</td>
-</tr>
-<tr>
-<td>Depends</td>
-<td>依赖环境，用 <code>,</code> 隔开，用<code>(&gt;=&lt; )</code>指定版本号</td>
-</tr>
-<tr>
-<td>Suggests</td>
-<td>推荐安装，指非必要依赖，可以提供更多功能</td>
-</tr>
-<tr>
-<td>Maintainer</td>
-<td>作者  &lt;邮箱或者其他联系方式&gt;</td>
-</tr>
-<tr>
-<td>Descritprion</td>
-<td>简介，可以换行书写</td>
-</tr>
-</tbody>
-</table>
-<p><img src="https://cdn.jsdelivr.net/gh/kushidou/PicLibrary/img/20211019101901.png" alt="image-20211019094048011"></p>
-<h3 id="额外脚本">额外脚本</h3>
-<p><code>DEBIAN</code>目录下之多放置四个可执行脚本，包括<strong>安装前<code>preinst</code></strong>、<strong>安装后<code>postinst</code></strong>、<strong>卸载前<code>prerm</code></strong>、<strong>卸载前<code>postrm</code></strong>，四个脚本都需要以<code>#!/bin/bash</code>开头，内容与普通脚本无异，文件名不需要后缀。</p>
-<p>这些脚本主要实现复制快捷方式、建立软连接、添加环境变量、添加额外的文件和配置等操作。这些脚本是以<code>root</code>身份运行，注意他们创建文件的访问权限。inst创建的文件无法被dpkg删除，需要使用rm脚本自行处理。</p>
-<p>此外<code>postinst</code>可以用来启动已安装的程序，<code>prerm</code>常用来停止正在运行的程序。</p>
-<h3 id="md5sums">md5sums</h3>
-<p>为了防止安装包被篡改，可以计算每个二进制文件的md5值存放在这个文件里。非必要。</p>
-<h2 id="打包">打包</h2>
-<p>所有文件配置完成后，进入工作空间上级目录，执行指令</p>
-<pre><code class="language-bash">dpkg -b ./PackageDIR packagename.deb
+<p>disk目录提前建立好了，把机械盘挂载上去，cd到目录里，然后我就发现了新世界的大门。盘里有个<code>NasData</code>目录，这正是我当时保存文件的地方。cd进去，在！都还在！</p>
+<h2 id="v-3-移动数据">v 3 移动数据</h2>
+<p>我打算直接把就数据拷贝到新NAS里去了，烤到移动硬盘再复制到nas大费周章的。</p>
+<p>在NAS里的主共享文件夹启动NFS服务，映射为root，允许所有来源的读写，然后到树莓派中挂载nfs</p>
+<pre><code class="language-bash">sudo mount -t nfs 10.x.x.x:/volume2/NasData ~/Nasdata
 </code></pre>
-<p>deb包命名的一般规则为 <strong>软件名_版本-修订号_架构.deb</strong></p>
-<h2 id="其他信息">其他信息</h2>
-<p>一般公开发行的安装包应该包含其他信息，如版权信息、changelog、doc、man手册等。这些文件都有各自的编撰格式，主要是为了方便系统识别和二次开发，与用户直接体验无关。</p>
+<p>主目录下提前建立Nasdata目录，挂载完成后新Nas的内容也都出现了。不想一个个复制文件，CP指令不支持排除不想要的文件（毕竟还有部分文件依然保存在移动硬盘和笔记本里，树莓派只支持2.4GHz的wifi太慢），最终我选择了rsync指令进行“本地复制”。</p>
+<pre><code class="language-bash">rsync -vrultD --exclude '文件名' --exclude '目录名' ~/disk/NasData/* ~/Nasdata/临时目录
+# -v 详细输出 -r 递归拷贝(保留目录结构) -u 仅更新，防止中断再开后重新拷贝 -l 保留软连接 -t 保留时间信息 -D 保持设备文件信息
+# 不用-a 是因为对拷过去的文件赋权限时疯狂报错失败
+</code></pre>
+<p>经历树莓派三次死机两次中断后，我终于抢救了500G数据中的50G（另外450包括百度云同步、移动硬盘依然保存着的动漫视频等）。</p>
+<h2 id="v-4-结论">v 4 结论</h2>
+<p>现在数据和小姐姐们都住在一个raid1备份的空间中，应该轻易不会发生无家可归的情况了。</p>
+<p>这次事件完全是我自己作死，群晖其实提供了备份功能，可以完整的把数据、部分设置乃至我的Docker容器都完整备份到新NAS里（只要两台都在线），而且树莓派的wifi只有5MiB/s，比起家里千兆的内网，速度慢了数十倍，时间也花了我整整一下午。</p>
+<p>总之硬盘出了事故不要慌，只要不是物理损坏，都有机会修复。除了事故后第一时间就要停止读写，更不要格式化，先尝试重建分区表，失败了换个系统试试。说不定我不重建，放到Linux上也能看到正常的三个分区呢？</p>
+<p><img src="https://cdn.jsdelivr.net/gh/kushidou/PicLibrary//img/202111150957877.png" alt="image-20211115095410121"></p>
         </div>
         
         <div class="my-4">
     
-    <a href="/tags/linux/" class="inline-block bg-tertiary-bg text-sm rounded px-3 py-1 my-1 mr-2 hover:text-eureka">#Linux</a>
+    <a href="/tags/nas/" class="inline-block bg-tertiary-bg text-sm rounded px-3 py-1 my-1 mr-2 hover:text-eureka">#NAS</a>
     
-    <a href="/tags/deepin/uos/" class="inline-block bg-tertiary-bg text-sm rounded px-3 py-1 my-1 mr-2 hover:text-eureka">#Deepin/UOS</a>
+    <a href="/tags/%E7%BE%A4%E6%99%96/" class="inline-block bg-tertiary-bg text-sm rounded px-3 py-1 my-1 mr-2 hover:text-eureka">#群晖</a>
+    
+    <a href="/tags/%E6%95%B0%E6%8D%AE%E6%81%A2%E5%A4%8D/" class="inline-block bg-tertiary-bg text-sm rounded px-3 py-1 my-1 mr-2 hover:text-eureka">#数据恢复</a>
     
 </div>
         
@@ -436,14 +368,11 @@
 <div class="flex flex-col md:flex-row md:justify-between -mx-2 mt-4 px-2 pt-4 border-t">
     <div>
         
-        <span class="block font-bold">Previous</span>
-        <a href="/posts/211115-fixnasdriver/" class="block">记一次拯救NAS硬盘</a>
-        
     </div>
     <div class="md:text-right mt-4 md:mt-0">
         
         <span class="block font-bold">Next</span>
-        <a href="/posts/210914-mdadm/" class="block">Linux恢复操作系统后mdadm导致开机变慢的方法</a>
+        <a href="/posts/211019-dpkg_package_guide/" class="block">DEB打包方法简介</a>
         
     </div>
 </div>
@@ -462,37 +391,7 @@
     <div class="content">
         
         
-        <a href="/posts/211019-dpkg_package_guide/">DEB打包方法简介</a>
-        <br />
-        
-        <a href="/posts/210914-mdadm/">Linux恢复操作系统后mdadm导致开机变慢的方法</a>
-        <br />
-        
-        <a href="/posts/210914-linuxbackupdd/">使用dd指令备份和恢复Linux系统（硬盘级）</a>
-        <br />
-        
-        <a href="/posts/210824-linuxtouchscreenfin/">Linux处理多触屏的终极解决方案</a>
-        <br />
-        
-        <a href="/posts/210719-gpuinfoinlinux/">Linux中获得AMD显卡的状态信息</a>
-        <br />
-        
-        <a href="/posts/210630-sudowithoutpasswd/">免密码使用sudo</a>
-        <br />
-        
-        <a href="/posts/210429-deepinautorun/">deepin和UOS，快捷方式，开机自启动</a>
-        <br />
-        
-        <a href="/posts/210420-linuxmorethan4serialport/">Linux启用四个以上的串口</a>
-        <br />
-        
-        <a href="/posts/210328-linuxchangemacip/">Linux修改mac地址</a>
-        <br />
-        
-        <a href="/posts/210311-serialmodeandudevinlinux/">Linux串口和udev理解</a>
-        <br />
-        
-        <a href="/posts/210311-multitouchscreeninlinux/">Linux多显示器触屏调试与暂行解决方案</a>
+        <a href="/posts/211115-fixnasdriver/">记一次拯救NAS硬盘</a>
         <br />
         
         
@@ -506,16 +405,13 @@
 <div class="sticky-toc hidden lg:block px-6 pb-6 ">
     <nav id="TableOfContents">
   <ul>
-    <li><a href="#文件结构">文件结构</a></li>
-    <li><a href="#debian">DEBIAN</a>
-      <ul>
-        <li><a href="#control">control</a></li>
-        <li><a href="#额外脚本">额外脚本</a></li>
-        <li><a href="#md5sums">md5sums</a></li>
-      </ul>
-    </li>
-    <li><a href="#打包">打包</a></li>
-    <li><a href="#其他信息">其他信息</a></li>
+    <li><a href="#v-0-起因">v 0 起因</a></li>
+    <li><a href="#v-1-杯具">v-1 杯具</a></li>
+    <li><a href="#v-2-尝试">v-2 尝试</a></li>
+    <li><a href="#v-1-曙光">v 1 曙光</a></li>
+    <li><a href="#v-2-得到数据">v 2 得到数据</a></li>
+    <li><a href="#v-3-移动数据">v 3 移动数据</a></li>
+    <li><a href="#v-4-结论">v 4 结论</a></li>
   </ul>
 </nav>
 </div>
@@ -529,32 +425,6 @@
     
 
     
-    
-    <div
-        class="col-span-2  lg:col-span-6 bg-secondary-bg rounded p-6">
-        <h2 class="text-lg font-semibold mb-4">See Also</h2>
-        <div class="content">
-            
-            <a href="/posts/210914-linuxbackupdd/">使用dd指令备份和恢复Linux系统（硬盘级）</a>
-            <br />
-            
-            <a href="/posts/210824-linuxtouchscreenfin/">Linux处理多触屏的终极解决方案</a>
-            <br />
-            
-            <a href="/posts/210429-deepinautorun/">deepin和UOS，快捷方式，开机自启动</a>
-            <br />
-            
-            <a href="/posts/210311-multitouchscreeninlinux/">Linux多显示器触屏调试与暂行解决方案</a>
-            <br />
-            
-            <a href="/posts/210914-mdadm/">Linux恢复操作系统后mdadm导致开机变慢的方法</a>
-            <br />
-            
-            <a href="/posts/210719-gpuinfoinlinux/">Linux中获得AMD显卡的状态信息</a>
-            <br />
-            
-        </div>
-    </div>
     
 </div>
 <script>
