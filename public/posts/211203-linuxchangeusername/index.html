@@ -3,7 +3,7 @@
 <meta name="viewport" content="width=device-width">
 
 
-<title>Linux恢复操作系统后mdadm导致开机变慢的方法 | 香风家的火柴盒</title>
+<title>在Linux环境下修改用户名和主目录 | 香风家的火柴盒</title>
 
 <meta name="generator" content="Hugo and Eureka 0.8.0" />
 <link rel="stylesheet" href="/css/eureka.min.css">
@@ -72,7 +72,7 @@
 <link rel="apple-touch-icon" sizes="180x180" href="/images/icon_hu2edf57696400f275bcb1d2f9022ef01c_28092_180x180_fill_box_center_2.png">
 
 <meta name="description"
-  content="mdadm no arrays found in config file or automatically">
+  content="如何在Linux下完整修改当前用户名和主目录，还不影响其他文件？">
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -84,8 +84,8 @@
       "item":"/posts/"},{
       "@type": "ListItem",
       "position": 2 ,
-      "name":"Linux恢复操作系统后mdadm导致开机变慢的方法",
-      "item":"/posts/210914-mdadm/"}]
+      "name":"在Linux环境下修改用户名和主目录",
+      "item":"/posts/211203-linuxchangeusername/"}]
 }
 </script>
 
@@ -97,11 +97,11 @@
     "@type": "Article",
     "mainEntityOfPage": {
         "@type": "WebPage",
-        "@id": "/posts/210914-mdadm/"
+        "@id": "/posts/211203-linuxchangeusername/"
     },
-    "headline": "Linux恢复操作系统后mdadm导致开机变慢的方法 | 香风家的火柴盒","datePublished": "2021-09-14T15:16:13+08:00",
-    "dateModified": "2021-09-14T15:16:13+08:00",
-    "wordCount":  287 ,
+    "headline": "在Linux环境下修改用户名和主目录 | 香风家的火柴盒","datePublished": "2021-12-03T09:01:23+08:00",
+    "dateModified": "2021-12-03T09:01:23+08:00",
+    "wordCount":  603 ,
     "author": {
         "@type": "Person",
         "name": "kushidou"
@@ -114,20 +114,22 @@
             "url": "/images/icon.png"
         }
         },
-    "description": "mdadm no arrays found in config file or automatically"
+    "description": "\u003cp\u003e如何在Linux下完整修改当前用户名和主目录，还不影响其他文件？\u003c\/p\u003e"
 }
-</script><meta property="og:title" content="Linux恢复操作系统后mdadm导致开机变慢的方法 | 香风家的火柴盒" />
+</script><meta property="og:title" content="在Linux环境下修改用户名和主目录 | 香风家的火柴盒" />
 <meta property="og:type" content="article" />
 
 
 <meta property="og:image" content="/images/icon.png">
 
 
-<meta property="og:url" content="/posts/210914-mdadm/" />
+<meta property="og:url" content="/posts/211203-linuxchangeusername/" />
 
 
 
-<meta property="og:description" content="mdadm no arrays found in config file or automatically" />
+
+<meta property="og:description" content="如何在Linux下完整修改当前用户名和主目录，还不影响其他文件？" />
+
 
 
 
@@ -143,10 +145,10 @@
 
 
 
-<meta property="article:published_time" content="2021-09-14T15:16:13&#43;08:00" />
+<meta property="article:published_time" content="2021-12-03T09:01:23&#43;08:00" />
 
 
-<meta property="article:modified_time" content="2021-09-14T15:16:13&#43;08:00" />
+<meta property="article:modified_time" content="2021-12-03T09:01:23&#43;08:00" />
 
 
 
@@ -163,13 +165,13 @@
 
 
 
-<meta property="og:see_also" content="/posts/211203-linuxchangeusername/" />
-
 
 
 <meta property="og:see_also" content="/posts/211019-dpkg_package_guide/" />
 
 
+
+<meta property="og:see_also" content="/posts/210914-mdadm/" />
 
 
 
@@ -286,15 +288,15 @@
 <div class="grid grid-cols-2 lg:grid-cols-8 gap-4 lg:pt-12">
     <div
         class="col-span-2  lg:col-span-6 bg-secondary-bg rounded px-6 py-8">
-        <h1 class="font-bold text-3xl text-primary-text">Linux恢复操作系统后mdadm导致开机变慢的方法</h1>
+        <h1 class="font-bold text-3xl text-primary-text">在Linux环境下修改用户名和主目录</h1>
         <div class="flex flex-wrap flex-row items-center mt-2 text-tertiary-text">
     <div class="mr-6 my-2">
         <i class="fas fa-calendar-check"></i>
-        <span>2021-09-14</span>
+        <span>2021-12-03</span>
     </div>
     <div class="mr-6 my-2">
         <i class="fas fa-history"></i>
-        <span> update 2021-09-14</span>
+        <span> update 2021-12-03</span>
     </div>
     
     
@@ -313,22 +315,33 @@
         
 
         <div class="content">
-            <p>解决Linux系统异地恢复后开机mdadm报错导致开机时间变长。</p>
-<h2 id="现象">现象</h2>
-<p>使用deepin-clone恢复UOS镜像后，开机会不断跳一条日志:</p>
-<pre><code class="language-bash">mdadm: no arrays found in config file or automatically
+            <p>如何在Linux下完整修改当前用户名和主目录，还不影响其他文件？</p>
+<p>Linux的用户名是一个用户的字符串表示，是可以修改的。只要用户的id不改变就不会被系统认作新用户，所有的权限都可以继承。下面介绍如何修改用户的名称、所属组，并更改主目录的名称与对应关系。</p>
+<h2 id="一退出当前用户">一、退出当前用户</h2>
+<p>为了修改用户名时不影响程序运行，需要把当前用户打开的所有程序都关闭。一般情况下注销用户就可以了，但是有些GUI桌面环境就是以当前用户的身份运行的，所以提供如下几个方式关闭当前用户，挨个尝试即可。</p>
+<pre><code class="language-bash"># 1 桌面中点击注销
+# 2 杀掉当前用户所有进程
+pkill -kill -u old_name
+# 3 杀掉进程后可能桌面重启，关闭Lightdm管理器
+#     Ctrl + Alt + F2 进入第二页面，以root用户登录（可能需要提前设置root密码）
+systemctl stop lightdm
+#     然后再次执行第二步
 </code></pre>
-<p>大概蹦个15条后，系统才真正开机。mdadm好像是一个磁盘raid管理工具，当磁盘变化后其配置也不适配了，必须等到超时才会加载默认配置。那么我们就为其生成一个新的配置即可解决问题。</p>
-<h2 id="方案">方案</h2>
-<p>步骤一：删除mdadm.conf</p>
-<pre><code class="language-bash">sudo rm /etc/mdadm/mdadm.conf
+<h2 id="二修改信息">二、修改信息</h2>
+<p>使用 <code>ctrl + alt + f2</code>进入黑频终端（远程连接可以），以root用户登录。</p>
+<pre><code class="language-bash"># 1 修改组的名称
+groupmod -n new_name old_name
+# 2 修改用户名    -l 改名字  -d 改目录  -g 改组
+usermod -l new_name -d /home/new_name -g new_name old_name
+# 3 修改主目录
+mv /home/old_name /home/new_name
 </code></pre>
-<p>步骤二：生成新的mdadm.conf</p>
-<pre><code class="language-bash">sudo update-initramfs  -u
-</code></pre>
-<p>ps:如果是swap分区问题导致等待90s开机慢，不归这儿管。</p>
-<h2 id="从这儿抄的">从这儿抄的：</h2>
-<p><a href="https://blog.csdn.net/KuXiaoQuShiHuai/article/details/99686620">W: mdadm: no arrays found in config file or automatically导致开机变慢的解决方案（deepin）</a></p>
+<p>如果执行过第一部分第3步的话，需要启动lightdm服务<code>systemctl start lightdm</code></p>
+<p>最后重新登录，桌面环境按 <code>ctrl + alt + f1</code>（有的系统是F7）回到登陆界面。这时候应该就可以看到新的用户名了，而密码等都没有发生改变。</p>
+<h2 id="参考">参考：</h2>
+<p># <a href="https://blog.csdn.net/weixin_30016961/article/details/116543982">linux用户家目录怎么修改,Linux 更改用户名,用户组和主目录</a></p>
+<p># <a href="https://www.runoob.com/linux/linux-comm-usermod.html">菜鸟教程-usermod指令</a></p>
+<p># <a href="https://blog.csdn.net/weixin_40001125/article/details/88903115">linux组的管理：修改组名字，删除组，使用sudo权限</a></p>
         </div>
         
         <div class="my-4">
@@ -374,14 +387,11 @@
 <div class="flex flex-col md:flex-row md:justify-between -mx-2 mt-4 px-2 pt-4 border-t">
     <div>
         
-        <span class="block font-bold">Previous</span>
-        <a href="/posts/211019-dpkg_package_guide/" class="block">DEB打包方法简介</a>
-        
     </div>
     <div class="md:text-right mt-4 md:mt-0">
         
         <span class="block font-bold">Next</span>
-        <a href="/posts/210914-linuxbackupdd/" class="block">使用dd指令备份和恢复Linux系统（硬盘级）</a>
+        <a href="/posts/211115-fixnasdriver/" class="block">记一次拯救NAS硬盘</a>
         
     </div>
 </div>
@@ -451,6 +461,15 @@
         <h2 class="text-lg font-semibold mb-4">See Also</h2>
         <div class="content">
             
+            <a href="/tools/kushidoutouch/">kushidoutouch多触屏修复软件</a>
+            <br />
+            
+            <a href="/posts/211019-dpkg_package_guide/">DEB打包方法简介</a>
+            <br />
+            
+            <a href="/posts/210914-mdadm/">Linux恢复操作系统后mdadm导致开机变慢的方法</a>
+            <br />
+            
             <a href="/posts/210914-linuxbackupdd/">使用dd指令备份和恢复Linux系统（硬盘级）</a>
             <br />
             
@@ -458,15 +477,6 @@
             <br />
             
             <a href="/posts/210719-gpuinfoinlinux/">Linux中获得AMD显卡的状态信息</a>
-            <br />
-            
-            <a href="/posts/210630-sudowithoutpasswd/">免密码使用sudo</a>
-            <br />
-            
-            <a href="/posts/210429-deepinautorun/">deepin和UOS，快捷方式，开机自启动</a>
-            <br />
-            
-            <a href="/posts/210420-linuxmorethan4serialport/">Linux启用四个以上的串口</a>
             <br />
             
         </div>
