@@ -101,7 +101,7 @@
     },
     "headline": "在Linux环境下修改用户名和主目录 | 香风家的火柴盒","datePublished": "2021-12-03T09:01:23+08:00",
     "dateModified": "2021-12-03T09:01:23+08:00",
-    "wordCount":  603 ,
+    "wordCount":  645 ,
     "author": {
         "@type": "Person",
         "name": "kushidou"
@@ -338,6 +338,7 @@ mv /home/old_name /home/new_name
 </code></pre>
 <p>如果执行过第一部分第3步的话，需要启动lightdm服务<code>systemctl start lightdm</code></p>
 <p>最后重新登录，桌面环境按 <code>ctrl + alt + f1</code>（有的系统是F7）回到登陆界面。这时候应该就可以看到新的用户名了，而密码等都没有发生改变。</p>
+<p>修改完主目录后记得检查是不是有其他软连接指向旧目录，需要进行更新，否则还会遇到问题。</p>
 <h2 id="参考">参考：</h2>
 <p># <a href="https://blog.csdn.net/weixin_30016961/article/details/116543982">linux用户家目录怎么修改,Linux 更改用户名,用户组和主目录</a></p>
 <p># <a href="https://www.runoob.com/linux/linux-comm-usermod.html">菜鸟教程-usermod指令</a></p>
