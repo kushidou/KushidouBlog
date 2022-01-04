@@ -101,7 +101,7 @@
     },
     "headline": "在Linux环境下修改用户名和主目录 | 香风家的火柴盒","datePublished": "2021-12-03T09:01:23+08:00",
     "dateModified": "2021-12-03T09:01:23+08:00",
-    "wordCount":  645 ,
+    "wordCount":  657 ,
     "author": {
         "@type": "Person",
         "name": "kushidou"
@@ -317,9 +317,15 @@
         <div class="content">
             <p>如何在Linux下完整修改当前用户名和主目录，还不影响其他文件？</p>
 <p>Linux的用户名是一个用户的字符串表示，是可以修改的。只要用户的id不改变就不会被系统认作新用户，所有的权限都可以继承。下面介绍如何修改用户的名称、所属组，并更改主目录的名称与对应关系。</p>
-<h2 id="一退出当前用户">一、退出当前用户</h2>
-<p>为了修改用户名时不影响程序运行，需要把当前用户打开的所有程序都关闭。一般情况下注销用户就可以了，但是有些GUI桌面环境就是以当前用户的身份运行的，所以提供如下几个方式关闭当前用户，挨个尝试即可。</p>
-<pre><code class="language-bash"># 1 桌面中点击注销
+<h2 id="一进入单用户模式">一、进入“单用户模式”</h2>
+<p>为了修改用户名时不影响程序运行，需要把当前用户打开的所有程序都关闭。该方法可以快速注销当前用户。</p>
+<pre><code class="language-bash">init  0
+执行后输入当前用户密码
+进入黑屏终端后需要输入root密码，可以使用sudo passwd 提前设置
+</code></pre>
+<p>对于屏蔽init指令的系统，一般情况下注销用户就可以了，但是有些GUI桌面环境就是以当前用户的身份运行的，所以提供如下几个方式关闭当前用户，挨个尝试即可。</p>
+<pre><code class="language-bash"># 1 桌面环境中点击注销
+
 # 2 杀掉当前用户所有进程
 pkill -kill -u old_name
 # 3 杀掉进程后可能桌面重启，关闭Lightdm管理器
@@ -328,7 +334,7 @@ systemctl stop lightdm
 #     然后再次执行第二步
 </code></pre>
 <h2 id="二修改信息">二、修改信息</h2>
-<p>使用 <code>ctrl + alt + f2</code>进入黑频终端（远程连接可以），以root用户登录。</p>
+<p><code>init 0</code>可以直接进入黑屏的终端，或者使用 <code>ctrl + alt + f2</code>进入（远程连接可以），以root用户登录。</p>
 <pre><code class="language-bash"># 1 修改组的名称
 groupmod -n new_name old_name
 # 2 修改用户名    -l 改名字  -d 改目录  -g 改组
@@ -336,8 +342,7 @@ usermod -l new_name -d /home/new_name -g new_name old_name
 # 3 修改主目录
 mv /home/old_name /home/new_name
 </code></pre>
-<p>如果执行过第一部分第3步的话，需要启动lightdm服务<code>systemctl start lightdm</code></p>
-<p>最后重新登录，桌面环境按 <code>ctrl + alt + f1</code>（有的系统是F7）回到登陆界面。这时候应该就可以看到新的用户名了，而密码等都没有发生改变。</p>
+<p>最后回到图形化界面，输入<code>init 5</code> ，或者重启电脑。</p>
 <p>修改完主目录后记得检查是不是有其他软连接指向旧目录，需要进行更新，否则还会遇到问题。</p>
 <h2 id="参考">参考：</h2>
 <p># <a href="https://blog.csdn.net/weixin_30016961/article/details/116543982">linux用户家目录怎么修改,Linux 更改用户名,用户组和主目录</a></p>
@@ -387,6 +392,9 @@ mv /home/old_name /home/new_name
         
 <div class="flex flex-col md:flex-row md:justify-between -mx-2 mt-4 px-2 pt-4 border-t">
     <div>
+        
+        <span class="block font-bold">Previous</span>
+        <a href="/posts/220104-diylinuxiso/" class="block">定制自己的Linux ISO镜像</a>
         
     </div>
     <div class="md:text-right mt-4 md:mt-0">

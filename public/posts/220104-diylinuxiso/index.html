@@ -3,7 +3,7 @@
 <meta name="viewport" content="width=device-width">
 
 
-<title>香风家的火柴盒</title>
+<title>定制自己的Linux ISO镜像 | 香风家的火柴盒</title>
 
 <meta name="generator" content="Hugo and Eureka 0.8.0" />
 <link rel="stylesheet" href="/css/eureka.min.css">
@@ -72,26 +72,62 @@
 <link rel="apple-touch-icon" sizes="180x180" href="/images/icon_hu2edf57696400f275bcb1d2f9022ef01c_28092_180x180_fill_box_center_2.png">
 
 <meta name="description"
-  content="香风家的火柴盒，第三期~">
+  content="为已有的Linux ISO镜像添加自己的功能。">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [{
+      "@type": "ListItem",
+      "position": 1 ,
+      "name":"Posts",
+      "item":"/posts/"},{
+      "@type": "ListItem",
+      "position": 2 ,
+      "name":"定制自己的Linux ISO镜像",
+      "item":"/posts/220104-diylinuxiso/"}]
+}
+</script>
 
 
 
-<meta property="og:title" content="香风家的火柴盒" />
-<meta property="og:type" content="website" />
+<script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "/posts/220104-diylinuxiso/"
+    },
+    "headline": "定制自己的Linux ISO镜像 | 香风家的火柴盒","datePublished": "2022-01-04T09:17:38+08:00",
+    "dateModified": "2022-01-04T09:17:38+08:00",
+    "wordCount":  1170 ,
+    "author": {
+        "@type": "Person",
+        "name": "kushidou"
+    },
+    "publisher": {
+        "@type": "Person",
+        "name": "Kushidou",
+        "logo": {
+            "@type": "ImageObject",
+            "url": "/images/icon.png"
+        }
+        },
+    "description": "为已有的Linux ISO镜像添加自己的功能。"
+}
+</script><meta property="og:title" content="定制自己的Linux ISO镜像 | 香风家的火柴盒" />
+<meta property="og:type" content="article" />
 
 
 <meta property="og:image" content="/images/icon.png">
 
 
-<meta property="og:url" content="/" />
+<meta property="og:url" content="/posts/220104-diylinuxiso/" />
 
 
 
-
-
-<meta property="og:description" content="香风家的火柴盒，第三期~" />
-
-
+<meta property="og:description" content="为已有的Linux ISO镜像添加自己的功能。" />
 
 
 
@@ -107,14 +143,21 @@
 
 
 
-<meta property="og:updated_time" content="2022-01-04T09:17:38&#43;08:00" />
+<meta property="article:published_time" content="2022-01-04T09:17:38&#43;08:00" />
+
+
+<meta property="article:modified_time" content="2022-01-04T09:17:38&#43;08:00" />
 
 
 
-<meta property="article:section" content="" />
+<meta property="article:section" content="posts" />
 
 
-<link rel="alternate" type="application/rss+xml" href="/index.xml" title="香风家的火柴盒" />
+<meta property="article:tag" content="Linux学习与解决方案" />
+
+
+
+
 
 <body class="flex flex-col min-h-screen">
   <header class="fixed flex items-center w-full min-h-16 pl-scrollbar z-50 bg-secondary-bg shadow-sm">
@@ -134,7 +177,7 @@
         class="hidden block md:flex md:flex-grow md:justify-between md:items-center w-full md:w-auto text-primary-text z-20">
         <div class="md:flex md:h-16 text-sm md:flex-grow pb-4 md:pb-0 border-b md:border-b-0">
             <a href="/minecraft/" class="block mt-4 md:inline-block md:mt-0 md:h-(16-4px) md:leading-(16-4px) box-border md:border-t-2 md:border-b-2  border-transparent  mr-4">Minecraft</a>
-            <a href="/posts/" class="block mt-4 md:inline-block md:mt-0 md:h-(16-4px) md:leading-(16-4px) box-border md:border-t-2 md:border-b-2  border-transparent  mr-4">博客</a>
+            <a href="/posts/" class="block mt-4 md:inline-block md:mt-0 md:h-(16-4px) md:leading-(16-4px) box-border md:border-t-2 md:border-b-2  selected-menu-item  mr-4">博客</a>
             <a href="/tools/" class="block mt-4 md:inline-block md:mt-0 md:h-(16-4px) md:leading-(16-4px) box-border md:border-t-2 md:border-b-2  border-transparent  mr-4">工具</a>
         </div>
 
@@ -184,77 +227,15 @@
 </div>
   </header>
   <main class="flex-grow pt-16">
-  
-  
-  
-    
-      
-  
-
-  
-
-  
-  
-  
-
-  
-    
-    
-    
-    
-      
-      
-    
-  
-
-  
-  
-  
-  
-    
-    
-    
-    
-      
-      
-    
-
-    
-    
-    
-    
-    
-  
-
-  <div class="pl-scrollbar bg-primary-bg" 
-    >
-    <div class="max-w-screen-xl mx-auto">
-      <div id="pages" class="lg:w-3/4 mx-auto px-6 md:px-8 xl:px-12 py-12">
-        
-  
-
-  
-    
-  <h2 class=" font-bold text-3xl my-4">博客与文章</h2>
+    <div class="pl-scrollbar">
+      <div class="w-full max-w-screen-xl lg:px-4 xl:px-8 mx-auto">
 
 
-  
-  
-  <div class="overflow-hidden divide-y">
-  
-  <div class="py-6">
-    <div class="flex flex-col-reverse lg:flex-row justify-between">
-  
-  <div class="w-full ">
-    <div class="mb-4">
-  <a href="/posts/220104-diylinuxiso/" class="font-bold text-xl hover:text-eureka">定制自己的Linux ISO镜像</a>
-</div>
-<div class="content">
-  想要在原版的Linux镜像上添加自定义的软件，但是不想、不会编译，那么就可以基于Linux的iso文件进行修改，定制自己的安装试用镜像。
-
-</div>
-
-<div class="flex flex-wrap flex-row items-center mt-2 text-tertiary-text">
+<div class="grid grid-cols-2 lg:grid-cols-8 gap-4 lg:pt-12">
+    <div
+        class="col-span-2 lg:col-start-2 lg:col-span-6 bg-secondary-bg rounded px-6 py-8">
+        <h1 class="font-bold text-3xl text-primary-text">定制自己的Linux ISO镜像</h1>
+        <div class="flex flex-wrap flex-row items-center mt-2 text-tertiary-text">
     <div class="mr-6 my-2">
         <i class="fas fa-calendar-check"></i>
         <span>2022-01-04</span>
@@ -268,323 +249,109 @@
 
     
 </div>
-
-  </div>
-
-  
-</div>
-  </div>
-  
-  <div class="py-6">
-    <div class="flex flex-col-reverse lg:flex-row justify-between">
-  
-  <div class="w-full ">
-    <div class="mb-4">
-  <a href="/posts/211203-linuxchangeusername/" class="font-bold text-xl hover:text-eureka">在Linux环境下修改用户名和主目录</a>
-</div>
-<div class="content">
-  如何在Linux下完整修改当前用户名和主目录，还不影响其他文件？
-
-</div>
-
-<div class="flex flex-wrap flex-row items-center mt-2 text-tertiary-text">
-    <div class="mr-6 my-2">
-        <i class="fas fa-calendar-check"></i>
-        <span>2021-12-03</span>
-    </div>
-    <div class="mr-6 my-2">
-        <i class="fas fa-history"></i>
-        <span> update 2021-12-03</span>
-    </div>
-    
-    
-
-    
-    <div class="mr-6 my-2">
-        <i class="fas fa-th-list mr-1"></i>
         
-        <a href="/series/linux%E5%AD%A6%E4%B9%A0%E4%B8%8E%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/" class="hover:text-eureka">Linux学习与解决方案</a>
         
-    </div>
-    
-</div>
-
-  </div>
-
-  
-</div>
-  </div>
-  
-  <div class="py-6">
-    <div class="flex flex-col-reverse lg:flex-row justify-between">
-  
-  <div class="w-full lg:w-2/3">
-    <div class="mb-4">
-  <a href="/posts/211115-fixnasdriver/" class="font-bold text-xl hover:text-eureka">记一次拯救NAS硬盘</a>
-</div>
-<div class="content">
-  更新家里的NAS，手滑把原来NAS硬盘的分区信息删掉了。如何拯救盘里的数据？
-
-</div>
-
-<div class="flex flex-wrap flex-row items-center mt-2 text-tertiary-text">
-    <div class="mr-6 my-2">
-        <i class="fas fa-calendar-check"></i>
-        <span>2021-11-15</span>
-    </div>
-    <div class="mr-6 my-2">
-        <i class="fas fa-history"></i>
-        <span> update 2021-11-15</span>
-    </div>
-    
-    
-
-    
-    <div class="mr-6 my-2">
-        <i class="fas fa-th-list mr-1"></i>
         
-        <a href="/series/nas%E6%8A%98%E8%85%BE/" class="hover:text-eureka">NAS折腾</a>
+
+        <div class="content">
+            <p>想要在原版的Linux镜像上添加自定义的软件，但是不想、不会编译，那么就可以基于Linux的iso文件进行修改，定制自己的安装试用镜像。</p>
+<p>起因是因为对付信创操作系统的备份恢复时，UOS、麒麟自带的工具都超级不好用，两个系统的镜像不统一，导致实际使用的时候各种问题和不方便。所以使用clonezilla再生龙工具自己做一个PE镜像。这个镜像不仅可以备份、安装系统，还能够修改硬盘大小、应急拯救系统等多种功能。并且它是一个完整的系统可以安装使用。</p>
+<h2 id="基本计划">基本计划</h2>
+<p>之前尝试过使用<a href="http://bbs.wuyou.net/forum.php?mod=viewthread&amp;tid=409980">deepin魔改lub工具</a>制作系统的完整镜像，但是启动总是失败。<a href="https://forum.ubuntu.org.cn/viewtopic.php?t=206287">LUB</a>全称是<em>Live Ubuntu Backup</em>，是Ubuntu的一个工具，到了同为Debian系的deepin魔改的UOS上就水土不服了。（好绕，套娃呢搁这儿</p>
+<p>所以采取另一种办法，用已有的Linux iso，通过解压其系统文件filesystem.squashfs，然后替换关键文件，最后实现自定义系统。</p>
+<h2 id="解压修改打包linux文件系统">解压、修改、打包Linux文件系统</h2>
+<p>首先把Linux iso挂载到系统中。把里面的filesystem.squashfs文件复制出来（因为iso是只读的，复制出来后也方便管理和备份）。我这里以UOS1040为例，其文件系统在<code>./live</code>目录下</p>
+<pre><code class="language-bash">sudo mount -o loop /xxx/xxx.iso  /media/usrname/isofolder
+cd /media/usrname/isofolder/live/
+cp ./filesystem.squashfs ~
+</code></pre>
+<p>安装<code>squashfs-tools</code>工具，用来压缩解压归档文件。</p>
+<pre><code class="language-bash">sudo apt install squashfs-tools
+#回到主目录后，解压filesystem.squashfs文件
+sudo unsquashfs filesystem.squashfs
+</code></pre>
+<p>解压后可以看到主目录多一个<code>squashfs-root</code>目录，里面存放的就是一个Linux的文件系统了。这时候把你需要的文件拷贝进去，比如我替换了/usr、/opt、/etc三个目录，这三个目录保存了我安装的clonezilla应用及其配置程序，以及我编写的辅助脚本和自启动脚本。</p>
+<p>修改好了就可以打包了。第一个参数是刚刚解压出来修改好的文件系统，第二个参数是输出的名称。建议把之前拷贝出来的squashfs文件改名进行保存。</p>
+<pre><code class="language-bash">sudo mksquashfs squashfs-root/ filesystem.squashfs
+</code></pre>
+<h2 id="重建linux-iso">重建Linux iso</h2>
+<p>最后我们需要重建ISO文件。由于我们是基于原来的ISO修改的，所以只需要替换iso里面的filesystem.squashfs文件即可。否则还需要更换系统内核img/lz、重写引导。</p>
+<p>把新生成的filesystem.squashfs文件拷贝到Windows系统里，打开UltraISO软件，直接替换Live目录下的filesystem.squashfs文件。同时我们也可以修改<code>EFI/grub.cfg</code>文件，毕竟这个系统主要是使用而不是安装。我调换了安装和试用的次序，并把等待时间增加到60s。</p>
+<p>最后进行修改ISO名称等小操作，保存为ISO文件就可以了。</p>
+<p>新生成的ISO文件既可以用rufus等工具烧录到U盘中制作PE盘，也可以试用ventoy工具制作成多系统启动盘，甚至可以烧录一张光盘来使用。</p>
+        </div>
+        
+        <div class="my-4">
+    
+    <a href="/tags/linux%E5%AD%A6%E4%B9%A0%E4%B8%8E%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/" class="inline-block bg-tertiary-bg text-sm rounded px-3 py-1 my-1 mr-2 hover:text-eureka">#Linux学习与解决方案</a>
+    
+</div>
+        
+        
+        
+
+
+        
+        
+        <div class="py-2">
+    
+    <div class="flex flex-col md:flex-row items-center my-8">
+        <a href="/authors/kushidou/" class="w-24 h-24 md:mr-4">
+            
+            
+            <img src="/images/kushidou.png" class="w-full bg-primary-bg rounded-full" alt="Avatar">
+            
+        </a>
+        <div class="w-full md:w-auto mt-4 md:mt-0">
+            <a href="/authors/kushidou/" class="block font-bold text-lg pb-1 mb-2 border-b">Kushidou</a>
+            <span class="block pb-2">什么都学，却什么都不精通的一个小白:)</span>
+            
+            
+            
+            
+            
+            <a href="" class="mr-1">
+                <i class="&lt;nil&gt; fa-&lt;nil&gt;"></i>
+            </a>
+            
+        </div>
+    </div>
+    
+</div>
+        
+        
+        
+<div class="flex flex-col md:flex-row md:justify-between -mx-2 mt-4 px-2 pt-4 border-t">
+    <div>
         
     </div>
-    
-</div>
-
-  </div>
-
-  
-  <div class="w-full lg:w-1/3 mb-4 lg:mb-0 lg:ml-8">
-    <img src="https://cdn.jsdelivr.net/gh/kushidou/PicLibrary//img/202111151000352.png" width="200px" alt="Featured Image">
-  </div>
-  
-</div>
-  </div>
-  
-  <div class="py-6">
-    <div class="flex flex-col-reverse lg:flex-row justify-between">
-  
-  <div class="w-full ">
-    <div class="mb-4">
-  <a href="/posts/211019-dpkg_package_guide/" class="font-bold text-xl hover:text-eureka">DEB打包方法简介</a>
-</div>
-<div class="content">
-  简单介绍deb打包的方法，包括目录树格式和打包注意事项。
-
-</div>
-
-<div class="flex flex-wrap flex-row items-center mt-2 text-tertiary-text">
-    <div class="mr-6 my-2">
-        <i class="fas fa-calendar-check"></i>
-        <span>2021-10-19</span>
-    </div>
-    <div class="mr-6 my-2">
-        <i class="fas fa-history"></i>
-        <span> update 2021-10-19</span>
-    </div>
-    
-    
-
-    
-    <div class="mr-6 my-2">
-        <i class="fas fa-th-list mr-1"></i>
+    <div class="md:text-right mt-4 md:mt-0">
         
-        <a href="/series/linux%E5%AD%A6%E4%B9%A0%E4%B8%8E%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/" class="hover:text-eureka">Linux学习与解决方案</a>
+        <span class="block font-bold">Next</span>
+        <a href="/posts/211203-linuxchangeusername/" class="block">在Linux环境下修改用户名和主目录</a>
         
     </div>
-    
 </div>
 
-  </div>
-
-  
-</div>
-  </div>
-  
-  <div class="py-6">
-    <div class="flex flex-col-reverse lg:flex-row justify-between">
-  
-  <div class="w-full ">
-    <div class="mb-4">
-  <a href="/posts/210914-mdadm/" class="font-bold text-xl hover:text-eureka">Linux恢复操作系统后mdadm导致开机变慢的方法</a>
-</div>
-<div class="content">
-  解决Linux系统异地恢复后开机mdadm报错导致开机时间变长。
-
-</div>
-
-<div class="flex flex-wrap flex-row items-center mt-2 text-tertiary-text">
-    <div class="mr-6 my-2">
-        <i class="fas fa-calendar-check"></i>
-        <span>2021-09-14</span>
-    </div>
-    <div class="mr-6 my-2">
-        <i class="fas fa-history"></i>
-        <span> update 2021-09-14</span>
-    </div>
-    
-    
-
-    
-    <div class="mr-6 my-2">
-        <i class="fas fa-th-list mr-1"></i>
         
-        <a href="/series/linux%E5%AD%A6%E4%B9%A0%E4%B8%8E%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/" class="hover:text-eureka">Linux学习与解决方案</a>
-        
+
+
+
     </div>
     
-</div>
 
-  </div>
-
-  
-</div>
-  </div>
-  
-</div>
-
-
-  <div class="pt-2 hover:text-eureka">
     
-  <a href="/posts/" class="font-semibold">Read More</a>
-  <i class="fas fa-caret-right ml-1"></i>
-
-  </div>
-
-
-
-
-
-
-
-
-
-
-
-
-  
+    
+</div>
+<script>
+    document.addEventListener('DOMContentLoaded', ()=>{
+        hljs.initHighlightingOnLoad();
+    })
+</script>
 
       </div>
     </div>
-  </div>
-
     
-
-  
-  
-    
-      
-  
-
-  
-
-  
-  
-  
-
-  
-    
-    
-    
-    
-      
-      
-        
-      
-    
-  
-
-  
-  
-  
-  
-    
-    
-    
-    
-      
-      
-        
-      
-    
-
-    
-    
-    
-    
-    
-  
-
-  <div class="pl-scrollbar bg-secondary-bg" 
-    >
-    <div class="max-w-screen-xl mx-auto">
-      <div id="about" class="lg:w-2/3 mx-auto px-6 md:px-8 xl:px-12 py-12">
-        
-  
-
-  
-    <div class="flex flex-col md:flex-row items-center justify-center mb-12">
-  
-  
-    <div class="flex-none w-48 mx-auto md:ml-0 md:mr-8 md:pr-8 md:border-r">
-      <img src="/images/kushidou.png" class="rounded-full" alt="头像">
-    </div>
-  
-  <div class="flex-grow mt-4 md:mt-0">
-    <div class="text-3xl py-4">kushidou</div>
-    <div class="w-3/12 xl:w-2/12 border-b"></div>
-
-    <div class="flex items-center pt-4">
-      
-      <div class="flex flex-wrap">
-        
-
-        
-      </div>
-
-    </div>
-
-    
-      <div class="py-8 text-lg leading-normal">
-        啥都学，啥都不精通的一个小白。B站@唐唐xiaozhen。欢迎加群交♂流：655742099
-      </div>
-    
-  </div>
-  <div class="flex md:flex-col justify-center items-end ml-8">
-    
-    
-      
-      
-      
-      
-      
-      <div class="pb-2 pr-4 md:pr-0 pt-4 md:pt-0">
-        <a href="small09@qq.com"><i class="fas fa-envelope"></i></a>
-      </div>
-    
-      
-      
-      
-      
-      
-      <div class="pb-2 pr-4 md:pr-0 pt-4 md:pt-0">
-        <a href="https://twitter.com/tangzhen1219"><i class="fab fa-twitter"></i></a>
-      </div>
-    
-  </div>
-</div>
-<div class="content">
-  
-</div>
-
-  
-
-      </div>
-    </div>
-  </div>
-
-    
-
-  
-  
   </main>
   <footer class="pl-scrollbar">
     <div class="w-full max-w-screen-xl mx-auto"><div class="text-center p-6 pin-b">
