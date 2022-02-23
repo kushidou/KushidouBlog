@@ -49,9 +49,9 @@ do
     [[ ${fname} == "#" ]] && continue
 
     echo -e "\t\t\t<tr>" >> ${ihtml}
-    echo -e "\t\t\t\t<td><a href=\"/d/${fname}\">${fname}</a> </td><td> ... </td>" >> ${ihtml}
-    echo -e "\t\t\t\t<td> ${fsize} </td><td> ... </td>" >> ${ihtml}
-    echo -e "\t\t\t\t<td> ${ftime} </td>" >> ${ihtml}
+    echo -e "\t\t\t\t<td><a href=\"/d/${fname}\">${fname}</a></td>" >> ${ihtml}
+    echo -e "\t\t\t\t<td>${fsize}</td>" >> ${ihtml}
+    echo -e "\t\t\t\t<td>${ftime}</td>" >> ${ihtml}
     echo -e "\t\t\t</tr>" >> ${ihtml}
     echo " " >> ${ihtml}
     echo "Success: ${fname}"
