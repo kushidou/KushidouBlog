@@ -1,7 +1,7 @@
 main:
   - name: Minecraft
     # url: '#about'
-    url: mc.small09.top
+    url: https://mc.small09.top
     weight: 1
   - name: 博客
     url: /posts/
