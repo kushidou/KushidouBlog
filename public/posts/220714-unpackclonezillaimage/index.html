@@ -3,7 +3,7 @@
 <meta name="viewport" content="width=device-width">
 
 
-<title>Linux修改mac地址 | 香风家的火柴盒</title>
+<title>从再生龙（clonezilla）镜像直接提取文件 | 香风家的火柴盒</title>
 
 <meta name="generator" content="Hugo and Eureka 0.8.0" />
 <link rel="stylesheet" href="/css/eureka.min.css">
@@ -72,7 +72,7 @@
 <link rel="apple-touch-icon" sizes="180x180" href="/images/icon_hu2edf57696400f275bcb1d2f9022ef01c_28092_180x180_fill_box_center_2.png">
 
 <meta name="description"
-  content="当Linux的图形界面没有或失效的时候，该如何更改mac地址？">
+  content="从clonezilla的镜像直接提取文件，免于先全盘全区恢复。">
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -84,8 +84,8 @@
       "item":"/posts/"},{
       "@type": "ListItem",
       "position": 2 ,
-      "name":"Linux修改mac地址",
-      "item":"/posts/210328-linuxchangemacip/"}]
+      "name":"从再生龙（clonezilla）镜像直接提取文件",
+      "item":"/posts/220714-unpackclonezillaimage/"}]
 }
 </script>
 
@@ -97,11 +97,11 @@
     "@type": "Article",
     "mainEntityOfPage": {
         "@type": "WebPage",
-        "@id": "/posts/210328-linuxchangemacip/"
+        "@id": "/posts/220714-unpackclonezillaimage/"
     },
-    "headline": "Linux修改mac地址 | 香风家的火柴盒","datePublished": "2021-03-28T00:00:00+00:00",
-    "dateModified": "2021-03-28T00:00:00+00:00",
-    "wordCount":  716 ,
+    "headline": "从再生龙（clonezilla）镜像直接提取文件 | 香风家的火柴盒","datePublished": "2022-07-14T13:05:51+08:00",
+    "dateModified": "2022-07-14T13:05:51+08:00",
+    "wordCount":  791 ,
     "author": {
         "@type": "Person",
         "name": "kushidou"
@@ -114,21 +114,21 @@
             "url": "/images/icon.png"
         }
         },
-    "description": "\u003cp\u003e当Linux的图形界面没有或失效的时候，该如何更改mac地址？\u003c\/p\u003e"
+    "description": "\u003cp\u003e从clonezilla的镜像直接提取文件，免于先全盘全区恢复。\u003c\/p\u003e"
 }
-</script><meta property="og:title" content="Linux修改mac地址 | 香风家的火柴盒" />
+</script><meta property="og:title" content="从再生龙（clonezilla）镜像直接提取文件 | 香风家的火柴盒" />
 <meta property="og:type" content="article" />
 
 
 <meta property="og:image" content="/images/icon.png">
 
 
-<meta property="og:url" content="/posts/210328-linuxchangemacip/" />
+<meta property="og:url" content="/posts/220714-unpackclonezillaimage/" />
 
 
 
 
-<meta property="og:description" content="当Linux的图形界面没有或失效的时候，该如何更改mac地址？" />
+<meta property="og:description" content="从clonezilla的镜像直接提取文件，免于先全盘全区恢复。" />
 
 
 
@@ -145,19 +145,20 @@
 
 
 
-<meta property="article:published_time" content="2021-03-28T00:00:00&#43;00:00" />
+<meta property="article:published_time" content="2022-07-14T13:05:51&#43;08:00" />
 
 
-<meta property="article:modified_time" content="2021-03-28T00:00:00&#43;00:00" />
+<meta property="article:modified_time" content="2022-07-14T13:05:51&#43;08:00" />
 
 
 
 <meta property="article:section" content="posts" />
 
 
+<meta property="article:tag" content="clonezilla" />
+
 <meta property="article:tag" content="Linux" />
 
-<meta property="article:tag" content="网络" />
 
 
 
@@ -165,9 +166,6 @@
 
 
 
-
-
-<meta property="og:see_also" content="/posts/220714-unpackclonezillaimage/" />
 
 
 
@@ -214,6 +212,8 @@
 <meta property="og:see_also" content="/posts/210420-linuxmorethan4serialport/" />
 
 
+
+<meta property="og:see_also" content="/posts/210328-linuxchangemacip/" />
 
 
 
@@ -302,15 +302,15 @@
 <div class="grid grid-cols-2 lg:grid-cols-8 gap-4 lg:pt-12">
     <div
         class="col-span-2  lg:col-span-6 bg-secondary-bg rounded px-6 py-8">
-        <h1 class="font-bold text-3xl text-primary-text">Linux修改mac地址</h1>
+        <h1 class="font-bold text-3xl text-primary-text">从再生龙（clonezilla）镜像直接提取文件</h1>
         <div class="flex flex-wrap flex-row items-center mt-2 text-tertiary-text">
     <div class="mr-6 my-2">
         <i class="fas fa-calendar-check"></i>
-        <span>2021-03-28</span>
+        <span>2022-07-14</span>
     </div>
     <div class="mr-6 my-2">
         <i class="fas fa-history"></i>
-        <span> update 2021-03-28</span>
+        <span> update 2022-07-14</span>
     </div>
     
     
@@ -329,53 +329,38 @@
         
 
         <div class="content">
-            <p>当Linux的图形界面没有或失效的时候，该如何更改mac地址？</p>
-<h1 id="linux调整网卡mac地址指令">Linux调整网卡MAC地址（指令）</h1>
-<p>有的时候需要使用欺骗的方法为电脑设置新的mac，比如存在上网网卡限制，或者想要隐藏自己的真实mac地址。这里列举三种修改mac的方法，适用于Debian系的Linux，其他的应该类似。</p>
-<h2 id="方法一ifconfig">方法一：ifconfig</h2>
-<pre><code class="language-bash"># ifconfig    查看网卡名称$NAME
-# 需要sudo权限
-ifconfig $NAME down
-ifconfig $NAME hw ether $NEW_MAC
-ifconfig $NAME up
-# 使用ifconfig检查有没有改变
+            <p>从clonezilla的镜像直接提取文件，免于先全盘全区恢复。</p>
+<p>再生龙（clonezilla）是一个常用的Linux系统备份工具，适用于多个版本、多种CPU架构的电脑。</p>
+<p>再生龙生成的镜像是比较特殊的格式，如果想要从里面提取文件，通常只能进行镜像恢复后进入系统提取。但是往往我们没有那么多硬盘来恢复系统。</p>
+<p>再生龙的原理简单来说就是把硬盘分区使用partclone工具打包成img文件，然后使用gzip进行分卷压缩。我们只需要逆向操作，利用工具，把镜像解包挂载，直接在当前系统挂载，就可以得到原分区的文件了。</p>
+<h2 id="挂载方法">挂载方法：</h2>
+<h3 id="1-环境需求">1. 环境需求</h3>
+<p>我们操作再生龙镜像时，最好是使用Linux环境。这个环境中，需要安装partclone（也就是再生龙生成镜像的核心工具）。</p>
+<pre><code class="language-bash">sudo apt install partclone
+# 以Debian系为例
 </code></pre>
-<h2 id="方法二macchanger">方法二：macchanger</h2>
-<p><code>sudo apt install macchanger</code>，安装过程提示是否自启，随便。</p>
-<pre><code class="language-bash">ifconfig $NAME down
-macchanger -m $NEW_MAC $NAME
-ifconfig $NAME up
+<p>并且我们需要准备一个足够大的硬盘，用来存储镜像包和解包出的img文件。硬盘/分区的空间需要大于镜像本来的<strong>分区</strong>空间。</p>
+<h3 id="2-合并镜像">2. 合并镜像</h3>
+<p>再生龙默认情况下会把一个硬盘分区分按4GB的大小进行分包，通常以<code>gz.aa</code>、<code>gz.ab</code>等结尾，我们需要把这些包重新整合成一个gz包。</p>
+<p>整合成gz包后，我们就可以解压gz来得到镜像img了。我们可以把两个步骤用流的方式写入一条命令，节省硬盘空间。</p>
+<pre><code class="language-bash">cat sda1.ext4-ptcl-img.gz.* | gzip -d -c &gt; sda1.img
 </code></pre>
-<p>ps:macchanger可以附加多种参数，如-m指定mac地址，-s查看状态，-r随机地址</p>
-<h2 id="备注">备注：</h2>
-<p>以上两种方法是软件层面的修改，不会对硬件造成损伤，重启之后就能恢复如初。如果是要长期有效，可以把这些命令写入脚本开机自启。除了这两个，还有另一种软修改的方法，因为我总是提示失败就遗忘了。</p>
-<p>有些方法会提到修改/etc目录下的文件实现MAC地址的修改，但是我一个文件都没找到（UOS），这个是因系统而异的，不同的发行版可以选择性的编译这些文件，就会造成有人有有人没有，因为没有实践，所以就不写在这里了。</p>
-<h2 id="方法三ethtool慎用">方法三：ethtool（慎用）</h2>
-<p>以上方法都失效，可以直接修改网卡的物理MAC地址，修改后无法恢复，慎用</p>
-<pre><code class="language-bash"># 首先检查mac是否支持修改
-ethtool -i $NAME
-# 如果  supports-eeprom-access: no，大概率不支持修改
-
-# 查看网卡的mac寄存器
-ethtool -e $NAME
-# 如果无法读取，大概率不支持修改
-
-# 修改mac，按字节修改
-ethtool -E $NAME offset 0 value 0xAA
-ethtool -E $NAME offset 1 value 0xBB
-ethtool -E $NAME offset 2 value 0xCC
-...共六行
-# 如果修改无效，则驱动不支持修改
+<p>这一步生成的img文件不能直接使用（google上也有说能用的，但是我试下来不能），需要进行一次转换。经过实际操作，这个文件所占用的空间是镜像原分区的大小，但是统计硬盘使用量时却只计算实际大小，希望了解的人可以帮忙解释一下。</p>
+<pre><code class="language-bash">partclone.extfs -r -s sda1.img -o sda1-ex.img --restore_raw_file
 </code></pre>
-<h2 id="如果以上方法都无法修改则建议申请新的ip">如果以上方法都无法修改，则建议申请新的ip。。。</h2>
-<p><em><font size="1">文章首发于<a href="small09.top" target="前往火柴盒" title="前往Kushidou个人博客" rel="noopener">香风家的小别墅</a>，转载请携带出处。</font></em></p>
+<p>当然上面两条指令也可以使用流的方式再次封装到一条，但是消耗的时间、失败后重新来过的时间，都会更长。</p>
+<h2 id="3挂载镜像">3.挂载镜像</h2>
+<p>将最后生成的img镜像挂载到我们的/mnt（或其他）目录，进入这个目录就可以看到原来全部的文件了。</p>
+<pre><code class="language-bash">sudo mount -o loop -t ext4 sda1-ex.img /mnt
+</code></pre>
+<p>最后我们只需要进入 <code>/mnt</code> 目录，就可以想直接操作硬盘一样把文件复制出来了。</p>
         </div>
         
         <div class="my-4">
     
-    <a href="/tags/linux/" class="inline-block bg-tertiary-bg text-sm rounded px-3 py-1 my-1 mr-2 hover:text-eureka">#Linux</a>
+    <a href="/tags/clonezilla/" class="inline-block bg-tertiary-bg text-sm rounded px-3 py-1 my-1 mr-2 hover:text-eureka">#clonezilla</a>
     
-    <a href="/tags/%E7%BD%91%E7%BB%9C/" class="inline-block bg-tertiary-bg text-sm rounded px-3 py-1 my-1 mr-2 hover:text-eureka">#网络</a>
+    <a href="/tags/linux/" class="inline-block bg-tertiary-bg text-sm rounded px-3 py-1 my-1 mr-2 hover:text-eureka">#Linux</a>
     
 </div>
         
@@ -416,14 +401,11 @@ ethtool -E $NAME offset 2 value 0xCC
 <div class="flex flex-col md:flex-row md:justify-between -mx-2 mt-4 px-2 pt-4 border-t">
     <div>
         
-        <span class="block font-bold">Previous</span>
-        <a href="/posts/210420-linuxmorethan4serialport/" class="block">Linux启用四个以上的串口</a>
-        
     </div>
     <div class="md:text-right mt-4 md:mt-0">
         
         <span class="block font-bold">Next</span>
-        <a href="/posts/about_hugo_website/" class="block">关于使用HUGO建立博客站点</a>
+        <a href="/posts/220223-deepin_partsinddefilemanager/" class="block">Deepin/UOS文件管理器隐藏不需要的盘符</a>
         
     </div>
 </div>
@@ -502,13 +484,22 @@ ethtool -E $NAME offset 2 value 0xCC
         <h2 class="text-lg font-semibold mb-4">See Also</h2>
         <div class="content">
             
-            <a href="/posts/210311-serialmodeandudevinlinux/">Linux串口和udev理解</a>
+            <a href="/posts/220223-deepin_partsinddefilemanager/">Deepin/UOS文件管理器隐藏不需要的盘符</a>
             <br />
             
-            <a href="/posts/210311-multitouchscreeninlinux/">Linux多显示器触屏调试与暂行解决方案</a>
+            <a href="/posts/220104-diylinuxiso/">定制自己的Linux ISO镜像</a>
             <br />
             
-            <a href="/posts/210218-teamspeakwithdocker/">使用Docker安装TeamSpeak</a>
+            <a href="/posts/211203-linuxchangeusername/">在Linux环境下修改用户名和主目录</a>
+            <br />
+            
+            <a href="/tools/kushidoutouch/">kushidoutouch多触屏修复软件</a>
+            <br />
+            
+            <a href="/posts/211019-dpkg_package_guide/">DEB打包方法简介</a>
+            <br />
+            
+            <a href="/posts/210914-mdadm/">Linux恢复操作系统后mdadm导致开机变慢的方法</a>
             <br />
             
         </div>

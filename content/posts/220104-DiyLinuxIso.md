@@ -4,9 +4,9 @@ description: 为已有的Linux ISO镜像添加自己的功能。
 toc: false
 authors: kushidou
 tags: 
-  - Linux学习与解决方案
+  - Linux
 categories: []
-series: []
+series: Linux学习与解决方案
 date: 2022-01-04T09:17:38+08:00
 lastmod: 2022-01-04T09:17:38+08:00
 featuredVideo:

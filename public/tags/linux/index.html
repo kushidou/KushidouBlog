@@ -99,63 +99,106 @@
     "itemListElement":[{
             "@type":"ListItem",
             "position":  1 ,
+            "name": "从再生龙（clonezilla）镜像直接提取文件",
+            "description": "\u003cp\u003e从clonezilla的镜像直接提取文件，免于先全盘全区恢复。\u003c/p\u003e",
+            "url": "/posts/220714-unpackclonezillaimage/"
+        },{
+            "@type":"ListItem",
+            "position":  2 ,
+            "name": "Deepin/UOS文件管理器隐藏不需要的盘符",
+            "description": "处理UOS出现其他盘符的问题",
+            "url": "/posts/220223-deepin_partsinddefilemanager/"
+        },{
+            "@type":"ListItem",
+            "position":  3 ,
+            "name": "定制自己的Linux ISO镜像",
+            "description": "为已有的Linux ISO镜像添加自己的功能。",
+            "url": "/posts/220104-diylinuxiso/"
+        },{
+            "@type":"ListItem",
+            "position":  4 ,
             "name": "在Linux环境下修改用户名和主目录",
             "description": "\u003cp\u003e如何在Linux下完整修改当前用户名和主目录，还不影响其他文件？\u003c/p\u003e",
             "url": "/posts/211203-linuxchangeusername/"
         },{
             "@type":"ListItem",
-            "position":  2 ,
+            "position":  5 ,
             "name": "kushidoutouch多触屏修复软件",
             "description": "Linux多显示器触摸问题软件解决方案。",
             "url": "/tools/kushidoutouch/"
         },{
             "@type":"ListItem",
-            "position":  3 ,
+            "position":  6 ,
             "name": "DEB打包方法简介",
             "description": "Debian系Linux，如ubuntu, deepin等系统的deb打包教程",
             "url": "/posts/211019-dpkg_package_guide/"
         },{
             "@type":"ListItem",
-            "position":  4 ,
+            "position":  7 ,
             "name": "Linux恢复操作系统后mdadm导致开机变慢的方法",
             "description": "mdadm no arrays found in config file or automatically",
             "url": "/posts/210914-mdadm/"
         },{
             "@type":"ListItem",
-            "position":  5 ,
+            "position":  8 ,
             "name": "使用dd指令备份和恢复Linux系统（硬盘级）",
             "description": "Backup Linux with dd command.",
             "url": "/posts/210914-linuxbackupdd/"
         },{
             "@type":"ListItem",
-            "position":  6 ,
+            "position":  9 ,
             "name": "Linux处理多触屏的终极解决方案",
             "description": "Linux with mutli touch screen",
             "url": "/posts/210824-linuxtouchscreenfin/"
         },{
             "@type":"ListItem",
-            "position":  7 ,
+            "position":  10 ,
             "name": "Linux中获得AMD显卡的状态信息",
             "description": "\u003cp\u003e在Linux下获得AMD GPU的状态和温度信息。\u003c/p\u003e",
             "url": "/posts/210719-gpuinfoinlinux/"
         },{
             "@type":"ListItem",
-            "position":  8 ,
+            "position":  11 ,
             "name": "免密码使用sudo",
             "description": "\u003cp\u003e记录一种可以免密码使用sudo的方法。\u003c/p\u003e",
             "url": "/posts/210630-sudowithoutpasswd/"
         },{
             "@type":"ListItem",
-            "position":  9 ,
+            "position":  12 ,
             "name": "deepin和UOS，快捷方式，开机自启动",
             "description": "\u003cp\u003e修正触屏的脚本总是运行失败，于是找到在Deepin下能够在桌面启动后自动运行的方法。这样的触屏映射就稳定了。经测试在Ubuntu 1604中也适用。\u003c/p\u003e",
             "url": "/posts/210429-deepinautorun/"
         },{
             "@type":"ListItem",
-            "position":  10 ,
+            "position":  13 ,
             "name": "Linux启用四个以上的串口",
             "description": "\u003cp\u003e工控板安装Linux常常最多只能看到四个串口，通过修改引导文件可以显示所有的串口。\u003c/p\u003e",
             "url": "/posts/210420-linuxmorethan4serialport/"
+        },{
+            "@type":"ListItem",
+            "position":  14 ,
+            "name": "Linux修改mac地址",
+            "description": "\u003cp\u003e当Linux的图形界面没有或失效的时候，该如何更改mac地址？\u003c/p\u003e",
+            "url": "/posts/210328-linuxchangemacip/"
+        },{
+            "@type":"ListItem",
+            "position":  15 ,
+            "name": "Linux串口和udev理解",
+            "description": "\u003cp\u003e配置串口权限，顺便看一下linux的udev规则。\u003c/p\u003e",
+            "url": "/posts/210311-serialmodeandudevinlinux/"
+        },{
+            "@type":"ListItem",
+            "position":  16 ,
+            "name": "Linux多显示器触屏调试与暂行解决方案",
+            "description": "Linux with multi touch screen",
+            "url": "/posts/210311-multitouchscreeninlinux/"
+        },{
+            "@type":"ListItem",
+            "position":  17 ,
+            "name": "使用Docker安装TeamSpeak",
+            "description": "install teamspeak with docker",
+            "image": "https://cdn.jsdelivr.net/gh/kushidou/PicLibrary/img/image-20210526173013413.png",
+            "url": "/posts/210218-teamspeakwithdocker/"
         }
     ]
 }
@@ -190,7 +233,7 @@
 
 
 
-<meta property="og:updated_time" content="2021-12-03T09:01:23&#43;08:00" />
+<meta property="og:updated_time" content="2022-07-14T13:05:51&#43;08:00" />
 
 
 
@@ -275,6 +318,126 @@
 </article>
 <div class="bg-secondary-bg rounded px-6">
     <div class="overflow-hidden divide-y">
+  
+  <div class="py-6">
+    <div class="flex flex-col-reverse lg:flex-row justify-between">
+  
+  <div class="w-full ">
+    <div class="mb-4">
+  <a href="/posts/220714-unpackclonezillaimage/" class="font-bold text-xl hover:text-eureka">从再生龙（clonezilla）镜像直接提取文件</a>
+</div>
+<div class="content">
+  从clonezilla的镜像直接提取文件，免于先全盘全区恢复。
+
+</div>
+
+<div class="flex flex-wrap flex-row items-center mt-2 text-tertiary-text">
+    <div class="mr-6 my-2">
+        <i class="fas fa-calendar-check"></i>
+        <span>2022-07-14</span>
+    </div>
+    <div class="mr-6 my-2">
+        <i class="fas fa-history"></i>
+        <span> update 2022-07-14</span>
+    </div>
+    
+    
+
+    
+    <div class="mr-6 my-2">
+        <i class="fas fa-th-list mr-1"></i>
+        
+        <a href="/series/linux%E5%AD%A6%E4%B9%A0%E4%B8%8E%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/" class="hover:text-eureka">Linux学习与解决方案</a>
+        
+    </div>
+    
+</div>
+
+  </div>
+
+  
+</div>
+  </div>
+  
+  <div class="py-6">
+    <div class="flex flex-col-reverse lg:flex-row justify-between">
+  
+  <div class="w-full ">
+    <div class="mb-4">
+  <a href="/posts/220223-deepin_partsinddefilemanager/" class="font-bold text-xl hover:text-eureka">Deepin/UOS文件管理器隐藏不需要的盘符</a>
+</div>
+<div class="content">
+  Deepin/UOS 里处理文件管理器显示太多盘符的问题。
+
+</div>
+
+<div class="flex flex-wrap flex-row items-center mt-2 text-tertiary-text">
+    <div class="mr-6 my-2">
+        <i class="fas fa-calendar-check"></i>
+        <span>2022-02-23</span>
+    </div>
+    <div class="mr-6 my-2">
+        <i class="fas fa-history"></i>
+        <span> update 2022-02-23</span>
+    </div>
+    
+    
+
+    
+    <div class="mr-6 my-2">
+        <i class="fas fa-th-list mr-1"></i>
+        
+        <a href="/series/linux%E5%AD%A6%E4%B9%A0%E4%B8%8E%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/" class="hover:text-eureka">Linux学习与解决方案</a>
+        
+    </div>
+    
+</div>
+
+  </div>
+
+  
+</div>
+  </div>
+  
+  <div class="py-6">
+    <div class="flex flex-col-reverse lg:flex-row justify-between">
+  
+  <div class="w-full ">
+    <div class="mb-4">
+  <a href="/posts/220104-diylinuxiso/" class="font-bold text-xl hover:text-eureka">定制自己的Linux ISO镜像</a>
+</div>
+<div class="content">
+  想要在原版的Linux镜像上添加自定义的软件，但是不想、不会编译，那么就可以基于Linux的iso文件进行修改，定制自己的安装试用镜像。
+
+</div>
+
+<div class="flex flex-wrap flex-row items-center mt-2 text-tertiary-text">
+    <div class="mr-6 my-2">
+        <i class="fas fa-calendar-check"></i>
+        <span>2022-01-04</span>
+    </div>
+    <div class="mr-6 my-2">
+        <i class="fas fa-history"></i>
+        <span> update 2022-01-04</span>
+    </div>
+    
+    
+
+    
+    <div class="mr-6 my-2">
+        <i class="fas fa-th-list mr-1"></i>
+        
+        <a href="/series/linux%E5%AD%A6%E4%B9%A0%E4%B8%8E%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/" class="hover:text-eureka">Linux学习与解决方案</a>
+        
+    </div>
+    
+</div>
+
+  </div>
+
+  
+</div>
+  </div>
   
   <div class="py-6">
     <div class="flex flex-col-reverse lg:flex-row justify-between">
@@ -670,31 +833,168 @@
 </div>
   </div>
   
+  <div class="py-6">
+    <div class="flex flex-col-reverse lg:flex-row justify-between">
+  
+  <div class="w-full ">
+    <div class="mb-4">
+  <a href="/posts/210328-linuxchangemacip/" class="font-bold text-xl hover:text-eureka">Linux修改mac地址</a>
+</div>
+<div class="content">
+  当Linux的图形界面没有或失效的时候，该如何更改mac地址？
+
+</div>
+
+<div class="flex flex-wrap flex-row items-center mt-2 text-tertiary-text">
+    <div class="mr-6 my-2">
+        <i class="fas fa-calendar-check"></i>
+        <span>2021-03-28</span>
+    </div>
+    <div class="mr-6 my-2">
+        <i class="fas fa-history"></i>
+        <span> update 2021-03-28</span>
+    </div>
+    
+    
+
+    
+    <div class="mr-6 my-2">
+        <i class="fas fa-th-list mr-1"></i>
+        
+        <a href="/series/linux%E5%AD%A6%E4%B9%A0%E4%B8%8E%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/" class="hover:text-eureka">Linux学习与解决方案</a>
+        
+    </div>
+    
+</div>
+
+  </div>
+
+  
+</div>
+  </div>
+  
+  <div class="py-6">
+    <div class="flex flex-col-reverse lg:flex-row justify-between">
+  
+  <div class="w-full ">
+    <div class="mb-4">
+  <a href="/posts/210311-serialmodeandudevinlinux/" class="font-bold text-xl hover:text-eureka">Linux串口和udev理解</a>
+</div>
+<div class="content">
+  配置串口权限，顺便看一下linux的udev规则。
+
+</div>
+
+<div class="flex flex-wrap flex-row items-center mt-2 text-tertiary-text">
+    <div class="mr-6 my-2">
+        <i class="fas fa-calendar-check"></i>
+        <span>2021-03-11</span>
+    </div>
+    <div class="mr-6 my-2">
+        <i class="fas fa-history"></i>
+        <span> update 2021-03-11</span>
+    </div>
+    
+    
+
+    
+    <div class="mr-6 my-2">
+        <i class="fas fa-th-list mr-1"></i>
+        
+        <a href="/series/linux%E5%AD%A6%E4%B9%A0%E4%B8%8E%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/" class="hover:text-eureka">Linux学习与解决方案</a>
+        
+    </div>
+    
+</div>
+
+  </div>
+
+  
+</div>
+  </div>
+  
+  <div class="py-6">
+    <div class="flex flex-col-reverse lg:flex-row justify-between">
+  
+  <div class="w-full ">
+    <div class="mb-4">
+  <a href="/posts/210311-multitouchscreeninlinux/" class="font-bold text-xl hover:text-eureka">Linux多显示器触屏调试与暂行解决方案</a>
+</div>
+<div class="content">
+  由于需要使用新创平台配合多个显示器，触摸屏经常出现不准的情况。经过多次的查阅资料、测试和整合，总结了一个解决触摸的方法。一些测试过程中的弯路也保留了，作为记录。
+
+</div>
+
+<div class="flex flex-wrap flex-row items-center mt-2 text-tertiary-text">
+    <div class="mr-6 my-2">
+        <i class="fas fa-calendar-check"></i>
+        <span>2021-03-11</span>
+    </div>
+    <div class="mr-6 my-2">
+        <i class="fas fa-history"></i>
+        <span> update 2021-09-14</span>
+    </div>
+    
+    
+
+    
+    <div class="mr-6 my-2">
+        <i class="fas fa-th-list mr-1"></i>
+        
+        <a href="/series/linux%E5%AD%A6%E4%B9%A0%E4%B8%8E%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/" class="hover:text-eureka">Linux学习与解决方案</a>
+        
+    </div>
+    
+</div>
+
+  </div>
+
+  
+</div>
+  </div>
+  
+  <div class="py-6">
+    <div class="flex flex-col-reverse lg:flex-row justify-between">
+  
+  <div class="w-full lg:w-2/3">
+    <div class="mb-4">
+  <a href="/posts/210218-teamspeakwithdocker/" class="font-bold text-xl hover:text-eureka">使用Docker安装TeamSpeak</a>
+</div>
+<div class="content">
+  TeamSpeak的官网总是有些问题，无法下载其客户端，所以考虑使用Docker来部署一个ts服务器环境。
+
+</div>
+
+<div class="flex flex-wrap flex-row items-center mt-2 text-tertiary-text">
+    <div class="mr-6 my-2">
+        <i class="fas fa-calendar-check"></i>
+        <span>2021-02-18</span>
+    </div>
+    <div class="mr-6 my-2">
+        <i class="fas fa-history"></i>
+        <span> update 2021-02-18</span>
+    </div>
+    
+    
+
+    
+</div>
+
+  </div>
+
+  
+  <div class="w-full lg:w-1/3 mb-4 lg:mb-0 lg:ml-8">
+    <img src="https://cdn.jsdelivr.net/gh/kushidou/PicLibrary/img/image-20210526173013413.png" width="200px" alt="Featured Image">
+  </div>
+  
+</div>
+  </div>
+  
 </div>
 
 
 </div>
 
-<ul class="pagination">
-  <li class="page-item">
-    <a href="/tags/linux/" class="page-link" aria-label="First"><span aria-hidden="true">&laquo;&laquo;</span></a>
-  </li>
-  <li class="page-item disabled">
-    <a  class="page-link" aria-label="Previous"><span aria-hidden="true">&laquo;</span></a>
-  </li>
-  <li class="page-item active">
-    <a class="page-link" href="/tags/linux/">1</a>
-  </li>
-  <li class="page-item">
-    <a class="page-link" href="/tags/linux/page/2/">2</a>
-  </li>
-  <li class="page-item">
-    <a href="/tags/linux/page/2/" class="page-link" aria-label="Next"><span aria-hidden="true">&raquo;</span></a>
-  </li>
-  <li class="page-item">
-    <a href="/tags/linux/page/2/" class="page-link" aria-label="Last"><span aria-hidden="true">&raquo;&raquo;</span></a>
-  </li>
-</ul>
 
 
 

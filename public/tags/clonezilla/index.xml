@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>clonezilla on 香风家的火柴盒</title>
+    <link>/tags/clonezilla/</link>
+    <description>Recent content in clonezilla on 香风家的火柴盒</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <copyright>2021-2021  &amp;copy;  Kushidou · Powered by &lt;a href=&#34;https://www.wangchucheng.com/&#34;&gt;Eureka&lt;/a&gt; and &lt;a href=&#34;https://gohugo.io/&#34;&gt;Hugo&lt;/a&gt;
+</copyright>
+    <lastBuildDate>Thu, 14 Jul 2022 13:05:51 +0800</lastBuildDate><atom:link href="/tags/clonezilla/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>从再生龙（clonezilla）镜像直接提取文件</title>
+      <link>/posts/220714-unpackclonezillaimage/</link>
+      <pubDate>Thu, 14 Jul 2022 13:05:51 +0800</pubDate>
+      
+      <guid>/posts/220714-unpackclonezillaimage/</guid>
+      <description>&lt;p&gt;从clonezilla的镜像直接提取文件，免于先全盘全区恢复。&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

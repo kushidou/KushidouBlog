@@ -4,9 +4,10 @@ description: 处理UOS出现其他盘符的问题
 toc: true
 authors: kushidou
 tags: 
-  - Linux学习与解决方案
+  - Linux
+  - Deepin/UOS
 categories: []
-series: []
+series: Linux学习与解决方案
 date: 2022-02-23T09:18:55+08:00
 lastmod: 2022-02-23T09:18:55+08:00
 featuredVideo:
