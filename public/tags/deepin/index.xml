@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>deepin on 香风家的火柴盒</title>
+    <link>/tags/deepin/</link>
+    <description>Recent content in deepin on 香风家的火柴盒</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <copyright>2021-2021  &amp;copy;  Kushidou · Powered by &lt;a href=&#34;https://www.wangchucheng.com/&#34;&gt;Eureka&lt;/a&gt; and &lt;a href=&#34;https://gohugo.io/&#34;&gt;Hugo&lt;/a&gt;
+</copyright>
+    <lastBuildDate>Mon, 08 May 2023 14:43:41 +0800</lastBuildDate><atom:link href="/tags/deepin/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>讨论在Debian系操作系统中重新提取已安装的软件并重新打包</title>
+      <link>/posts/230508-remake-deb/</link>
+      <pubDate>Mon, 08 May 2023 14:43:41 +0800</pubDate>
+      
+      <guid>/posts/230508-remake-deb/</guid>
+      <description>&lt;p&gt;Debian系操作系统采用dpkg作为包管理器，在安装软件后会存储deb包信息，是否可以提取这些信息并且重新打deb包转移到其他平台使用？&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Deepin/UOS文件管理器隐藏不需要的盘符</title>
+      <link>/posts/220223-deepin_partsinddefilemanager/</link>
+      <pubDate>Wed, 23 Feb 2022 09:18:55 +0800</pubDate>
+      
+      <guid>/posts/220223-deepin_partsinddefilemanager/</guid>
+      <description>&lt;p&gt;Deepin/UOS 里处理文件管理器显示太多盘符的问题。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>DEB打包方法简介</title>
+      <link>/posts/211019-dpkg_package_guide/</link>
+      <pubDate>Tue, 19 Oct 2021 10:12:23 +0800</pubDate>
+      
+      <guid>/posts/211019-dpkg_package_guide/</guid>
+      <description>&lt;p&gt;简单介绍deb打包的方法，包括目录树格式和打包注意事项。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>使用dd指令备份和恢复Linux系统（硬盘级）</title>
+      <link>/posts/210914-linuxbackupdd/</link>
+      <pubDate>Tue, 14 Sep 2021 13:51:16 +0800</pubDate>
+      
+      <guid>/posts/210914-linuxbackupdd/</guid>
+      <description>&lt;p&gt;害，谁不是个DD (誰でも 大好き)了呢!&lt;/p&gt;
+&lt;p&gt;但是这玩意儿太慢了。。。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Linux处理多触屏的终极解决方案</title>
+      <link>/posts/210824-linuxtouchscreenfin/</link>
+      <pubDate>Tue, 24 Aug 2021 00:00:00 +0000</pubDate>
+      
+      <guid>/posts/210824-linuxtouchscreenfin/</guid>
+      <description>&lt;p&gt;一般Linux操作系统接入多个触摸屏的最终解！&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>deepin和UOS，快捷方式，开机自启动</title>
+      <link>/posts/210429-deepinautorun/</link>
+      <pubDate>Thu, 29 Apr 2021 00:00:00 +0000</pubDate>
+      
+      <guid>/posts/210429-deepinautorun/</guid>
+      <description>&lt;p&gt;修正触屏的脚本总是运行失败，于是找到在Deepin下能够在桌面启动后自动运行的方法。这样的触屏映射就稳定了。经测试在Ubuntu 1604中也适用。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Linux多显示器触屏调试与暂行解决方案</title>
+      <link>/posts/210311-multitouchscreeninlinux/</link>
+      <pubDate>Thu, 11 Mar 2021 00:00:00 +0000</pubDate>
+      
+      <guid>/posts/210311-multitouchscreeninlinux/</guid>
+      <description>&lt;p&gt;由于需要使用新创平台配合多个显示器，触摸屏经常出现不准的情况。经过多次的查阅资料、测试和整合，总结了一个解决触摸的方法。一些测试过程中的弯路也保留了，作为记录。&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

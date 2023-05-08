@@ -8,7 +8,16 @@
     <language>en</language>
     <copyright>2021-2021  &amp;copy;  Kushidou · Powered by &lt;a href=&#34;https://www.wangchucheng.com/&#34;&gt;Eureka&lt;/a&gt; and &lt;a href=&#34;https://gohugo.io/&#34;&gt;Hugo&lt;/a&gt;
 </copyright>
-    <lastBuildDate>Thu, 14 Jul 2022 13:05:51 +0800</lastBuildDate><atom:link href="/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 08 May 2023 14:43:41 +0800</lastBuildDate><atom:link href="/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>讨论在Debian系操作系统中重新提取已安装的软件并重新打包</title>
+      <link>/posts/230508-remake-deb/</link>
+      <pubDate>Mon, 08 May 2023 14:43:41 +0800</pubDate>
+      
+      <guid>/posts/230508-remake-deb/</guid>
+      <description>&lt;p&gt;Debian系操作系统采用dpkg作为包管理器，在安装软件后会存储deb包信息，是否可以提取这些信息并且重新打deb包转移到其他平台使用？&lt;/p&gt;</description>
+    </item>
+    
     <item>
       <title>从再生龙（clonezilla）镜像直接提取文件</title>
       <link>/posts/220714-unpackclonezillaimage/</link>

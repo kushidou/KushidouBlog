@@ -3,33 +3,39 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>/authors/</loc>
-    <lastmod>2022-07-14T13:05:51+08:00</lastmod>
+    <lastmod>2023-05-08T14:43:41+08:00</lastmod>
+  </url><url>
+    <loc>/tags/deepin/</loc>
+    <lastmod>2023-05-08T14:43:41+08:00</lastmod>
+  </url><url>
+    <loc>/authors/kushidou/</loc>
+    <lastmod>2023-05-08T14:43:41+08:00</lastmod>
+  </url><url>
+    <loc>/tags/linux/</loc>
+    <lastmod>2023-05-08T14:43:41+08:00</lastmod>
+  </url><url>
+    <loc>/series/linux%E5%AD%A6%E4%B9%A0%E4%B8%8E%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/</loc>
+    <lastmod>2023-05-08T14:43:41+08:00</lastmod>
+  </url><url>
+    <loc>/posts/</loc>
+    <lastmod>2023-05-08T14:43:41+08:00</lastmod>
+  </url><url>
+    <loc>/series/</loc>
+    <lastmod>2023-05-08T14:43:41+08:00</lastmod>
+  </url><url>
+    <loc>/tags/</loc>
+    <lastmod>2023-05-08T14:43:41+08:00</lastmod>
+  </url><url>
+    <loc>/posts/230508-remake-deb/</loc>
+    <lastmod>2023-05-08T14:43:41+08:00</lastmod>
+  </url><url>
+    <loc>/</loc>
+    <lastmod>2023-05-08T14:43:41+08:00</lastmod>
   </url><url>
     <loc>/tags/clonezilla/</loc>
     <lastmod>2022-07-14T13:05:51+08:00</lastmod>
   </url><url>
-    <loc>/authors/kushidou/</loc>
-    <lastmod>2022-07-14T13:05:51+08:00</lastmod>
-  </url><url>
-    <loc>/tags/linux/</loc>
-    <lastmod>2022-07-14T13:05:51+08:00</lastmod>
-  </url><url>
-    <loc>/series/linux%E5%AD%A6%E4%B9%A0%E4%B8%8E%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/</loc>
-    <lastmod>2022-07-14T13:05:51+08:00</lastmod>
-  </url><url>
-    <loc>/posts/</loc>
-    <lastmod>2022-07-14T13:05:51+08:00</lastmod>
-  </url><url>
-    <loc>/series/</loc>
-    <lastmod>2022-07-14T13:05:51+08:00</lastmod>
-  </url><url>
-    <loc>/tags/</loc>
-    <lastmod>2022-07-14T13:05:51+08:00</lastmod>
-  </url><url>
     <loc>/posts/220714-unpackclonezillaimage/</loc>
-    <lastmod>2022-07-14T13:05:51+08:00</lastmod>
-  </url><url>
-    <loc>/</loc>
     <lastmod>2022-07-14T13:05:51+08:00</lastmod>
   </url><url>
     <loc>/posts/220223-deepin_partsinddefilemanager/</loc>

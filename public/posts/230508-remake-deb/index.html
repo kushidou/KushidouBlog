@@ -3,7 +3,7 @@
 <meta name="viewport" content="width=device-width">
 
 
-<title>Linux恢复操作系统后mdadm导致开机变慢的方法 | 香风家的火柴盒</title>
+<title>讨论在Debian系操作系统中重新提取已安装的软件并重新打包 | 香风家的火柴盒</title>
 
 <meta name="generator" content="Hugo and Eureka 0.8.0" />
 <link rel="stylesheet" href="/css/eureka.min.css">
@@ -72,7 +72,7 @@
 <link rel="apple-touch-icon" sizes="180x180" href="/images/icon_hu2edf57696400f275bcb1d2f9022ef01c_28092_180x180_fill_box_center_2.png">
 
 <meta name="description"
-  content="mdadm no arrays found in config file or automatically">
+  content="Debian系操作系统采用dpkg作为包管理器，在安装软件后会存储deb包信息，是否可以提取这些信息并且重新打deb包转移到其他平台使用？">
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -84,8 +84,8 @@
       "item":"/posts/"},{
       "@type": "ListItem",
       "position": 2 ,
-      "name":"Linux恢复操作系统后mdadm导致开机变慢的方法",
-      "item":"/posts/210914-mdadm/"}]
+      "name":"讨论在Debian系操作系统中重新提取已安装的软件并重新打包",
+      "item":"/posts/230508-remake-deb/"}]
 }
 </script>
 
@@ -97,11 +97,11 @@
     "@type": "Article",
     "mainEntityOfPage": {
         "@type": "WebPage",
-        "@id": "/posts/210914-mdadm/"
+        "@id": "/posts/230508-remake-deb/"
     },
-    "headline": "Linux恢复操作系统后mdadm导致开机变慢的方法 | 香风家的火柴盒","datePublished": "2021-09-14T15:16:13+08:00",
-    "dateModified": "2021-09-14T15:16:13+08:00",
-    "wordCount":  287 ,
+    "headline": "讨论在Debian系操作系统中重新提取已安装的软件并重新打包 | 香风家的火柴盒","datePublished": "2023-05-08T14:43:41+08:00",
+    "dateModified": "2023-05-08T14:43:41+08:00",
+    "wordCount":  1271 ,
     "author": {
         "@type": "Person",
         "name": "kushidou"
@@ -114,20 +114,22 @@
             "url": "/images/icon.png"
         }
         },
-    "description": "mdadm no arrays found in config file or automatically"
+    "description": "\u003cp\u003eDebian系操作系统采用dpkg作为包管理器，在安装软件后会存储deb包信息，是否可以提取这些信息并且重新打deb包转移到其他平台使用？\u003c\/p\u003e"
 }
-</script><meta property="og:title" content="Linux恢复操作系统后mdadm导致开机变慢的方法 | 香风家的火柴盒" />
+</script><meta property="og:title" content="讨论在Debian系操作系统中重新提取已安装的软件并重新打包 | 香风家的火柴盒" />
 <meta property="og:type" content="article" />
 
 
 <meta property="og:image" content="/images/icon.png">
 
 
-<meta property="og:url" content="/posts/210914-mdadm/" />
+<meta property="og:url" content="/posts/230508-remake-deb/" />
 
 
 
-<meta property="og:description" content="mdadm no arrays found in config file or automatically" />
+
+<meta property="og:description" content="Debian系操作系统采用dpkg作为包管理器，在安装软件后会存储deb包信息，是否可以提取这些信息并且重新打deb包转移到其他平台使用？" />
+
 
 
 
@@ -143,17 +145,19 @@
 
 
 
-<meta property="article:published_time" content="2021-09-14T15:16:13&#43;08:00" />
+<meta property="article:published_time" content="2023-05-08T14:43:41&#43;08:00" />
 
 
-<meta property="article:modified_time" content="2021-09-14T15:16:13&#43;08:00" />
+<meta property="article:modified_time" content="2023-05-08T14:43:41&#43;08:00" />
 
 
 
 <meta property="article:section" content="posts" />
 
 
-<meta property="article:tag" content="Linux" />
+<meta property="article:tag" content="linux" />
+
+<meta property="article:tag" content="deepin" />
 
 
 
@@ -162,8 +166,6 @@
 
 
 
-
-<meta property="og:see_also" content="/posts/230508-remake-deb/" />
 
 
 
@@ -186,6 +188,8 @@
 <meta property="og:see_also" content="/posts/211019-dpkg_package_guide/" />
 
 
+
+<meta property="og:see_also" content="/posts/210914-mdadm/" />
 
 
 
@@ -302,15 +306,15 @@
 <div class="grid grid-cols-2 lg:grid-cols-8 gap-4 lg:pt-12">
     <div
         class="col-span-2  lg:col-span-6 bg-secondary-bg rounded px-6 py-8">
-        <h1 class="font-bold text-3xl text-primary-text">Linux恢复操作系统后mdadm导致开机变慢的方法</h1>
+        <h1 class="font-bold text-3xl text-primary-text">讨论在Debian系操作系统中重新提取已安装的软件并重新打包</h1>
         <div class="flex flex-wrap flex-row items-center mt-2 text-tertiary-text">
     <div class="mr-6 my-2">
         <i class="fas fa-calendar-check"></i>
-        <span>2021-09-14</span>
+        <span>2023-05-08</span>
     </div>
     <div class="mr-6 my-2">
         <i class="fas fa-history"></i>
-        <span> update 2021-09-14</span>
+        <span> update 2023-05-08</span>
     </div>
     
     
@@ -329,27 +333,58 @@
         
 
         <div class="content">
-            <p>解决Linux系统异地恢复后开机mdadm报错导致开机时间变长。</p>
-<h2 id="现象">现象</h2>
-<p>使用deepin-clone恢复UOS镜像后，开机会不断跳一条日志:</p>
-<pre><code class="language-bash">mdadm: no arrays found in config file or automatically
-</code></pre>
-<p>大概蹦个15条后，系统才真正开机。mdadm好像是一个磁盘raid管理工具，当磁盘变化后其配置也不适配了，必须等到超时才会加载默认配置。那么我们就为其生成一个新的配置即可解决问题。</p>
-<h2 id="方案">方案</h2>
-<p>步骤一：删除mdadm.conf</p>
-<pre><code class="language-bash">sudo rm /etc/mdadm/mdadm.conf
-</code></pre>
-<p>步骤二：生成新的mdadm.conf</p>
-<pre><code class="language-bash">sudo update-initramfs  -u
-</code></pre>
-<p>ps:如果是swap分区问题导致等待90s开机慢，不归这儿管。</p>
-<h2 id="从这儿抄的">从这儿抄的：</h2>
-<p><a href="https://blog.csdn.net/KuXiaoQuShiHuai/article/details/99686620">W: mdadm: no arrays found in config file or automatically导致开机变慢的解决方案（deepin）</a></p>
+            <p>Debian系操作系统采用dpkg作为包管理器，在安装软件后会存储deb包信息，是否可以提取这些信息并且重新打deb包转移到其他平台使用？</p>
+<p>之前有一个需求，要从UOS里面提取一个软件，并且将其安装到另一台设备中。当时找了一圈都没有找到相关的提取教程。但是从逻辑上来讲，dpkg安装的软件会保存deb包的相关信息，所以理论上讲是可以提取出软件包的所有内容，然后我们重新打包的。</p>
+<p>今天在一个机缘巧合下（其实是懒得研究dpkg原理，瞎猫撞上死耗子），发现了dpkg保存文件信息的地点，于是接下来可以展开畅想：提取已经安装的软件并重新打包。</p>
+<h2 id="文件的保存地点">文件的保存地点</h2>
+<p>我在找fcitx有关的配置文件进行全盘搜索的时候，找到了一条目录<code>/usr/lib/dpkg-db/info</code>，这个目录里面保留了fcitx的&quot;conffiles&quot;, &ldquo;md5sums&rdquo;, &ldquo;postinst&rdquo;, &ldquo;prerm&quot;四个文件，以及一个list文件。恰好fcitx.deb解包出来的DEBIAN文件夹内也是这四个文件加上额外的control文件，。</p>
+<p>那么合理猜测，dpkg安装软件的时候，不仅把软件本身的文件移动到对应位置，还把DEBIAN里面的信息和脚本也转移到<code>/usr/lib/dpkg-db/</code>里面保存了。</p>
+<p>而<code>fcitx.list</code>文件中记录的是所有的文件及其路径。想必这里面就是全部的文件了。</p>
+<p>至于control文件，则都被保存到了<code>/usr/lib/dpkg-db/status</code>这个文本文件中。</p>
+<h2 id="流程设想">流程设想</h2>
+<p>既然deb包所有必要的文件都找到了，那么就可以尝试一下还原过程了。在<a href="https://www.small09.top/posts/211019-dpkg_package_guide/">这篇文章</a>里我研究过deb包的组成、格式和打包方法。</p>
+<p>比如对于软件包A：</p>
+<ol>
+<li>
+<p>创建一个工作目录，并在其中新建<code>DEBIAN</code>目录。</p>
+</li>
+<li>
+<p>将<code>/usr/lib/dpkg-db/info</code>中所有该软件的脚本和信息(除了A.list)转移到<code>DEBIAN</code>中，并重命名成规范名称。</p>
+</li>
+<li>
+<p>将<code>/usr/lib/dpkg-db/status</code>中与软件A有关的部分提取出来，保存到<code>DEBIAN/control</code>文件中。</p>
+</li>
+<li>
+<p>根据A.list文件，找到软件包含的所有文件，将其按原样整理到工作目录内。</p>
+</li>
+<li>
+<p>使用<code>dpkg -b</code>指令重新打包。</p>
+</li>
+</ol>
+<h2 id="局限性">局限性</h2>
+<p>以上毕竟只是设想，没有进行试验，所以估计会出现这些问题，希望有需要的人尝试后可以解决。</p>
+<ul>
+<li>
+<p>提取信息的难度： 由于<code>/usr/lib/dpkg-db/status</code>文件是一个包含几乎所有deb信息的文本文件，体积大内容乱，对于自动化脚本来说有些难度。加上一些软件的衍生品会在软件名上直接加后缀，对于提取的脚本来讲可能造成混淆，提取出不必要的东西。</p>
+</li>
+<li>
+<p>获取源文件的难度： 不排除一些软件安装时会删除、修改自身的一些文件，可能打包会后会缺失内容。一些软件安装过程中会进行手动配置从而造成内容改变，重做出来的软件包不一定完整。</p>
+</li>
+<li>
+<p>签名问题： 我们打包的软件没有原作者的数字签名，可能无法安装，也可能时候安装官方软件时冲突。</p>
+</li>
+<li>
+<p>这个方案只能处理普通的软件，一些deb打包源码，安装时进行编译的，应该是不能用这种方案复原的。（apt的deb-src源）</p>
+</li>
+</ul>
+<p>最后，希望有大佬可以验证一下这个方案。</p>
         </div>
         
         <div class="my-4">
     
     <a href="/tags/linux/" class="inline-block bg-tertiary-bg text-sm rounded px-3 py-1 my-1 mr-2 hover:text-eureka">#Linux</a>
+    
+    <a href="/tags/deepin/" class="inline-block bg-tertiary-bg text-sm rounded px-3 py-1 my-1 mr-2 hover:text-eureka">#deepin</a>
     
 </div>
         
@@ -390,14 +425,11 @@
 <div class="flex flex-col md:flex-row md:justify-between -mx-2 mt-4 px-2 pt-4 border-t">
     <div>
         
-        <span class="block font-bold">Previous</span>
-        <a href="/posts/211019-dpkg_package_guide/" class="block">DEB打包方法简介</a>
-        
     </div>
     <div class="md:text-right mt-4 md:mt-0">
         
         <span class="block font-bold">Next</span>
-        <a href="/posts/210914-linuxbackupdd/" class="block">使用dd指令备份和恢复Linux系统（硬盘级）</a>
+        <a href="/posts/220714-unpackclonezillaimage/" class="block">从再生龙（clonezilla）镜像直接提取文件</a>
         
     </div>
 </div>
@@ -469,36 +501,28 @@
 </div>
         
         
+        <div class="sticky top-16 z-10 hidden lg:block px-6 py-4  bg-primary-bg ">
+    <span class="text-lg font-semibold">章节</span>
+</div>
+<div class="sticky-toc hidden lg:block px-6 pb-6 ">
+    <nav id="TableOfContents">
+  <ul>
+    <li><a href="#文件的保存地点">文件的保存地点</a></li>
+    <li><a href="#流程设想">流程设想</a></li>
+    <li><a href="#局限性">局限性</a></li>
+  </ul>
+</nav>
+</div>
+<script>
+    window.addEventListener('DOMContentLoaded', () => {
+        enableStickyToc();
+    });
+</script>
+        
     </div>
     
 
     
-    
-    <div
-        class="col-span-2  lg:col-span-6 bg-secondary-bg rounded p-6">
-        <h2 class="text-lg font-semibold mb-4">See Also</h2>
-        <div class="content">
-            
-            <a href="/posts/210914-linuxbackupdd/">使用dd指令备份和恢复Linux系统（硬盘级）</a>
-            <br />
-            
-            <a href="/posts/210824-linuxtouchscreenfin/">Linux处理多触屏的终极解决方案</a>
-            <br />
-            
-            <a href="/posts/210719-gpuinfoinlinux/">Linux中获得AMD显卡的状态信息</a>
-            <br />
-            
-            <a href="/posts/210630-sudowithoutpasswd/">免密码使用sudo</a>
-            <br />
-            
-            <a href="/posts/210429-deepinautorun/">deepin和UOS，快捷方式，开机自启动</a>
-            <br />
-            
-            <a href="/posts/210420-linuxmorethan4serialport/">Linux启用四个以上的串口</a>
-            <br />
-            
-        </div>
-    </div>
     
 </div>
 <script>
