@@ -20,7 +20,7 @@ jobs:
       - uses: webfactory/ssh-agent@v0.4.1
         with:
           ssh-private-key: |
-            ${{ secrets.TX_LIGHTHOUSE_GZ }}
+            ${{ secrets.TX_GZ_GIT_RSA }}
 
       - name: Scan public keys
         run: |
